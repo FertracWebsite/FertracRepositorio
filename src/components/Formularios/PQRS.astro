@@ -1,0 +1,109 @@
+<section class="max-w-xl mx-auto mt-10 p-6 bg-white shadow-md rounded-xl">
+    <h1 class="text-2xl font-bold mb-4">Formulario PQRS</h1>
+    <form id="pqrsForm" class="space-y-4">
+
+      <div>
+         <div>
+        <label class="block text-sm font-medium">Nombres</label>
+        <input name="nombres" type="text" required class="w-full border p-2 rounded" />
+      </div>
+
+       <div>
+        <label class="block text-sm font-medium">Apellidos</label>
+        <input name="apellidos" type="text" required class="w-full border p-2 rounded" />
+      </div>
+
+      
+        <label class="block text-sm font-medium">Empresa</label>
+        <input name="empresa" type="text" required class="w-full border p-2 rounded" />
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Tipo de solicitud</label>
+        <select name="tipo" required class="w-full border p-2 rounded">
+          <option value="">Selecciona</option>
+          <option value="peticion">NIT</option>
+          <option value="queja">CC</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Correo electrónico</label>
+        <input name="email" type="email" required class="w-full border p-2 rounded" />
+      </div>
+
+
+
+      <div>
+        <label class="block text-sm font-medium">Tipo de solicitud</label>
+        <select name="tipo" required class="w-full border p-2 rounded">
+          <option value="">Selecciona</option>
+          <option value="peticion">Petición</option>
+          <option value="queja">Queja</option>
+          <option value="reclamo">Reclamo</option>
+          <option value="sugerencia">Sugerencia</option>
+        </select>
+      </div>
+      <div>
+        <label class="block text-sm font-medium">Mensaje</label>
+        <textarea name="mensaje" rows="4" required class="w-full border p-2 rounded"></textarea>
+      </div>
+<!--       <div>
+        <label class="block text-sm font-medium">Adjuntar archivo</label>
+        <input name="archivo" type="file" class="w-full" />
+      </div> -->
+      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Enviar</button>
+    </form>
+    <div id="respuesta" class="mt-4 text-green-600 font-semibold hidden">Formulario enviado correctamente.</div>
+  </section>
+
+  
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+  // Tu configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyAJzY9Og0f1DjiXOr5ug7RqRUtbK20Ii2Y",
+    authDomain: "formulario-pqrs-5a195.firebaseapp.com",
+    projectId: "formulario-pqrs-5a195",
+    storageBucket: "formulario-pqrs-5a195.firebasestorage.app",
+    messagingSenderId: "366767588477",
+    appId: "1:366767588477:web:6f21d81f2bc86e20a31d14",
+    measurementId: "G-LWHB79ZRQG"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Manejar el envío del formulario
+  document.getElementById("pqrsForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const empresa = form.empresa.value;
+    const identificación = form.empresa.value;
+    const email = form.email.value;
+    const tipo = form.tipo.value;
+    const mensaje = form.mensaje.value;
+
+    try {
+      await addDoc(collection(db, "pqrs"), {
+        empresa,
+        identificación,
+        nombres,
+        apellidos,
+        email,
+        tipo,
+        mensaje,
+        fecha: new Date().toISOString()
+      });
+
+      form.reset();
+      document.getElementById("respuesta").classList.remove("hidden");
+    } catch (error) {
+      console.error("Error al guardar:", error);
+      alert("Ocurrió un error al enviar tu formulario. Intenta nuevamente.");
+    }
+  });
+</script>
