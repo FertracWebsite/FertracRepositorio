@@ -1,0 +1,298 @@
+---
+// Props que puedes controlar desde la página donde lo uses
+const {
+  id = "pqrsForm",
+  dataColección = "pqrs",
+  titulo = "Formulario de contacto",
+  mostrarIdentificacion = true,
+  mostrarEmpresa = true,
+  mostrarTipoPQRS = true,
+  mostrarArchivo = true
+} = Astro.props;
+---
+
+<div class=" p-4 rounded-lg bg-gray-50 dark:bg-gray-800 animacion from-left flex items-center justify-center sm:flex-wrap lg:flex-nowrap gap-4" id={id}
+role="tabpanel" aria-labelledby="pqrs-tab">
+    
+    <div
+    class="relative flex items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg sm-auto w-full max-w-lg bg-slate-600" style="height:-webkit-fill-available">
+    <img
+      alt=""
+      src="/img/area-mercadeo.jpg"
+      class="absolute inset-0 h-full w-full object-cover"
+    />
+
+    <div
+      class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100"
+    >
+      <div class="p-4 sm:p-6">
+        <a href="#">
+          <h3 class="mt-0.5 text-lg !text-white">Area de Mercadeo</h3>
+        </a>
+
+        <p class="mt-2 text-sm/relaxed !text-white/95">
+          Impulsamos nuestra presencia con estrategias innovadoras para
+          conectar eficazmente con nuestros clientes y destacar en el
+          mercado.
+        </p>
+      </div>
+    </div>
+  </div>
+
+<form id={id} class="formulario-firebase w-full max-w-4xl mx-auto p-4 bg-white rounded-lg shadow-md " data-colección={dataColección} role="tabpanel" aria-labelledby="pqrsForm-tab">
+
+<div class="w-full max-w-4xl mx-auto ">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Nombres -->
+    <div class="field">
+      <label for="nombres">Nombres</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <input
+          type="text"
+          name="nombres"
+          id="nombres"
+          placeholder="Carlos"
+          required
+          class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800 text-sm ps-10"
+        />
+      </div>
+    </div>
+
+    <!-- Apellidos -->
+    <div class="field ">
+      <label for="apellidos">Apellidos</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <input
+          type="text"
+          name="apellidos"
+          id="apellidos"
+          placeholder="Ramírez"
+          required
+          class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800 text-sm ps-10"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Email -->
+  <div class="field">
+    <label for="email">Correo electrónico</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <i class="fa-solid fa-envelope"></i>
+      </div>
+      <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10" />
+    </div>
+  </div>
+
+  <!-- Teléfono -->
+  <div class="field">
+    <label for="telefono">Teléfono</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+        <i class="fa-solid fa-phone"></i>
+      </div>
+      <input type="tel" name="telefono" id="telefono" placeholder="3001234567" required class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10" />
+    </div>
+  </div>
+
+  {mostrarIdentificacion && (
+    <div class="field">
+      <label for="identificación">Identificación (NIT / CC)</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-id-card"></i>
+        </div>
+        <input type="text" name="identificación" id="identificación" placeholder="123456789" class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10" />
+      </div>
+    </div>
+  )}
+
+  {mostrarEmpresa && (
+    <div class="field">
+      <label for="empresa">Empresa</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-building"></i>
+        </div>
+        <input type="text" name="empresa" id="empresa" placeholder="Mi empresa S.A.S" class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10" />
+      </div>
+    </div>
+  )}
+
+  {mostrarTipoPQRS && (
+    <div class="field">
+      <label for="tipo_queja">Tipo de solicitud</label>
+      <div class="relative">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+          <i class="fa-solid fa-list"></i>
+        </div>
+        <select name="tipo_queja" id="tipo_queja" required class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10">
+          <option value="">Selecciona el tipo de solicitud</option>
+          <option value="Petición">Petición</option>
+          <option value="Queja">Queja</option>
+          <option value="Reclamo">Reclamo</option>
+          <option value="Sugerencia">Sugerencia</option>
+        </select>
+      </div>
+    </div>
+  )}
+
+  <!-- Mensaje -->
+  <div class="field">
+    <label for="mensaje">Mensaje</label>
+    <div class="relative">
+      <div class="absolute inset-y-0 start-0 flex items-start ps-3.5 pt-3 pointer-events-none">
+        <i class="fa-solid fa-comment-dots"></i>
+      </div>
+      <textarea name="mensaje" id="mensaje" rows="5" required class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10" placeholder="Escribe tu mensaje aquí..."></textarea>
+    </div>
+  </div>
+
+  {mostrarArchivo && (
+    <div class="field">
+      <label for="documento">Archivo adjunto</label>
+      <input name="documento" type="file" class="block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-naranja file:text-white hover:file:bg-orange-600" />
+    </div>
+  )}
+
+  <!-- Botón -->
+  <button type="submit" class="w-full bg-naranja text-white py-3 rounded-lg font-semibold hover:bg-orange-600 transition mt-4">
+    Enviar formulario
+  </button>
+
+  <p id="respuesta" class="hidden text-green-600 text-center font-medium mt-2">¡Formulario enviado exitosamente!</p>
+
+  <!-- Política -->
+  <div class="mt-4 text-sm">
+    <label class="flex items-center space-x-2">
+      <input type="checkbox" name="dataConsent" id="dataConsent-garantia" required class="w-4 h-4 text-blue-600 border-gray-300 rounded" />
+      <span class="text-gray-700 dark:text-gray-300">
+        Acepto la
+        <a href="/img/politica-manejo-de-datos.pdf" class="text-azul hover:underline" download="politica-manejo-de-datos.pdf">
+          Política de Datos
+        </a>
+      </span>
+    </label>
+  </div>
+
+</form>
+
+
+</div>
+
+
+
+
+<style>
+  .input {
+    @apply border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-naranja/50 my-2;
+  }
+  .field {
+    margin-bottom: 10px;
+  }
+
+  .field label {
+    display: block;
+    font-size: 16px;
+    color: #777;
+  }
+
+  .field input {
+    display: block;
+    min-width: 250px;
+    line-height: 1.5;
+    font-size: 14px;
+  }
+
+  .animacion {
+    transition:
+      opacity 0s ease,
+      filter 0.5s ease;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 1s;
+  }
+
+  .from-left {
+    opacity: 0;
+    filter: blur(4px);
+    animation: fadeInLeft 1s ease forwards;
+    animation-delay: 0.1s;
+  }
+
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+      filter: blur(0);
+    }
+  }
+  </style>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore.js";
+
+  // Tu configuración de Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyAJzY9Og0f1DjiXOr5ug7RqRUtbK20Ii2Y",
+    authDomain: "formulario-pqrs-5a195.firebaseapp.com",
+    projectId: "formulario-pqrs-5a195",
+    storageBucket: "formulario-pqrs-5a195.firebasestorage.app",
+    messagingSenderId: "366767588477",
+    appId: "1:366767588477:web:6f21d81f2bc86e20a31d14",
+    measurementId: "G-LWHB79ZRQG"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+
+  // Manejar el envío del formulario
+  document.getElementById("pqrsForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target;
+
+    const nombres = form.nombres.value;
+    const apellidos = form.apellidos.value;
+    const identificación = form.identificación.value;
+    const telefono = form.telefono.value;
+    const empresa = form.empresa.value;
+    const email = form.email.value;
+    const tipo_queja = form.tipo_queja.value;
+    const mensaje = form.mensaje.value;
+    /* const documento = form.documento.value; */
+
+    try {
+      await addDoc(collection(db, "FormularioPQRS"), {
+        nombres,
+        apellidos,
+        identificación,
+        telefono,
+        empresa,
+        email,
+        tipo_queja,
+        mensaje,
+        /* documento, */
+        fecha: new Date().toISOString()
+      });
+
+      form.reset();
+      document.getElementById("respuesta").classList.remove("hidden");
+    } catch (error) {
+      console.error("Error al guardar:", error);
+      alert("Ocurrió un error al enviar tu formulario. Intenta nuevamente.");
+    }
+  });
+  
+</script>
