@@ -1,10 +1,9 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import Contacto from "../components/Contacto.astro";
 import LayoutSecundario from "../layouts/LayoutSecundario.astro";
 import ContactoMercadeo from "../components/Formularios/ContactoMercadeo.astro";
 import ContactoGarantias from "../components/Formularios/ContactoGarantias.astro";
-import PQRS from "../components/Formularios/PQRS.astro";
+import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
+import FormularioPQRS from "../components/Formularios/FormularioPQRS.astro";
 
 
 const title = "Contáctanos - Fertrac";
@@ -63,11 +62,11 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
       <li class="me-2">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="dashboard-tab"
-          data-tabs-target="#dashboard"
+          id="mercadeoForm-tab"
+          data-tabs-target="#mercadeoForm"
           type="button"
           role="tab"
-          aria-controls="dashboard"
+          aria-controls="mercadeo"
           aria-selected="false">Area de Mercadeo</button
         >
       </li>
@@ -75,21 +74,33 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
       <li class="me-2">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="settings-tab"
-          data-tabs-target="#settings"
+          id="garantiasForm-tab"
+          data-tabs-target="#garantiasForm"
           type="button"
           role="tab"
-          aria-controls="settings"
+          aria-controls="garantias"
           aria-selected="false">Gestion de Garantias</button
         >
       </li>
 
-
+<li class="me-2">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 "
+          id="pqrsForm-tab"
+          data-tabs-target="#pqrsForm"
+          type="button"
+          role="tab"
+          aria-controls="pqrs"
+          aria-selected="false">PQRS (Pregunta, Queja, Reclamo o Petición)</button
+        >
+      </li>
 
     </ul>
   </div>
 
   <div id="default-tab-content">
+
+    <!-- MERCADEO -->
 
     <ContactoMercadeo/>
 
@@ -97,10 +108,13 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
 
     <ContactoGarantias/>
 
+<!--       PRUEBA FORMULARIO COMO COMPONENTE -->
 
-    <PQRS/>
+ <FormularioEstructura />
 
   </div>
+
+
 </section>
 
 
