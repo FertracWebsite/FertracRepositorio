@@ -15,7 +15,7 @@
 
 
 .parrafo {
-    @apply lg:text-lg sm:text-lg font-lato font-normal text-black sm:text-justify sm:leading-[1.5rem];
+    @apply lg:text-lg sm:text-lg font-lato font-normal text-black sm:text-justify sm:!leading-[1.2];
 }
 
 .faqs-titles {

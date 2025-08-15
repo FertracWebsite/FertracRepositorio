@@ -1,9 +1,6 @@
 ---
 import LayoutSecundario from "../layouts/LayoutSecundario.astro";
-import ContactoMercadeo from "../components/Formularios/ContactoMercadeo.astro";
-import ContactoGarantias from "../components/Formularios/ContactoGarantias.astro";
 import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
-import FormularioPQRS from "../components/Formularios/FormularioPQRS.astro";
 
 
 const title = "Contáctanos - Fertrac";
@@ -27,12 +24,12 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
     
   <div class="mb-4 border-b border-gray-200 w-full">
     <ul
-      class="flex md:flex-wrap sm:flex-nowrap text-sm font-medium text-center justify-center"
-      id="default-tab"
-      data-tabs-toggle="#default-tab-content"
+      class="flex md:flex-wrap sm:flex-wrap text-sm font-medium text-center justify-center"
+      id="myTab"
+      data-tabs-toggle="#myTabContent"
       role="tablist"
     >
-      <p class="flex items-center text-sm text-gray-500 dark:text-gray-400">
+<!--       <p class="flex items-center text-sm text-gray-500 dark:text-gray-400">
         <button
           data-popover-target="popover-description"
           data-popover-placement="bottom-end"
@@ -41,7 +38,7 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
             >Show information</span
           ></button
         >
-      </p>
+      </p> -->
       <div
         data-popover
         id="popover-description"
@@ -59,23 +56,23 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
         <div data-popper-arrow></div>
       </div>
 
-      <li class="me-2">
+      <li class="me-2" role="presentation">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="mercadeoForm-tab"
-          data-tabs-target="#mercadeoForm"
+          id="mercadeo-tab"
+          data-tabs-target="#mercadeo"
           type="button"
           role="tab"
           aria-controls="mercadeo"
-          aria-selected="false">Area de Mercadeo</button
+          aria-selected="true">Area de Mercadeo</button
         >
       </li>
 
-      <li class="me-2">
+      <li class="me-2" role="presentation">
         <button
           class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="garantiasForm-tab"
-          data-tabs-target="#garantiasForm"
+          id="garantias-tab"
+          data-tabs-target="#garantias"
           type="button"
           role="tab"
           aria-controls="garantias"
@@ -83,42 +80,51 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
         >
       </li>
 
-<li class="me-2">
-        <button
-          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 "
-          id="pqrsForm-tab"
-          data-tabs-target="#pqrsForm"
-          type="button"
-          role="tab"
-          aria-controls="pqrs"
-          aria-selected="false">PQRS (Pregunta, Queja, Reclamo o Petición)</button
-        >
-      </li>
-
     </ul>
   </div>
 
-  <div id="default-tab-content">
+  <div id="myTabContent">
 
-    <!-- MERCADEO -->
 
-    <ContactoMercadeo/>
+<div id="mercadeo" role="tabpanel" aria-labelledby="mercadeo-tab" class="hidden">
+  <FormularioEstructura
+    id="mercadeoForm"
+    dataColeccion="formulario_mercadeo"
+   tituloForm="Conectemos y hagamos crecer tu negocio"
+  descripcionForm="Nuestro equipo de mercadeo se pondrá en contacto contigo para ofrecerte propuestas personalizadas que se adapten a tus necesidades y objetivos."
+  imgForm="/img/area-mercadeo.jpg"
+    mostrarIdentificacion={true}
+    mostrarEmpresa={true}
+    mostrarTipoPQRS={false}
+    mostrarArchivo={true}
+  />
+</div>
 
-    <!-- GARANTIAS -->
+ <div id="garantias" role="tabpanel" aria-labelledby="pqrs-tab" class="hidden" >
 
-    <ContactoGarantias/>
+<FormularioEstructura
+  id = "garantiasForm"
+  dataColeccion="formulario_garantias"
+  tituloForm="Formulario de Garantías"
+tituloForm="Respaldo y confianza en cada compra"
+  descripcionForm="Queremos asegurarnos de que recibas productos de calidad y un servicio confiable. "
+  imgForm="/img/gestion-garantias.jpg"
+  mostrarIdentificacion={true}
+  mostrarEmpresa={true}
+  mostrarTipoPQRS={false}
+  mostrarArchivo={true}
 
-<!--       PRUEBA FORMULARIO COMO COMPONENTE -->
+/>
+ </div>
 
- <FormularioEstructura />
+
 
   </div>
 
 
 </section>
 
-
-
+          
 
 
 </LayoutSecundario>

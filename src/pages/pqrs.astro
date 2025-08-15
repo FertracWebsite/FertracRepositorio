@@ -1,0 +1,35 @@
+---
+import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro"
+import LayoutSecundario from "../layouts/LayoutSecundario.astro"
+
+   
+const title ="PQRS – Peticiones, Quejas, Reclamos y Sugerencias"
+const descripcion ="asdasZZd" 
+---
+
+
+<LayoutSecundario title={title} descripcion={descripcion}>
+
+  <section class="xl:mt-48 max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">
+
+  <div id="pqrs">
+      <FormularioEstructura
+      id = "pqrsForm"
+  dataColeccion="formulario_pqrs"
+    tituloForm="¡Tu voz cuenta!"
+  tituloResto="Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias."
+  descripcionForm="Tu opinión es clave para mejorar nuestros servicios, fortalecer la confianza y construir juntos un camino de calidad en cada experiencia."
+  imgForm="/img/pqrs-imagen.jpg"
+  mostrarIdentificacion={true}
+  mostrarEmpresa={true}
+  mostrarTipoPQRS={true}
+  mostrarArchivo={true}
+/>
+
+
+
+
+
+  </section>
+
+</LayoutSecundario>

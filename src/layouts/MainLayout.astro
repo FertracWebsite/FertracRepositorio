@@ -6,7 +6,7 @@ import BotonesFlotantes from "../components/BotonesFlotantes.astro";
 import "../estilos.css";
 
 const { title } = Astro.props;
-const { description } = Astro.props;
+const { descripcion } = Astro.props;
 ---
 
 <!doctype html>
@@ -14,7 +14,7 @@ const { description } = Astro.props;
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
+    <meta name="descripcion" content={descripcion} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
