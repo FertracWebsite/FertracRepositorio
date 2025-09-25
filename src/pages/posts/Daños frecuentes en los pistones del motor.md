@@ -7,7 +7,8 @@ image:
     url: "/img/pistones-del-motor.webp"
     alt: "imagen de post"
 tags: ["Articulo"] 
-previewText: "Las camisas del motor Diesel son un elemento demasiado importante en el motor, pues estas son las que alojan los pistones que en conjunto son los que hacen que la combustión suceda. "
+previewText: "Los pistones son piezas fundamentales en el proceso de combustión del motor. Su desgaste o daño puede ocasionar fallas graves y costosas reparaciones. Entre los problemas más comunes se encuentran el gripado en la falda, el gripado unilateral, el gripado en la cabeza y la fundición de la cabeza del pistón. Identificar estas fallas a tiempo permite mantener un óptimo rendimiento, prolongar la vida útil del motor y evitar paradas inesperadas en el vehículo."
+tiempoLectura: "3 minutos"
 ---
 
 <div class="">

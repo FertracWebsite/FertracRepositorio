@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 .titulos {
-    @apply sm:text-[32px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-gotham font-black sm:text-justify sm:leading-none lg:text-left tracking-tight;
+    @apply sm:text-[30px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-gotham font-black sm:text-justify sm:leading-none lg:text-left tracking-tight;
 }
 .subtitulos {
     @apply sm:text-2xl lg:text-3xl xl:text-4xl font-gotham font-black text-azul sm:text-justify lg:text-left sm:leading-none tracking-tight;
 }
 
 .titulos-h3 {
-    @apply sm:text-2xl lg:text-xl xl:text-2xl font-gotham font-bold sm:text-center lg:text-left sm:leading-none !leading-7 tracking-tighter;
+    @apply sm:text-2xl lg:text-xl xl:text-2xl font-gotham font-bold sm:text-center text-azul lg:text-left sm:leading-none !leading-7 tracking-tighter;
 }
 
 

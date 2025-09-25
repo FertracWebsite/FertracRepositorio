@@ -1,10 +1,12 @@
 ---
 import LayoutSecundario from "../layouts/LayoutSecundario.astro";
 import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
+import BotonPrincipal from "../components/BotonPrincipal.astro";
+
 
 
 const title = "Contáctanos - Fertrac";
-const description = "¿Tienes preguntas o necesitas más información sobre nuestros repuestos para vehiculos de carga? En Fertrac, estamos aquí para ayudarte. Completa nuestro formulario de contacto o envíanos un mensaje por WhatsApp y un miembro de nuestro equipo se pondrá en contacto contigo a la brevedad.";
+const description = "¿Tienes preguntas o necesitas más información sobre nuestros repuestos para vehículos de carga? En Fertrac, estamos aquí para ayudarte. Completa nuestro formulario de contacto o envíanos un mensaje por WhatsApp y un miembro de nuestro equipo se pondrá en contacto contigo a la brevedad.";
 ---
 
 <LayoutSecundario title={title} description={description}>
@@ -64,7 +66,7 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
           type="button"
           role="tab"
           aria-controls="mercadeo"
-          aria-selected="true">Area de Mercadeo</button
+          aria-selected="false">Area de Mercadeo</button
         >
       </li>
 
@@ -80,43 +82,81 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
         >
       </li>
 
+        <li class="me-2" role="presentation">
+        <button
+          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+          id="rrhh-tab"
+          data-tabs-target="#rrhh"
+          type="button"
+          role="tab"
+          aria-controls="rrhh"
+          aria-selected="false">Gestion Humana</button
+        >
+      </li>
+
     </ul>
   </div>
 
-  <div id="myTabContent">
+<div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
+  <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
+    <h3 class="text-lg font-semibold  !text-center">¡Formulario enviado con éxito!</h3>
+    <p class=" !text-gray-600 !text-center">Tu información ha sido recibida correctamente. <br> Nuestro equipo la revisará y se pondrá en contacto contigo en caso necesario.</p>
+    <div id="cerrarModal" class="mt-4">
+      <BotonPrincipal text="Cerrar" icon="hidden" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white" estilosButton="!w-auto"/>
+    </div>
+   
+  </div>
+</div>
+
+
+  <div id="myTabContent" class="">
 
 
 <div id="mercadeo" role="tabpanel" aria-labelledby="mercadeo-tab" class="hidden">
   <FormularioEstructura
     id="mercadeoForm"
     dataColeccion="formulario_mercadeo"
-   tituloForm="Conectemos y hagamos crecer tu negocio"
-  descripcionForm="Nuestro equipo de mercadeo se pondrá en contacto contigo para ofrecerte propuestas personalizadas que se adapten a tus necesidades y objetivos."
+   tituloForm="Area de Mercadeo"
+  descripcionForm="Impulsamos nuestra presencia con estrategias innovadoras para conectar eficazmente con nuestros clientes y destacar en el mercado."
   imgForm="/img/area-mercadeo.jpg"
-    mostrarIdentificacion={true}
+    mostraridentificacion={true}
     mostrarEmpresa={true}
     mostrarTipoPQRS={false}
     mostrarArchivo={true}
   />
 </div>
 
- <div id="garantias" role="tabpanel" aria-labelledby="pqrs-tab" class="hidden" >
+ <div id="garantias" role="tabpanel" aria-labelledby="garantias-tab" class="hidden" >
 
 <FormularioEstructura
   id = "garantiasForm"
   dataColeccion="formulario_garantias"
-  tituloForm="Formulario de Garantías"
-tituloForm="Respaldo y confianza en cada compra"
-  descripcionForm="Queremos asegurarnos de que recibas productos de calidad y un servicio confiable. "
+  tituloForm="Gestión de Garantias"
+  descripcionForm="Respaldo total en cada venta. Aseguramos que cualquier inconveniente con los repuestos adquiridos sea atendido de manera eficiente y profesional."
   imgForm="/img/gestion-garantias.jpg"
-  mostrarIdentificacion={true}
+  mostraridentificacion={true}
   mostrarEmpresa={true}
-  mostrarTipoPQRS={false}
+  mostrarTipoPQRS={false} 
   mostrarArchivo={true}
 
 />
  </div>
 
+
+  <div id="rrhh" role="tabpanel" aria-labelledby="rrhh-tab" class="hidden" >
+
+<FormularioEstructura
+  id = "rrhhForm"
+  dataColeccion="formulario_rrhh"
+  tituloForm="Gestión Humana"
+  descripcionForm="Respaldo total en cada venta. Aseguramos que cualquier inconveniente con los repuestos adquiridos sea atendido de manera eficiente y profesional."
+  imgForm="/img/recursos-humanos.jpg"
+  mostraridentificacion={true}
+  mostrarEmpresa={true}
+  mostrarTipoPQRS={false}
+
+/>
+ </div>
 
 
   </div>
@@ -129,7 +169,7 @@ tituloForm="Respaldo y confianza en cada compra"
 
 </LayoutSecundario>
 
-<!-- <script>
+<!--  <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Obtener referencia al botón de envío del formulario
       const btn = document.getElementById("button");
@@ -171,4 +211,4 @@ tituloForm="Respaldo y confianza en cada compra"
         console.error("Formulario no encontrado.");
       }
     });
-  </script> -->
+  </script>  -->

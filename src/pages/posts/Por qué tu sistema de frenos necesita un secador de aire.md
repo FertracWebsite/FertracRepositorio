@@ -5,7 +5,7 @@ title: "¿Por qué tu sistema de frenos necesita un secador de aire?"
 author: "Edwin Camilo"
 image:
   url: "/img/filtro-secador-de-aire.png"
-  alt: "imagen de guias de valvulas"
+  alt: "imagen de guias de válvulas"
 tags: ["Articulo"]
 previewText: "¿Sabías que el estado de las guías de válvulas influye directamente en el rendimiento de tu motor? Estas piezas clave aseguran un sellado perfecto, reducen el desgaste y ayudan a disipar el calor. Reemplazarlas a tiempo mejora la compresión, evita pérdidas de potencia y prolonga la vida útil del motor. Descubre cómo unas guías en buen estado pueden marcar la diferencia en la eficiencia, durabilidad y consumo de combustible de tu vehículo."
 tiempoLectura: "4 minutos"
