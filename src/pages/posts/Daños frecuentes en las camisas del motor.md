@@ -7,7 +7,8 @@ image:
     url: "/img/camisas-del-motor.webp"
     alt: "imagen de post"
 tags: ["Articulo"] 
-previewText: "Las camisas del motor diésel son un elemento demasiado importante en el motor, pues estas son las que alojan los pistones que en conjunto son los que hacen que la combustión suceda. "
+previewText: "Las camisas de motor diésel cumplen un papel esencial al alojar los pistones y permitir que la combustión suceda de forma eficiente. Sin embargo, una instalación incorrecta o la falta de mantenimiento puede provocar daños severos. Entre las fallas más comunes se encuentran las fracturas longitudinales, la cavitación y las zonas brillantes en el interior. Detectar estos problemas a tiempo es clave para evitar fallas catastróficas, prolongar la vida útil del motor y reducir costos de reparación."
+tiempoLectura: "3 minutos"
 ---
 
 <div class="">

@@ -12,11 +12,21 @@ const {bgNav} = Astro.props;
       />
   </a>
 
+
+
+
   <nav class="sm:hidden lg:block">
     <ul class="flex items-center justify-center font-semibold text-white">
+
+        <!-- INICIO -->
+         
+
         <li class="background relative px-3 py-2 group">
             <a href="/" class="effect"><!-- <i class="fa-solid fa-house mr-2"> --></i>Inicio</a>
           </li>
+
+
+          <!-- ESPECIALIDADES -->
 
       <li class="background relative px-3 py-2  cursor-pointer group">
         <a href="#"><!-- <i class="fa-solid fa-gear mr-2"> --></i>
@@ -24,10 +34,10 @@ const {bgNav} = Astro.props;
         <i class="fa-solid fa-caret-down"></i>
       </a>
         <div
-          class="absolute w-[1000px] top-0 -left-[320px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          class="absolute w-[1000px] top-0 left-[-440px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
           <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
             <div
-              class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-[22%] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
+              class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-[300px] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
             </div>
 
             <div class="relative z-10 justify-between">
@@ -35,7 +45,7 @@ const {bgNav} = Astro.props;
 
                 <div>
 
-                  <ul class="mt-3 text-[15px] space-y-4">
+                  <ul class=" text-[15px] space-y-4">
                     
                       <li>
                         <a href="/especialidades/motor/"
@@ -95,7 +105,7 @@ const {bgNav} = Astro.props;
                 </div>
 
                 <div>
-                  <ul class="mt-3 text-[15px] space-y-4">
+                  <ul class=" text-[15px] space-y-4">
                     
                       <li>
                         <a href="/especialidades/filtración/"
@@ -159,7 +169,7 @@ const {bgNav} = Astro.props;
                 </div>
 
                 <div>
-                  <ul class="mt-3 text-[15px] space-y-4">
+                  <ul class=" text-[15px] space-y-4">
                     
                       <li>
                         <a href="/especialidades/sistema-de-refrigeración/"
@@ -227,7 +237,7 @@ const {bgNav} = Astro.props;
         </div>
       </li>
       
-
+<!-- SERVICIOS -->
 
       <li class="background relative px-3 py-2 group cursor-pointer">
         <a href="#"><!-- <i class="fa-regular fa-square-check mr-2"> --></i>Servicios
@@ -243,7 +253,7 @@ const {bgNav} = Astro.props;
             <div class="relative z-10 justify-between">
               <div class="grid items-stretch grid-cols-2 gap-6">
                 <div>
-                  <ul class="mt-3 text-[15px] space-y-4">
+                  <ul class=" text-[15px] space-y-4">
 
                     <li>
                       <a href="/servicios#ventas"
@@ -252,7 +262,7 @@ const {bgNav} = Astro.props;
                           <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                         </div>
                         <div>
-                          Venta de repuestos para vehiculos de carga
+                          Venta de repuestos para vehículos de carga
                           <p class="!text-sm font-light !text-gray-600">Calidad, confianza y marcas lideres.</p>
                         </div>
                       </a>
@@ -279,10 +289,10 @@ const {bgNav} = Astro.props;
                 </div>
 
                 <div>
-                  <ul class="mt-3 text-[15px] space-y-4">
+                  <ul class=" text-[15px] space-y-4">
 
                     <li>
-                      <a href="/servicios#catalogo-online"
+                      <a href="/servicios#bruchure-digital"
                         class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
                         <div class="p-2 bg-green-500 rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
@@ -302,7 +312,7 @@ const {bgNav} = Astro.props;
                         </div>
                         <div>
                           Asesoria Tecnica
-                          <p class="!text-sm font-light !text-gray-600">Soluciones rapidas y apoyo de primer mano .</p>
+                          <p class="!text-sm font-light !text-gray-600">Soluciones rapidas y apoyo de primer mano.</p>
                         </div>
                       </a>
                     </li>
@@ -331,54 +341,75 @@ const {bgNav} = Astro.props;
         </div>
       </li>
 
+<!--  SOBRE NOSOTROS -->
+
       <li class="background relative px-3 py-2 group">
         <a href="/sobre-nosotros/" class="effect"><!-- <i class="fa-solid fa-people-group mr-2"> --></i>Sobre Nosotros</a>
       </li>
 
-      <li class="background relative px-3 py-2 group">
-        <a href="/contactanos/" class="effect"><!-- <i class="fa-solid fa-phone mr-2"> --></i>Contactanos</a>
-      </li> 
+      <!-- CONTACTANOS -->
+
+            <li class="background relative px-3 py-2 group cursor-pointer">
+        <a href="#"><!-- <i class="fa-regular fa-square-check mr-2"> --></i>Contactanos
+        <i class="fa-solid fa-caret-down"></i>
+      </a>
+        <div
+          class="absolute w-auto top-0 left-[-160px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          <div class="relative w-fit p-6 bg-white shadow-xl top-6 rounded-xl">
+            <div
+              class="absolute top-0 z-0 w-10 h-10  right-[250px] transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
+            </div>
+
+            <div class="relative z-10 justify-between">
+
+                  <ul class=" text-[15px] space-y-4">
+
+                    <li>
+                      <a href="/contactanos/"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
+                        <div class="p-2 bg-green-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/form.png" alt="checked-truck"/>
+                        </div>
+                        <div>
+                          <span >Formulario de Garantias, Mercadeo y Gestión Humana.</span>
+                          <p class="!text-sm font-light !text-gray-600">Calidad, confianza y marcas lideres.</p>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/pqrs/"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-orange-200">
+                        <div class="p-2 bg-orange-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/submit-document.png" alt="checked-truck"/>
+                        </div>
+                        <div>
+                          Formulario de PQRS
+                          <p class="!text-sm font-light !text-gray-600">Calidad, confianza y marcas lideres.</p>
+                        </div>
+                      </a>
+                    </li>
+
+                  
+
+                        
+
+                  </ul>
+
+
+
+            </div>
+          </div>
+        </div>
+      </li>
+
+
 
       <li class="background relative px-3 py-2 group ">
         
         <a href="/blog/" class="effect"><!-- <i class="fa-regular fa-newspaper"> --></i> Blog</a>
       </li> 
-        <!-- <div
-          class="absolute top-0 -left-2 transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[200px] transform">
-          <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
-            <div
-              class="absolute top-0 z-0 w-10 h-10 transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
-            </div>
-             <div class="relative z-10">
-              <ul class="mt-3 text-[15px] space-y-4">
-                <li>
-                  <a href="#"
-                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                    <div>
-                      Notifications
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-green-600 transition duration-300 ease-in-out rounded-lg bg-green-50">
-                    <div>
-                      Analytics
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a href="#"
-                    class="flex items-center p-2 -mx-2 space-x-2 font-bold text-gray-800 transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                    <div>
-                      Intregrations
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
+
 
       
     </ul>
@@ -604,7 +635,7 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-blue-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                           </div>
-                          Repuestos para <br> vehiculos de carga
+                          Repuestos para <br> vehículos de carga
 
                         </a>
                       </li>
@@ -937,24 +968,5 @@ window.addEventListener('scroll', function() {
     }
 });
 
-/* document.addEventListener('scroll', function () {
-      const scrollY = window.scrollY;
-      const imagen1 = document.getElementById('imagen1');
-      const imagen2 = document.getElementById('imagen2');
-      const social = document.querySelectorAll('.social');
-      
 
-      if (scrollY > 50) { // Cambia este valor según tus necesidades
-        imagen1.classList.add('ocultar');
-        imagen2.classList.remove('ocultar');
-        social.forEach(node => {node.classList.add('bgsocial');
-      })
-    }else {
-        imagen1.classList.remove('ocultar');
-        imagen2.classList.add('ocultar');
-        social.forEach(node => {node.classList.remove('bgsocial');
-      })
-      }
-    }
-  );  */
 </script> 
