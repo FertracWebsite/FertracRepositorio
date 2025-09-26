@@ -25,4 +25,5 @@ document.querySelectorAll('time').forEach((element) => {
 
 
 
+console.log("TEST:", import.meta.env.VITE_TEST);
 
