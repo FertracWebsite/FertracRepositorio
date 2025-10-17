@@ -1,8 +1,8 @@
 [
   {
-    "origin": ["http://localhost:4321", "https://fertrac.com/"],
+    "origin": ["http://localhost:4321", "https://fertrac.com"],
     "method": ["GET", "POST", "PUT", "DELETE", "HEAD"],
     "maxAgeSeconds": 3600,
-    "responseHeader": ["Content-Type", "Authorization"]
+    "responseHeaders": ["Content-Type", "Authorization"]
   }
 ]

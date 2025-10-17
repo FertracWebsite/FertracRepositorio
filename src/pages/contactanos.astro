@@ -1,15 +1,13 @@
 ---
-import LayoutSecundario from "../layouts/LayoutSecundario.astro";
-import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
 import BotonPrincipal from "../components/BotonPrincipal.astro";
+import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
+import LayoutSecundario from "../layouts/LayoutSecundario.astro";
 
-
-
-const title = "Contáctanos - Fertrac";
-const description = "¿Tienes preguntas o necesitas más información sobre nuestros repuestos para vehículos de carga? En Fertrac, estamos aquí para ayudarte. Completa nuestro formulario de contacto o envíanos un mensaje por WhatsApp y un miembro de nuestro equipo se pondrá en contacto contigo a la brevedad.";
+const title = "Contáctanos – Fertrac";
+const descripcion = "Comunícate con nosotros para recibir asesoría o más información sobre repuestos para tractocamiones.";
 ---
 
-<LayoutSecundario title={title} description={description}>
+<LayoutSecundario title={title} description={descripcion}>
 
 <div
   class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
@@ -169,46 +167,13 @@ const description = "¿Tienes preguntas o necesitas más información sobre nues
 
 </LayoutSecundario>
 
-<!--  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Obtener referencia al botón de envío del formulario
-      const btn = document.getElementById("button");
-  
-      // Agregar el manejador de eventos para el envío del formulario
-      const formElement = document.getElementById("form");
-      if (formElement) {
-        formElement.addEventListener("submit", function (event) {
-          event.preventDefault(); // Evita el envío predeterminado del formulario
-  
-          btn.value = "Sending..."; // Cambiar texto del botón a "Sending..."
-  
-          // Crear un objeto FormData a partir del formulario
-          const formData = new FormData(this);
-  
-          // Agregar el estado del checkbox con un mensaje personalizado
-          const dataConsent = document.getElementById("dataConsent").checked
-            ? "He aceptado el tratamiento de mis datos personales."
-            : "No he aceptado el tratamiento de mis datos personales.";
-  
-          formData.append("dataConsent", dataConsent); // Agregar estado del checkbox
-  
-          const serviceID = "service_umm7dcs";
-          const templateID = "template_f5tfw7e";
-  
-          // Enviar el formulario a EmailJS
-          emailjs.sendForm(serviceID, templateID, this).then(
-            () => {
-              btn.value = "Send Email"; // Restaurar el texto del botón
-              alert("¡Enviado!"); // Mostrar mensaje de éxito
-            },
-            (err) => {
-              btn.value = "Send Email"; // Restaurar el texto del botón
-              alert("Error: " + JSON.stringify(err)); // Mostrar mensaje de error
-            },
-          );
-        });
-      } else {
-        console.error("Formulario no encontrado.");
-      }
-    });
-  </script>  -->
+<!-- ✅ Script que se ejecuta solo en el navegador -->
+<script type="module" is:client>
+  import {
+    configurarEnvioFormulario,
+    configurarValidacionTelefono,
+  } from "/scripts/scriptFormulario.js";
+
+  configurarEnvioFormulario("contactoForm", "template_5903hhf"); // ⚠️ Usa el ID de plantilla correcto de EmailJS
+  configurarValidacionTelefono();
+</script>
