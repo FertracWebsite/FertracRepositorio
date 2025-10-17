@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/pistones-del-motor-en-camiones.jpg"
     alt: "Pistones de vehículos de carga modernos, componentes esenciales para mantener la potencia y eficiencia del motor."
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "En los albores de la motorización, los vehículos de carga eran máquinas robustas pero sencillas. Sus motores, aunque potentes para la época, eran relativamente básicos. El corazón de estos motores, los pistones, eran piezas de fundición de hierro, diseñadas para soportar grandes cargas y temperaturas."
 tiempoLectura: "2 minutos"
 ---

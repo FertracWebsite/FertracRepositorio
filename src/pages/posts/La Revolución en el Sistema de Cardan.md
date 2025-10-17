@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/crucetas-cardan.png"
     alt: "imagen de post"
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "Las crucetas libres de mantenimiento están transformando el sistema de cardan en los vehículos. A diferencia de las convencionales, no requieren lubricación periódica gracias a su grasa sintética de alto rendimiento. Ofrecen mayor rendimiento, confiabilidad y capacidad de carga, reduciendo costos operativos y prolongando la vida útil del sistema. Con sellos mejorados y diseño optimizado, estas crucetas garantizan una operación más eficiente y segura, convirtiéndose en una excelente opción para maximizar durabilidad y rendimiento."
 tiempoLectura: "2 minutos"
 ---

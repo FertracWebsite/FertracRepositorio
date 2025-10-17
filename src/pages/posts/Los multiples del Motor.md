@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/multiple-del-motor.webp"
     alt: "imagen de multiple de motor"
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "Los múltiples del motor son piezas clave que garantizan el rendimiento y la salud de tu vehículo. El múltiple de escape protege contra el calor extremo, evitando daños y alargando la vida útil del motor, mientras que el múltiple de admisión optimiza el flujo de aire, mejora la combustión y reduce ruidos. En Fertrac contamos con repuestos de admisión y escape para que tu motor funcione siempre al máximo. ¡Asesórate con nuestros expertos!"
 tiempoLectura: "4 minutos"
 ---

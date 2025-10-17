@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/suspension-de-camión.jpg"
     alt: "imagen de post"
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "La suspensión de un camión es un sistema complejo de componentes que conectan las ruedas al chasis, amortiguando los impactos y vibraciones de la carretera. En el caso de vehículos de carga y vehículos de carga, la suspensión juega un papel crucial en la seguridad, estabilidad, el confort del conductor y la vida útil del camión."
 tiempoLectura: "1 minuto"
 ---

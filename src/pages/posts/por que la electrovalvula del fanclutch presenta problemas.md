@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/electro-válvula-fanclutch.webp"
     alt: "imagen de multiple de motor"
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "¿Tu fan clutch presenta fallas inesperadas? La electroválvula es pequeña, pero un error en su instalación puede dejarla inservible en segundos. Descubre las causas más comunes de daño y lo que debes revisar antes de montarla en tu motor. Se utilizan en todo tipo de motores, tanto electrónicos como mecánicos, y pueden variar en su forma (tipo tambor o tipo lápiz) y tipo de conector (tipo lápiz o tipo puntilla).."
 tiempoLectura: "4 minutos"
 ---

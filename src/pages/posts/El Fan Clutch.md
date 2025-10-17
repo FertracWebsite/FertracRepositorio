@@ -6,7 +6,7 @@ author: "Edwin Camilo"
 image:
     url: "/img/fan-clutch.png"
     alt: "imagen de post"
-tags: ["Articulo"] 
+tags: ["artículo"] 
 previewText: "Como ya sabemos, el fan clutch es un componente clave en el sistema de enfriamiento de un camión. Su función principal es activar el ventilador del motor cuando la temperatura alcanza niveles críticos, garantizando así un funcionamiento óptimo y evitando el sobrecalentamiento. Sin embargo, la tecnología ha evolucionado, y los fan clutch de 2 velocidades ofrecen ventajas significativas sobre los modelos tradicionales de encendido/apagado."
 tiempoLectura: "4 minutos"
 ---
