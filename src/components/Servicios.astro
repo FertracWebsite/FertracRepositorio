@@ -6,7 +6,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     
   <div class="flex flex-col items-center justify-center xl:gap-4 sm:gap-2 ">
     <h2>Nuestros Servicios</h2>
-    <p class="lg:w-2/4 sm:w-full lg:text-center">
+    <p class="sm:px:4 md:px-24 lg:w-2/4 sm:w-full md:!text-center">
       Estamos comprometidos a ofrecer soluciones completas para el mantenimiento
       y reparación de vehículos de carga.
     </p>
@@ -185,7 +185,6 @@ import BotonPrincipal from "./BotonPrincipal.astro";
       spaceBetween: 25,
       loop: true,
       speed: 1000,
-      centeredSlides: true,
       grabCursor: true,
       pagination: {
         el: ".carrusel-pagination",
@@ -203,8 +202,14 @@ import BotonPrincipal from "./BotonPrincipal.astro";
         },
         520: {
           slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+
+        768: {
+          slidesPerView: 2,
           slidesPerGroup: 1,
         },
+
         950: {
           slidesPerView: 3,
           slidesPerGroup: 1,
