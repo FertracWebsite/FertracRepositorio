@@ -32,7 +32,7 @@ export function configurarEnvioFormulario(formId, templateID) {
     try {
       const coleccion = form.dataset.coleccion;
       if (!coleccion) {
-        console.error("No se encontró el atributo data-coleccion");
+       /*  console.error("No se encontró el atributo data-colección"); */
         return;
       }
 
@@ -53,7 +53,7 @@ export function configurarEnvioFormulario(formId, templateID) {
       datos.fecha = serverTimestamp();
 
       await addDoc(collection(db, coleccion), datos);
-      console.log(`📦 Formulario enviado a la colección: ${coleccion}`);
+    /*   console.log(`📦 Formulario enviado a la colección: ${coleccion}`); */
 
       // ⚡ EmailJS
       const btn = form.querySelector("button[type=submit]");
@@ -88,11 +88,11 @@ export function configurarEnvioFormulario(formId, templateID) {
           message:
             "Tu solicitud fue recibida por Fertrac. Te daremos respuesta en el tiempo establecido.",
         });
-        console.log("📧 Correo de confirmación enviado al usuario");
+     /*    console.log("📧 Correo de confirmación enviado al usuario"); */
       }
 
       if (btn) btn.textContent = "Enviar";
-      console.log("✅ Correo enviado con EmailJS");
+     /*  console.log("Correo enviado con EmailJS"); */
 
       // 🎉 Modal de éxito
       const modal = document.getElementById("modalExito");
@@ -108,7 +108,7 @@ export function configurarEnvioFormulario(formId, templateID) {
 
       form.reset();
     } catch (error) {
-      console.error("❌ Error al enviar el formulario:", error);
+/*       console.error("Ha corrudio un error al enviar el formulario:", error); */
       alert("Ocurrió un error al enviar. Intenta de nuevo.");
     }
   };
