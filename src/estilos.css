@@ -64,3 +64,8 @@ details {
     color: #f2790c;
     background-color: white; /* Color al hacer hover */
   }
+
+.body .sk-ww-google-reviews .sk-wrapper {
+    display: grid;
+    grid-template-columns: 1;
+}
