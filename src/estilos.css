@@ -10,7 +10,7 @@
 }
 
 .titulos-h3 {
-    @apply sm:text-2xl lg:text-xl xl:text-2xl font-gotham font-bold sm:text-center text-azul lg:text-left sm:leading-none !leading-7 tracking-tighter;
+    @apply sm:text-xl lg:text-xl xl:text-2xl font-gotham font-bold sm:text-center text-azul lg:text-left sm:leading-none !leading-7 tracking-tighter;
 }
 
 
