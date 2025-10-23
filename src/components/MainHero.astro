@@ -2,30 +2,35 @@
 import BotonPrincipal from "./BotonPrincipal.astro";
 ---
 
-<section class="lg:h-[80vh] w-screen ">
-  <div class="hero-section bg-cover bg-center bg-no-repeat h-full" style="background-image: url(/img/hero.jpg);">
-  <div class="container sm:mx-0 md:mx-auto lg:mx-auto lg:h-full sm:h-[80%] flex items-center justify-start lg:px-20 lg:pt-20 xl:pt-20 2xl:pt-20 xl:pl-60 sm:p-4">
-    <div class="text-white 2xl:max-w-3xl xl:max-w-[37rem] lg:max-w-3xl  animate-fade-in-up ">
+<section class="lg:h-[80vh] w-screen relative overflow-hidden">
+  <img 
+    src="/img/hero.webp"
+    alt="Camión Kenworth en carretera"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+    loading="lazy"
+    decoding="async"
+  />
+  <div class="container sm:mx-0 md:mx-auto lg:mx-auto lg:h-full sm:h-[80%] flex items-center justify-start lg:px-20 lg:pt-20 xl:pt-20 2xl:pt-20 xl:pl-60 sm:p-4 relative z-10">
+    <div class="text-white 2xl:max-w-3xl xl:max-w-[37rem] lg:max-w-3xl animate-fade-in-up">
       <span class="bg-naranja px-4 py-2 inline-block text-xl text-white text-lato tracking-wides rounded-r-xl mb-4">
         Fertrac tiene presencia en todo el territorio Colombiano
       </span>
       <h1 class="!text-white !text-left 2xl:text-6xl xl:text-5xl lg:text-5xl sm:text-3xl md:text-[40px] font-bold leading-none mb-4">
-        Venta de respuestos originales para vehículos de carga pesada.
+        Venta de repuestos originales para vehículos de carga pesada.
       </h1>
       <p class="!text-white text-left leading-[25px] mb-6">
         Nos especializamos en ofrecer una amplia gama de repuestos originales de alta calidad para vehículos de carga, diseñados para garantizar el máximo rendimiento y la durabilidad.
       </p>
       <BotonPrincipal 
-        url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..." 
-        icon="fa-brands fa-whatsapp" 
-        text="Solicita una Cotización" 
-        estilos="bg-naranja hover:bg-white hover:text-naranja hover:border text-white mr-2 sm:!w-full lg:!w-auto"
-        estilosButton="lg:!w-auto"
+        url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
+        icon="fa-brands fa-whatsapp"
+        text="Solicita una Cotización"
+        estilos="bg-naranja hover:bg-white hover:text-naranja hover:border text-white mr-2 sm:!w-full " estilosButton="lg:!w-auto"
       />
     </div>
   </div>
-</div>
 </section>
+
 
 
 <style>
