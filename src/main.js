@@ -23,6 +23,8 @@ document.querySelectorAll('time').forEach((element) => {
     element.classList.add('fecha');
 });
 
-
+document.querySelectorAll('li').forEach((element) => {
+    element.classList.add('lista');
+});
 
 

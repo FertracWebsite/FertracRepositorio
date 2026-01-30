@@ -11,7 +11,7 @@ export default {
 			fontFamily : {
 				"lato" : ["lato", "sans-serif"],
 				"gotham" : ["gotham", "sans-serif"],
-
+				"GTWalsheim" : ["GT Walsheim", "sans-serif"],
 			},
 
 			colors : {

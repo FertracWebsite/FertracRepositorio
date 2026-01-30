@@ -1,8 +1,61 @@
 ---
 import BotonPrincipal from "./BotonPrincipal.astro";
+import MegaMenu from "./MegaMenu.astro";
+import LogosProveedores from "../components/LogosProveedores.astro";
 ---
 
-<section class="lg:h-[80vh] w-screen relative overflow-hidden">
+<!-- HERO NUEVO SUSY -->
+
+<header class="mx-auto md:px-[100px] 2xl:px-[300px]">
+
+<section class="w-full bg-white sm:px-4 sm:pt-8">
+  <div class=" 2xl:max-w-full mx-auto md:pb-8 2xl:py-16 px-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 sm:gap-4 items-center">
+
+    <!-- TEXTO -->
+    <div class="lg:space-y-6 sm:space-y-4">
+      <h1 class="2xl:text-7xl md:text-5xl sm:text-4xl !leading-[1] !text-black">
+        Venta de <span class="text-naranja">repuestos originales</span> para vehículos de carga pesada.
+      </h1>
+
+      <p class=" text-gray-700">
+        Nos especializamos en ofrecer una amplia gama de 
+        <span class="text-naranja font-black">repuestos originales de alta calidad</span> 
+        para vehículos de carga, diseñados para garantizar el máximo rendimiento y durabilidad.
+      </p>
+      
+            <BotonPrincipal 
+        url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
+        icon="fa-brands fa-whatsapp"
+        text="Solicita una Cotización"
+        estilos="bg-naranja hover:bg-white hover:text-naranja hover:border text-white  sm:!w-full " estilosButton="lg:!w-auto"
+      />
+
+      <p class="!font-black sm:!text-center lg:!text-left">
+        Presencia en todo el territorio <span class="text-naranja">Colombiano.</span>
+      </p>
+    </div>
+
+    <!-- IMAGEN -->
+    <div class="flex justify-center lg:justify-end relative ">
+      <img 
+        src="/public/img/susy-hero.png"
+        alt="Personaje Fertrac"
+        class="relative lg:w-[30rem] 2xl:w-[45rem] sm:w-[20rem] z-10 select-none"
+        loading="lazy"
+      />
+    </div>
+
+  </div>
+</section>
+
+  </div>
+
+             
+
+</header>
+
+
+<!-- <section class="lg:h-[80vh] w-screen relative overflow-hidden">
   <img 
     src="/img/hero.jpg"
     alt="Camión Kenworth en carretera"
@@ -30,7 +83,7 @@ import BotonPrincipal from "./BotonPrincipal.astro";
     </div>
   </div>
 </section>
-
+ -->
 
 
 <style>
