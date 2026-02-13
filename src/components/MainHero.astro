@@ -6,14 +6,14 @@ import LogosProveedores from "../components/LogosProveedores.astro";
 
 <!-- HERO NUEVO SUSY -->
 
-<header class="mx-auto md:px-[100px] 2xl:px-[300px]">
+<section class="mx-auto md:px-[100px] xl:px-[300px]  !mt-32 ">
 
-<section class="w-full bg-white sm:px-4 sm:pt-8">
-  <div class=" 2xl:max-w-full mx-auto md:pb-8 2xl:py-16 px-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 sm:gap-4 items-center">
+
+  <div class=" 2xl:max-w-full mx-auto md:pb-8 2xl:py-16 px-0 grid grid-cols-1 lg:grid-cols-2 lg:gap-12 sm:gap-4 lg:py-12 sm:p-4 items-center ">
 
     <!-- TEXTO -->
     <div class="lg:space-y-6 sm:space-y-4">
-      <h1 class="2xl:text-7xl md:text-5xl sm:text-4xl !leading-[1] !text-black">
+      <h1 class="2xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl !leading-[1] !text-black">
         Venta de <span class="text-naranja">repuestos originales</span> para vehículos de carga pesada.
       </h1>
 
@@ -38,7 +38,7 @@ import LogosProveedores from "../components/LogosProveedores.astro";
     <!-- IMAGEN -->
     <div class="flex justify-center lg:justify-end relative ">
       <img 
-        src="/public/img/susy-hero.png"
+        src="/img/susy-hero.png"
         alt="Personaje Fertrac"
         class="relative lg:w-[30rem] 2xl:w-[45rem] sm:w-[20rem] z-10 select-none"
         loading="lazy"
@@ -46,62 +46,8 @@ import LogosProveedores from "../components/LogosProveedores.astro";
     </div>
 
   </div>
-</section>
 
-  </div>
 
              
 
-</header>
-
-
-<!-- <section class="lg:h-[80vh] w-screen relative overflow-hidden">
-  <img 
-    src="/img/hero.jpg"
-    alt="Camión Kenworth en carretera"
-    class="absolute inset-0 w-full h-full object-cover object-center"
-    loading="lazy"
-    decoding="async"
-  />
-  <div class="container sm:mx-0 md:mx-auto lg:mx-auto lg:h-full sm:h-[80%] flex items-center justify-start lg:px-20 lg:pt-20 xl:pt-20 2xl:pt-20 xl:pl-60 sm:p-4 relative z-10">
-    <div class="text-white 2xl:max-w-3xl xl:max-w-[37rem] lg:max-w-3xl animate-fade-in-up">
-      <span class="bg-naranja px-4 py-2 inline-block text-xl text-white text-lato tracking-wides rounded-r-xl mb-4">
-        Fertrac tiene presencia en todo el territorio Colombiano
-      </span>
-      <h1 class="!text-white !text-left 2xl:text-6xl xl:text-5xl lg:text-5xl sm:text-3xl md:text-[40px] font-bold leading-none mb-4">
-        Venta de repuestos originales para vehículos de carga pesada.
-      </h1>
-      <p class="!text-white text-left leading-[25px] mb-6">
-        Nos especializamos en ofrecer una amplia gama de repuestos originales de alta calidad para vehículos de carga, diseñados para garantizar el máximo rendimiento y la durabilidad.
-      </p>
-      <BotonPrincipal 
-        url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
-        icon="fa-brands fa-whatsapp"
-        text="Solicita una Cotización"
-        estilos="bg-naranja hover:bg-white hover:text-naranja hover:border text-white mr-2 sm:!w-full " estilosButton="lg:!w-auto"
-      />
-    </div>
-  </div>
 </section>
- -->
-
-
-<style>
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateX(-1000px);
-    filter: blur(4px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
-}
-</style>

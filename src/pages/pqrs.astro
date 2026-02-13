@@ -1,13 +1,13 @@
 ---
 import BotonPrincipal from "../components/BotonPrincipal.astro";
 import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
-import LayoutSecundario from "../layouts/LayoutSecundario.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 const title = "PQRS – Peticiones, Quejas, Reclamos y Sugerencias";
 const descripcion = "Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias.";
 ---
 
-<LayoutSecundario title={title} descripcion={descripcion}>
+<MainLayout title={title} descripcion={descripcion}>
   <section class="xl:mt-48 max-w-screen-xl mx-auto sm:my-8 md:my-16 lg:px-14">
     <section>
       <div class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0">
@@ -54,4 +54,4 @@ const descripcion = "Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias.";
       />
     </div>
   </section>
-</LayoutSecundario>
+</MainLayout>

@@ -25,7 +25,7 @@ export default {
 				"md" : "768px",      
 				"lg" : "1080px",
 				"xl" : "1536px",
-				"2xl" : "1900px",	
+				"2xl" : "2000px",	
 			},
 			
 		},

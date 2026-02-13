@@ -32,7 +32,7 @@ const { descripcion } = Astro.props;
   <body class="overflow-x-hidden">
     <header class="">
       <MegaMenu 
-      positionNav=""
+      positionNav="fixed top-0 left-0 w-full z-50"
       bgNav="white" />
 
 
@@ -40,7 +40,7 @@ const { descripcion } = Astro.props;
     </div>
   
 
-    <main class=" lg:mt-0">
+    <main class="">
       <slot />
       <BotonesFlotantes/>
       <UltimosPost />

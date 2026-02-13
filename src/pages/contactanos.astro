@@ -1,13 +1,13 @@
 ---
 import BotonPrincipal from "../components/BotonPrincipal.astro";
 import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
-import LayoutSecundario from "../layouts/LayoutSecundario.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 const title = "Contáctanos – Fertrac";
 const descripcion = "Comunícate con nosotros para recibir asesoría o más información sobre repuestos para tractocamiones.";
 ---
 
-<LayoutSecundario title={title} description={descripcion}>
+<MainLayout title={title} description={descripcion}>
 
 <div
   class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
@@ -165,7 +165,7 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
           
 
 
-</LayoutSecundario>
+</MainLayout>
 
 <!-- ✅ Script que se ejecuta solo en el navegador -->
  <script type="module" src="/scripts/firebase.js"></script>

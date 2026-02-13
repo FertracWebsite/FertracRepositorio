@@ -1,7 +1,7 @@
 ---
 import BotonPrincipal from "../components/BotonPrincipal.astro";
 import FAQS from "../components/FAQS.astro";
-import LayoutSecundario from "../layouts/LayoutSecundario.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 
 const title =
   "Fertrac - Servicios de Venta de Repuestos para vehículos de carga";
@@ -9,7 +9,7 @@ const descripcion =
   "En Fertrac, ofrecemos una amplia gama de servicios relacionados con la venta de repuestos para vehículos de carga. Con más de 20 años de experiencia, garantizamos la calidad y fiabilidad de nuestros productos, incluyendo asesoría técnica y atención personalizada para ayudarte a encontrar las piezas adecuadas para tus necesidades.";
 ---
 
-<LayoutSecundario title={title} descripcion={descripcion}>
+<MainLayout title={title} descripcion={descripcion}>
   <div
     class="grid lg:grid-cols-1 sm:grid-cols-1 2xl:mx-56 lg:mx-14 xl:mt-36 sm:m-4 sm:gap-8 lg:gap-12 items-center sm:py-8"
   >
@@ -142,7 +142,7 @@ const descripcion =
   </div>
 
   <FAQS />
-</LayoutSecundario>
+</MainLayout>
 
 <style>
   /* Aplicar clip-path solo en pantallas grandes */

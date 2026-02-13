@@ -34,11 +34,11 @@
 
 
 .parrafo {
-    @apply lg:text-xl 2xl:text-2xl sm:text-lg font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tighter;
+    @apply  sm:text-lg  lg:text-xl 2xl:text-2xl  font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tighter;
 }
 
 .lista {
-  @apply lg:text-xl sm:text-lg font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tight;
+  @apply lg:text-lg sm:text-lg font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tight;
 }
 
 .faqs-titles {
