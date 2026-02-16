@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "GT Walsheim";
-  src: url("/fonts/gt-walsheim/GTWalsheim-Light.woff2") format("woff2");
+  src: url("/fuentes/gt-walsheim/GT-Walsheim-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
   font-display: swap;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "GT Walsheim";
-  src: url("/fonts/gt-walsheim/GTWalsheim-Black.woff2") format("woff2");
+  src: url("/fuentes/gt-walsheim/GT-Walsheim-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -29,16 +29,16 @@
 }
 
 .titulos-h3 {
-    @apply sm:text-xl lg:text-xl xl:text-2xl font-GTWalsheim font-bold sm:text-center text-azul lg:text-left sm:leading-none !leading-7 tracking-tighter;
+    @apply sm:text-xl lg:text-xl xl:text-2xl font-GTWalsheim font-bold sm:text-center text-azul lg:text-left sm:!leading-[1.2] xl:!leading-7 ;
 }
 
 
 .parrafo {
-    @apply  sm:text-lg  lg:text-xl 2xl:text-2xl  font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tighter;
+    @apply  sm:text-lg  lg:text-lg 2xl:text-lg  font-GTWalsheim  text-black sm:text-justify sm:!leading-[1.2] tracking-tighter;
 }
 
 .lista {
-  @apply lg:text-lg sm:text-lg font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2] tracking-tight;
+  @apply lg:text-lg sm:text-lg font-GTWalsheim text-black sm:text-justify sm:!leading-[1.2] tracking-tight;
 }
 
 .faqs-titles {
@@ -50,12 +50,18 @@
 }
 
 summary {
-    @apply font-GTWalsheim text-black text-lg  bg-orange-200 rounded-md py-2 px-4;
+    @apply font-GTWalsheim text-black text-lg  bg-orange-200 rounded-md py-2 px-4 sm:!leading-[1.2rem];
 }
 
 details {
     @apply cursor-pointer;
 }
+
+
+.titulos-nav {
+  @apply lg:text-base text-left
+}
+
 
 /* blog */
 
@@ -65,7 +71,7 @@ details {
 
 
 .titulos-blog-card {
-    @apply sm:text-2xl lg:text-lg xl:text-2xl font-GTWalsheim font-extrabold sm:text-left lg:text-left sm:leading-none text-azul !leading-7 tracking-tighter py-2;
+    @apply sm:text-2xl lg:text-lg xl:text-2xl font-GTWalsheim font-extrabold sm:text-left lg:text-left text-azul sm:!leading-[1.2] !leading-7 tracking-tighter py-2;
 }
 
 .subtitulos-blog {

@@ -23,10 +23,10 @@ const descripcion = "Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias.";
     <!-- 🟢 Modal de éxito -->
     <div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
       <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
-        <h3 class="text-lg font-semibold !text-center">¡Formulario enviado con éxito!</h3>
+        <h3 class="text-lg !text-center">¡Formulario enviado con éxito!</h3>
         <p class="!text-gray-600 !text-center">
           Tu información ha sido recibida correctamente. <br />
-          Nuestro equipo la revisará y se pondrá en contacto contigo en caso necesario.
+          Nuestro equipo la revisará y se pondrá en contacto contigo.
         </p>
         <div id="cerrarModal" class="mt-4">
           <BotonPrincipal
@@ -47,7 +47,7 @@ const descripcion = "Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias.";
         tituloForm="PQRS"
         descripcionForm="En este espacio podrás registrar tus Peticiones, Quejas, Reclamos o Sugerencias (PQRS). Nuestro compromiso es escucharte y brindarte una respuesta clara y oportuna."
         imgForm="/img/pqrs-imagen.jpg"
-        mostraridentificacion={true}
+        mostrarIdentificacion={true}
         mostrarEmpresa={true}
         mostrarTipoPQRS={true}
         mostrarArchivo={true}
@@ -55,3 +55,4 @@ const descripcion = "Envíanos tus Peticiones, Quejas, Reclamos o Sugerencias.";
     </div>
   </section>
 </MainLayout>
+

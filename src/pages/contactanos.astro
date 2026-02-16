@@ -10,7 +10,7 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 <MainLayout title={title} description={descripcion}>
 
 <div
-  class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
+  class="xl:mt-48 sm:pt-8 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto  sm:m-4 lg:pt-0"
 >
   <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
     Estamos aqui para ti, Contáctanos en cualquier momento
@@ -22,39 +22,14 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 
 <section class="flex flex-col  max-lg:max-w-3xl mx-auto items-center ">
     
-  <div class="mb-4 border-b border-gray-200 w-full">
+<!--   <div class="mb-4 border-b border-gray-200 w-full">
     <ul
       class="flex md:flex-wrap sm:flex-wrap text-sm font-medium text-center justify-center"
       id="myTab"
       data-tabs-toggle="#myTabContent"
       role="tablist"
     >
-<!--       <p class="flex items-center text-sm text-gray-500 dark:text-gray-400">
-        <button
-          data-popover-target="popover-description"
-          data-popover-placement="bottom-end"
-          type="button"
-          ><i class="fa-solid fa-circle-question"></i><span class="sr-only"
-            >Show information</span
-          ></button
-        >
-      </p> -->
-      <div
-        data-popover
-        id="popover-description"
-        role="tooltip"
-        class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400"
-      >
-        <div class="p-3 space-y-2">
-          <h3 class="text-gray-900 !text-base !font-lato font-black">
-            Selecciona el formulario que necesites y envíanos tu solicitud.
-          </h3>
-          <p class="!text-base !font-lato">
-            Ponemos a tu disposición canales directos con nuestro equipo para brindarte una atención ágil y especializada, ya sea para gestionar garantías o coordinar acciones con el área de mercadeo.
-          </p>
-        </div>
-        <div data-popper-arrow></div>
-      </div>
+
 
       <li class="me-2" role="presentation">
         <button
@@ -93,11 +68,11 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
       </li>
 
     </ul>
-  </div>
+  </div> -->
 
 <div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
   <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
-    <h3 class="text-lg font-semibold  !text-center">¡Formulario enviado con éxito!</h3>
+    <h3 class="text-lg !text-center">¡Formulario enviado con éxito!</h3>
     <p class=" !text-gray-600 !text-center">Tu información ha sido recibida correctamente. <br> Nuestro equipo la revisará y se pondrá en contacto contigo en caso necesario.</p>
     <div id="cerrarModal" class="mt-4">
       <BotonPrincipal text="Cerrar" icon="hidden" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white" estilosButton="!w-auto"/>
@@ -107,54 +82,22 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 </div>
 
 
-  <div id="myTabContent" class="">
+<!--   <div id="myTabContent" class=""> -->
 
 
-<div id="mercadeo" role="tabpanel" aria-labelledby="mercadeo-tab" class="hidden">
+<div id="mercadeo">
   <FormularioEstructura
     id="mercadeoForm"
-    dataColeccion="formulario_mercadeo"
    tituloForm="Area de Mercadeo"
   descripcionForm="Impulsamos nuestra presencia con estrategias innovadoras para conectar eficazmente con nuestros clientes y destacar en el mercado."
   imgForm="/img/area-mercadeo.jpg"
-    mostraridentificacion={true}
+    mostrarIdentificacion={true}
     mostrarEmpresa={true}
+    mostrarAreaDirigida={true}
     mostrarTipoPQRS={false}
     mostrarArchivo={true}
   />
 </div>
-
- <div id="garantias" role="tabpanel" aria-labelledby="garantias-tab" class="hidden" >
-
-<FormularioEstructura
-  id = "garantiasForm"
-  dataColeccion="formulario_garantias"
-  tituloForm="Gestión de Garantias"
-  descripcionForm="Aseguramos que cualquier inconveniente con los repuestos adquiridos sea atendido de manera eficiente y profesional."
-  imgForm="/img/gestion-garantias.jpg"
-  mostraridentificacion={true}
-  mostrarEmpresa={true}
-  mostrarTipoPQRS={false} 
-  mostrarArchivo={true}
-
-/>
- </div>
-
-
-  <div id="rrhh" role="tabpanel" aria-labelledby="rrhh-tab" class="hidden" >
-
-<FormularioEstructura
-  id = "rrhhForm"
-  dataColeccion="formulario_rrhh"
-  tituloForm="Gestión Humana"
-  descripcionForm="A través de este formulario podrás postularte, enviar tu hoja de vida o comunicarte con nuestro equipo de gestión humana."
-  imgForm="/img/recursos-humanos.jpg"
-  mostraridentificacion={true}
-  mostrarEmpresa={true}
-  mostrarTipoPQRS={false}
-
-/>
- </div>
 
 
   </div>

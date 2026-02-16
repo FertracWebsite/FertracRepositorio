@@ -4,6 +4,8 @@ import { collection, addDoc, serverTimestamp } from "https://www.gstatic.com/fir
 import { ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-storage.js";
 
 // --- Inicializar EmailJS ---
+
+
 (function () {
   emailjs.init("zu2IlUo6ajuBYDTzR"); // 🔑 reemplaza con tu Public Key de EmailJS
 })();
@@ -21,6 +23,14 @@ async function subirArchivo(file) {
   }
 }
 
+const coleccionesPorArea = {
+  Gestión_Humana: "Gestión Humana",
+  Gestión_Garantias: "Gestión de Garantias",
+  Mercadeo: "Mercadeo",
+  Ventas: "Ventas",
+}
+
+
 // --- Configurar envío del formulario ---
 export function configurarEnvioFormulario(formId, templateID) {
   const form = document.getElementById(formId);
@@ -30,7 +40,13 @@ export function configurarEnvioFormulario(formId, templateID) {
     event.preventDefault();
 
     try {
-      const coleccion = form.dataset.coleccion;
+      // Detectar área seleccionada
+const area = form.querySelector("select[name=area]")?.value;
+
+// Elegir colección según el área
+const coleccion =
+  coleccionesPorArea[area] || form.dataset.coleccion; // fallback
+
       if (!coleccion) {
        /*  console.error("No se encontró el atributo data-colección"); */
         return;
@@ -85,8 +101,6 @@ export function configurarEnvioFormulario(formId, templateID) {
           tipo_queja: datos.tipo_queja,
           tiempo_respuesta: tiempo_respuesta,
           email: datos.email,
-          message:
-            "Tu solicitud fue recibida por Fertrac. Te daremos respuesta en el tiempo establecido.",
         });
      /*    console.log("📧 Correo de confirmación enviado al usuario"); */
       }

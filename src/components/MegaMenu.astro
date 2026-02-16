@@ -5,7 +5,7 @@ const {positionNav} = Astro.props;
 const {bgNav} = Astro.props;
 ---
 
-<nav class={`mx-auto flex items-center justify-between md:px-[100px] xl:px-[300px]  sm:p-6 md:py-8 sm:bg-naranja lg:bg-white ${positionNav} ${bgNav} z-50 `}>
+<nav class={`mx-auto flex items-center justify-between md:px-4 lg:px-8 xl:px-24 2xl:px-[300px]  sm:p-6 md:py-8 sm:bg-naranja lg:bg-white border-b border-white ${positionNav} ${bgNav} z-50 `}>
   <a href="/">
      <img src="/img/logo-fertrac-naranja.png" alt="Logo Fertrac naranja" class="md:w-44 2xl:w-56 sm:w-36 lg:block sm:hidden"/>
    <img src="/img/logo-fertrac-blanco.png" alt="Logo Fertrac blanco" class="md:w-44 2xl:w-56 sm:w-36 lg:hidden sm:block"/>
@@ -13,7 +13,7 @@ const {bgNav} = Astro.props;
 
 
   <div class="sm:hidden lg:block">
-    <ul class="flex items-center justify-center   gap-4">
+    <ul class="flex items-center justify-center  lg:gap-0 xl:gap-4">
 
         <!-- INICIO -->
          
@@ -31,14 +31,14 @@ const {bgNav} = Astro.props;
         <i class="fa-solid fa-caret-down"></i>
       </a>
         <div
-          class="absolute w-[1000px] top-0 left-[-440px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-          <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
+          class="absolute w-[1000px] top-0 lg:left-[-240px]  xl:left-[-440px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          <div class="relative w-full p-6 bg-white shadow-xl top-8 rounded-xl">
             <div
               class="w-10 h-10 bg-white transform rotate-45 absolute top-0 left-[300px] z-0 translate-x-0 transition-transform group-hover:translate-x-[12rem] duration-500 ease-in-out rounded-sm">
             </div>
 
             <div class="relative z-10 justify-between">
-              <div class="grid items-stretch grid-cols-3 gap-6">
+              <div class="grid items-stretch grid-cols-3 gap-8">
 
                 <div>
 
@@ -50,9 +50,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-blue-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/ios-filled/FFFFFF/engine.png" alt="icono de un motor"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Motor
-                            <p class="!text-base  !">Potencia y rendimiento para un viaje sin límites.</p>
+                            <p class="!text-base !font-light">Potencia y rendimiento para <br> un viaje sin límites.</p>
                           </div>
                         </a>
                       </li>
@@ -63,9 +63,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-orange-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-goofy-line-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-line-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-line-kerismaker"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Tren Delantero
-                            <p class="!text-base -light !">Precisión y control para una conducción segura.</p>
+                            <p class="!text-base !text-left !font-light">Precisión y control para una conducción segura.</p>
                           </div>
                         </a>
                       </li>
@@ -76,9 +76,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-slate-900 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Sistema de Frenado
-                            <p class="!text-base -light !">Seguridad y control, reduciendo la velocidad de manera eficiente.</p>
+                            <p class="!text-base !text-left !font-light">Seguridad y control, reduciendo la velocidad de manera eficiente.</p>
                           </div>
                         </a>
                       </li>
@@ -91,9 +91,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-fuchsia-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-clutch-disc-equipments-icongeek26-glyph-icongeek26.png" alt="icono de un embrague"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Embrague y Transmisión
-                            <p class="!text-base -light !">Conexión y transferencia de potencia del motor a las ruedas.</p>
+                            <p class="!text-base !text-left !font-light">Conexión y transferencia de potencia del motor a las ruedas.</p>
                           </div>
                         </a>
                       </li>
@@ -110,9 +110,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-red-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-bottle-travel-accessories-icongeek26-glyph-icongeek26.png" alt="external-bottle-travel-accessories-icongeek26-glyph-icongeek26"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Filtración
-                            <p class="!text-base -light !">Sistemas de tu camión libres de impurezas.</p>
+                            <p class="!text-base !text-left !font-light">Sistemas de tu camión libres de impurezas.</p>
                           </div>
                         </a>
                       </li>
@@ -124,9 +124,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-yellow-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-suspension-equipments-icongeek26-glyph-icongeek26-2.png" alt="icono de una suspensión"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Suspensión
-                            <p class="!text-base -light !">Garantiza una conducción cómoda y segura.</p>
+                            <p class="!text-base !text-left !font-light">Garantiza una conducción cómoda y segura.</p>
                           </div>
                         </a>
                       </li>
@@ -138,9 +138,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-green-500 rounded-xl">
                             <img width="24" height="24" src="/img/cardan-menu.png" alt="icono de un cardan"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Cardan
-                            <p class="!text-base -light !">Distribución de la fuerza del motor a las ruedas.</p>
+                            <p class="!text-base !text-left !font-light">Distribución de la fuerza del motor a las ruedas.</p>
                           </div>
                         </a>
                       </li>
@@ -151,9 +151,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-green-900 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Diferencial
-                            <p class="!text-base -light !">Componente vital del sistema de transmisión.</p>
+                            <p class="!text-base !text-left !font-light">Componente vital del sistema de transmisión.</p>
                           </div>
                         </a>
                       </li>
@@ -174,9 +174,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-teal-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/ios-filled/100/FFFFFF/heating.png" alt="icono representando un filtro de un camion"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Sistema de Refrigeración
-                            <p class="!text-base -light !">regula la temperatura del motor, evitando sobrecalentamiento.</p>
+                            <p class="!text-base !text-left !font-light">regula la temperatura del motor, evitando sobrecalentamiento.</p>
                           </div>
                         </a>
                       </li>
@@ -189,9 +189,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-lime-300 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-ball-bearing-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un rodamiento"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Rodamientos
-                            <p class="!text-base -light !">Durabilidad, estabilidad y eficiencia asegurada.</p>
+                            <p class="!text-base !text-left !font-light">Durabilidad, estabilidad y eficiencia asegurada.</p>
                           </div>
                         </a>
                       </li>
@@ -202,9 +202,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-slate-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/glyph-neue/64/FFFFFF/air-element.png" alt="icono de sistema de aire"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Sistema de Aire
-                            <p class="!text-base -light !">Componente vital del sistema de transmisión.</p>
+                            <p class="!text-base !text-left !font-light">Componente vital del sistema de transmisión.</p>
                           </div>
                         </a>
                       </li>
@@ -215,9 +215,9 @@ const {bgNav} = Astro.props;
                           <div class="p-2 bg-violet-500 rounded-full">
                             <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings-3.png" alt="icono de un engranaje"/>
                           </div>
-                          <div>
+                          <div class="titulos-nav">
                             Otras especialidades
-                            <p class="!text-base -light !">Repuestos para el óptimo desempeño de tu camión.</p>
+                            <p class="!text-base !text-left !font-light">Repuestos para el óptimo desempeño de tu camión.</p>
                           </div>
                         </a>
                       </li>
@@ -241,14 +241,14 @@ const {bgNav} = Astro.props;
         <i class="fa-solid fa-caret-down"></i>
       </a>
         <div
-          class="absolute w-[800px] top-0 left-[-335px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+          class="absolute w-[1000px] top-0 left-[-335px] transition group-hover:translate-y-5 translate-y-0 opacity-0 invisible group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
           <div class="relative w-full p-6 bg-white shadow-xl top-6 rounded-xl">
             <div
-              class="absolute top-0 z-0 w-10 h-10  right-[405px] transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
+              class="absolute top-0 z-0 w-10 h-10  right-[605px] transition-transform duration-500 ease-in-out transform rotate-45 -translate-x-4 bg-white rounded-sm group-hover:translate-x-3">
             </div>
 
             <div class="relative z-10 justify-between">
-              <div class="grid items-stretch grid-cols-2 gap-6">
+              <div class="grid items-stretch grid-cols-2 gap-8">
                 <div>
                   <ul class=" text-[15px] space-y-4">
 
@@ -258,9 +258,9 @@ const {bgNav} = Astro.props;
                         <div class="p-2 bg-blue-500 rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                         </div>
-                        <div>
+                        <div class="titulos-nav">
                           Venta de repuestos para vehículos de carga
-                          <p class="!text-base -light !">Calidad, confianza y marcas lideres.</p>
+                          <p class="!text-base !text-left !font-light">Calidad, confianza y marcas lideres.</p>
                         </div>
                       </a>
                     </li>
@@ -273,9 +273,9 @@ const {bgNav} = Astro.props;
                         <div class="p-2 bg-fuchsia-500  rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
                         </div>
-                        <div>
+                        <div class="titulos-nav">
                           Brochure Corporativo
-                          <p class="!text-base -light !">
+                          <p class="!text-base !text-left !font-light">
 Soluciones en repuestos para tractocamiones.</p>
                         </div>
                       </a>
@@ -295,9 +295,9 @@ Soluciones en repuestos para tractocamiones.</p>
                         <div class="p-2 bg-green-500 rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
                         </div>
-                        <div>
+                        <div class="titulos-nav">
                           Solicitud de Credito
-                          <p class="!text-base -light !">Opciones de credito flexibles y convenientes.</p>
+                          <p class="!text-base !text-left !font-light">Opciones de credito flexibles y convenientes.</p>
                         </div>
                       </a>
                     </li>
@@ -308,9 +308,9 @@ Soluciones en repuestos para tractocamiones.</p>
                         <div class="p-2 bg-yellow-500 rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
                         </div>
-                        <div>
+                        <div class="titulos-nav">
                           Asesoria Tecnica
-                          <p class="!text-base -light !">Soluciones rapidas y apoyo de primer mano.</p>
+                          <p class="!text-base !text-left !font-light">Soluciones rapidas y apoyo de primer mano.</p>
                         </div>
                       </a>
                     </li>
@@ -369,8 +369,8 @@ Soluciones en repuestos para tractocamiones.</p>
                           <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/form.png" alt="checked-truck"/>
                         </div>
                         <div>
-                          <span >Formulario de Garantias, Mercadeo y Gestión Humana.</span>
-                          <p class="!text-base -light !">Nuestro equipo está preparado para brindarte una atención ágil, profesional y personalizada en cada área.</p>
+                          <span class="titulos-nav" >Formulario de Garantias, Mercadeo y Gestión Humana.</span>
+                          <p class="!text-base !text-left !font-light">Nuestro equipo está preparado para brindarte una atención ágil, profesional y personalizada en cada área.</p>
                         </div>
                       </a>
                     </li>
@@ -381,9 +381,9 @@ Soluciones en repuestos para tractocamiones.</p>
                         <div class="p-2 bg-orange-500 rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/submit-document.png" alt="checked-truck"/>
                         </div>
-                        <div>
+                        <div class="titulos-nav">
                           Formulario de PQRS
-                          <p class="!text-base -light !">Valoramos tu opinión y trabajamos continuamente para mejorar nuestros servicios.</p>
+                          <p class="!text-base !text-left !font-light">Valoramos tu opinión y trabajamos continuamente <br> para mejorar nuestros servicios.</p>
                         </div>
                       </a>
                     </li>
@@ -462,28 +462,28 @@ Soluciones en repuestos para tractocamiones.</p>
 
 
         <div id="mobile-menu" class="hidden w-screen min-h-screen bg-naranja lg:hidden fixed z-40">
-      <div class="px-4 pt-2">
-        <ul class="flex flex-col items-start justify-start w-full gap-2  border-b py-2">
+      <div class="p-4 sm_menu">
+        <ul class="flex flex-col items-start justify-start w-full gap-2  border-b pb-4">
           <li class="relative w-full">
-            <a href="/" class="flex items-center text-base text-white w-full p-2 cursor-pointer active:bg-gray-100 active:rounded-xl dropdown-toggle"><i class="fa-solid fa-house mr-4"></i>Inicio</a>
+            <a href="/" class="flex items-center  text-white w-full p-2 cursor-pointer active:bg-gray-100 active:rounded-xl dropdown-toggle !text-lg"><i class="fa-solid fa-house mr-4"></i>Inicio</a>
 
           </li>
 
           <li class="relative w-full">
             <button
-              class="flex items-center text-base text-white w-full p-2 dropdown-toggle"><i class="fa-solid fa-gear mr-4"></i>
+              class="flex items-center text-white w-full p-2 dropdown-toggle"><i class="fa-solid fa-gear mr-4"></i>
               Especialidades
               <i class="rotate fa-solid fa-caret-down ml-4"></i>
             </button>
 
             
-            <div class="hidden w-full py-4 bg-white rounded-lg dropdown">
+            <div class="hidden w-full p-4 bg-white rounded-lg dropdown">
               <div class="relative z-10">
-                <div class="content grid items-stretch grid-cols-3">
+                <div class="content grid items-stretch grid-cols-3 gap-4">
 
-                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                    <ul class="text-center flex flex-col  gap-4">
                       <li class="">
-                        <a href="/especialidades/motor/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/motor/" class="flex items-center flex-col justify-left  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-blue-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/100/FFFFFF/engine.png" alt="icono de un motor"/>
                           </div>
@@ -493,7 +493,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
   
                       <li class="">
-                        <a href="/especialidades/tren-delantero/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/tren-delantero/" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-orange-500 rounded-xl">
                            <img width="16" height="16" src="https://img.icons8.com/external-goofy-solid-kerismaker/50/FFFFFF/external-Suspension-car-auto-parts-goofy-solid-kerismaker.png" alt="external-Suspension-car-auto-parts-goofy-solid-kerismaker"/>
                           </div>
@@ -502,7 +502,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
                       
                       <li class="">
-                        <a href="/especialidades/sistema-de-frenado/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/sistema-de-frenado/" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-slate-900 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-break-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un freno de camión"/>
                           </div>
@@ -511,7 +511,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li> 
 
                       <li class="">
-                        <a href="/especialidades/embrague-y-transmisión/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/embrague-y-transmisión/" class="flex items-center justify-between flex-col text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-fuchsia-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-clutch-disc-equipments-icongeek26-glyph-icongeek26.png" alt="icono de un embrague de transmisión"/>
                           </div>
@@ -523,9 +523,9 @@ Soluciones en repuestos para tractocamiones.</p>
 
                     </ul>
                  
-                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                    <ul class=" text-center flex flex-col gap-4">
                       <li class="">
-                        <a href="/especialidades/filtración/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/filtración/" class="flex items-center flex-col justify-left  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-red-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-bottle-travel-accessories-icongeek26-glyph-icongeek26.png" alt="">
                           </div>
@@ -535,7 +535,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
   
                       <li class="">
-                        <a href="/especialidades/suspensión/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/suspensión/" class="flex items-center justify-between flex-col text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-yellow-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-suspension-equipments-icongeek26-glyph-icongeek26-2.png" alt="icono de una suspensión"/>
                           </div>
@@ -545,7 +545,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
   
                       <li class="">
-                        <a href="/especialidades/cardan/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/cardan/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-green-500 rounded-full">
                             <img class="w-4" height="h-4" src="/img/cardan-menu.png" alt="icono de un diferencial"/>
                           </div>
@@ -555,7 +555,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
   
                       <li class="">
-                        <a href="/especialidades/diferencial/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/diferencial/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-green-900 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-obvious-glyph-kerismaker/96/FFFFFF/external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6.png" alt="external-accessories-car-auto-parts-glyph-obvious-glyph-kerismaker-6"/>
                           </div>
@@ -566,9 +566,9 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
                     </ul>
 
-                    <ul class="text-[12px] text-center flex flex-col gap-2">
+                    <ul class=" text-center flex flex-col gap-4">
                       <li class="">
-                        <a href="/especialidades/sistema-de-refrigeración/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/sistema-de-refrigeración/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-teal-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/100/FFFFFF/heating.png" alt="icono representando un filtro de un camion"/>
                           </div>
@@ -577,7 +577,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
 
                       <li class="">
-                        <a href="/especialidades/rodamientos/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/rodamientos/" class="flex items-center justify-between flex-col   text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-lime-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/64/FFFFFF/external-ball-bearing-car-parts-and-service-icongeek26-glyph-icongeek26.png" alt="icono de un rodamiento"/>
                           </div>
@@ -586,7 +586,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
 
                       <li class="">
-                        <a href="/especialidades/sistema-de-aire/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/sistema-de-aire/" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-slate-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/air-element.png" alt="icono de sistema de aire"/>
                           </div>
@@ -595,7 +595,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li> 
                     
                       <li class="">
-                        <a href="/especialidades/otras-especialidades/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/especialidades/otras-especialidades/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-violet-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/settings-3.png" alt="icono de un engranaje"/>
                           </div>
@@ -626,11 +626,11 @@ Soluciones en repuestos para tractocamiones.</p>
             <div class="hidden w-full py-4 bg-white rounded-lg dropdown">
               <div class="relative z-10">
     
-                <div class="">
-                    <ul class="gap-y-2.5 text-[12px] text-center grid grid-cols-2 grid-rows-2">
+                <div class="sm_menu">
+                    <ul class="gap-y-2.5  text-center grid grid-cols-2 grid-rows-2">
 
                       <li class="">
-                        <a href="/servicios/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/servicios/" class="flex items-center flex-col justify-left  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-blue-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                           </div>
@@ -640,7 +640,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
 
                       <li class="">
-                        <a href="/servicios/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/servicios/" class="flex items-center flex-col justify-left  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-green-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
                           </div>
@@ -650,7 +650,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
 
                       <li class="">
-                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-fuchsia-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
                           </div>
@@ -662,7 +662,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       
 
                       <li class="">
-                        <a href="/servicios/" class="flex items-center justify-between flex-col  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/servicios/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-yellow-500  rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
                           </div>
@@ -682,7 +682,7 @@ Soluciones en repuestos para tractocamiones.</p>
           </li>
 
           <li class="relative w-full">
-            <a href="/sobre-nosotros/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-solid fa-people-group mr-4"></i>
+            <a href="/sobre-nosotros/" class="flex items-center w-full p-2  text-white dropdown-toggle !text-lg"><i class="fa-solid fa-people-group mr-4"></i>
               Sobre Nosotros </a>
           </li>
 
@@ -695,11 +695,11 @@ Soluciones en repuestos para tractocamiones.</p>
             <div class="hidden w-full py-4 bg-white rounded-lg dropdown">
               <div class="relative z-10">
     
-                <div class="">
-                    <ul class="gap-y-2.5 text-[12px] text-center grid grid-cols-2">
+                <div class="sm_menu">
+                    <ul class="gap-y-2.5  text-center grid grid-cols-2">
 
                       <li class="">
-                        <a href="/contactanos/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/contactanos/" class="flex items-center flex-col justify-left text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-blue-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/submit-document.png" alt="checked-truck"/>
                           </div>
@@ -709,7 +709,7 @@ Soluciones en repuestos para tractocamiones.</p>
                       </li>
 
                       <li class="">
-                        <a href="/pqrs/" class="flex items-center flex-col justify-left  font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/pqrs/" class="flex items-center flex-col justify-left text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-green-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/form.png" alt="icono de una billetera"/>
                           </div>
@@ -729,7 +729,7 @@ Soluciones en repuestos para tractocamiones.</p>
 
 
           <li class="relative w-full">
-            <a href="/blog/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-regular fa-newspaper mr-4"></i>
+            <a href="/blog/" class="flex items-center w-full p-2  text-white dropdown-toggle sm:!text-lg"><i class="fa-regular fa-newspaper mr-4"></i>
               Blog </a>
           </li>
 
@@ -737,22 +737,22 @@ Soluciones en repuestos para tractocamiones.</p>
 
         <ul class="pt-4">
           <li class="relative w-full">
-            <a href="https://www.facebook.com/fertac.col?mibextid=9R9pXO" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-facebook mr-4"></i>
+            <a href="https://www.facebook.com/fertac.col?mibextid=9R9pXO" class="flex items-center w-full p-2  text-white dropdown-toggle !text-lg"><i class="fa-brands fa-facebook mr-4"></i>
               Facebook </a>
           </li>
 
           <li class="relative w-full">
-            <a href="https://instagram.com/fertrac.col?igshid=MzMyNGUyNmU2YQ==" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-instagram mr-4"></i>
+            <a href="https://instagram.com/fertrac.col?igshid=MzMyNGUyNmU2YQ==" class="flex items-center w-full p-2  text-white dropdown-toggle !text-lg"><i class="fa-brands fa-instagram mr-4"></i>
               Instagram </a>
           </li>
 
           <li class="relative w-full">
-            <a href="https://www.tiktok.com/@fertrac.col?_t=8n0duv13nev&_r=1" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-tiktok mr-4"></i>
+            <a href="https://www.tiktok.com/@fertrac.col?_t=8n0duv13nev&_r=1" class="flex items-center w-full p-2  text-white dropdown-toggle !text-lg"><i class="fa-brands fa-tiktok mr-4"></i>
               TikTok </a>
           </li>
 
           <li class="relative w-full">
-            <a href="https://www.linkedin.com/company/fertracsas/" class="flex items-center w-full p-2  text-white dropdown-toggle"><i class="fa-brands fa-linkedin-in mr-4"></i>
+            <a href="https://www.linkedin.com/company/fertracsas/" class="flex items-center w-full p-2  text-white dropdown-toggle sm:!text-lg"><i class="fa-brands fa-linkedin-in mr-4"></i>
               LinkedIn </a>
           </li>
 
@@ -840,6 +840,9 @@ ul {
   transform-origin: bottom left;
 }
 
+.sm_menu a {
+  font-size: 16px;
+}
 </style>
 
  <script>

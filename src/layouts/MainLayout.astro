@@ -24,35 +24,31 @@ const { descripcion } = Astro.props;
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="https://use.typekit.net/nfy3ymk.css">
+    <link rel="stylesheet" href="https://use.typekit.net/nfy3ymk.css" />
     <script src="https://static.elfsight.com/platform/platform.js" async
     ></script>
   </head>
 
   <body class="overflow-x-hidden">
     <header class="">
-      <MegaMenu 
-      positionNav="fixed top-0 left-0 w-full z-50"
-      bgNav="white" />
-
-
-        </header>
-    </div>
-  
-
-    <main class="">
-      <slot />
-      <BotonesFlotantes/>
-      <UltimosPost />
-    </main>
-
-    <footer>
-      <Footer />
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-    ></script>
-    <script src="/src/main.js"></script>
-    <script src="flowbite/dist/flowbite.min.js"></script>
+      <MegaMenu positionNav="fixed top-0 left-0 w-full z-50" bgNav="white" />
+    </header>
   </body>
+
+  <main class="sm:mt-[90px] lg:mt-0">
+    <slot />
+    <BotonesFlotantes />
+    <UltimosPost />
+  </main>
+
+  <footer>
+    <Footer />
+  </footer>
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+  ></script>
+  <script src="/src/main.js"></script>
+  <script src="flowbite/dist/flowbite.min.js"></script>
 </html>
