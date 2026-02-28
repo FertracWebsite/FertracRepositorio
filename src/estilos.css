@@ -8,7 +8,7 @@
   src: url("/fuentes/gt-walsheim/GT-Walsheim-Light.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -16,25 +16,23 @@
   src: url("/fuentes/gt-walsheim/GT-Walsheim-Black.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
-
-
 
 .titulos {
-    @apply sm:text-[30px] md:text-[60px] text-azul lg:text-4xl xl:text-5xl font-GTWalsheim font-black sm:text-left sm:leading-none lg:text-left tracking-tight;
+    @apply sm:text-[30px] md:text-[48px] text-azul lg:text-4xl xl:text-4xl   font-GTWalsheim font-black sm:text-left sm:leading-none lg:text-left tracking-tight;
 }
 .subtitulos {
-    @apply sm:text-2xl lg:text-3xl xl:text-4xl font-GTWalsheim font-black text-azul sm:text-justify lg:text-left sm:leading-none;
+    @apply sm:text-2xl lg:text-2xl xl:text-3xl font-GTWalsheim font-black text-azul sm:text-justify lg:text-left sm:leading-none  xl:!leading-7;
 }
 
 .titulos-h3 {
-    @apply sm:text-xl lg:text-xl xl:text-2xl font-GTWalsheim font-bold sm:text-center text-azul lg:text-left sm:!leading-[1.2] xl:!leading-7 ;
+    @apply sm:text-xl lg:text-xl xl:text-2xl font-GTWalsheim font-black sm:text-center text-azul lg:text-left sm:!leading-[1.2] xl:!leading-7 ;
 }
 
 
 .parrafo {
-    @apply  sm:text-lg  lg:text-lg 2xl:text-lg  font-GTWalsheim  text-black sm:text-justify sm:!leading-[1.2] tracking-tighter;
+    @apply  sm:text-lg  lg:text-lg 2xl:text-lg  font-GTWalsheim font-light text-black sm:text-justify sm:!leading-[1.2]  tracking-normal;
 }
 
 .lista {
@@ -42,7 +40,7 @@
 }
 
 .faqs-titles {
-    @apply lg:text-lg sm:text-lg font-GTWalsheim font-normal text-black sm:text-justify
+    @apply lg:text-lg sm:text-lg font-GTWalsheim  text-black sm:text-justify
 }
 
 .introduce {
@@ -78,8 +76,17 @@ details {
     @apply !leading-7 tracking-tighter lg:text-lg xl:text-2xl;
 }
 
+dt, dd {
+  @apply font-GTWalsheim sm:!leading-[1.2] tracking-tighter;
+}
 
 
+h1 { @apply titulos; }
+h2 { @apply subtitulos; }
+h3 { @apply titulos-h3; }
+p { @apply parrafo; }
+li { @apply lista; }
+time { @apply fecha; }
 
 /* HOVER MEGAMENU */
 
@@ -93,6 +100,12 @@ details {
     color: #f2790c;
     background-color: white; /* Color al hacer hover */
   }
+
+
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
 
 .container {
   width: 100%;

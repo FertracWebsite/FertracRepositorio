@@ -1,46 +1,60 @@
 ---
-import AsesoriaEspecialidades from '../components/AsesoriaEspecialidades.astro';
-import MegaMenu from '../components/MegaMenu.astro'
-import Footer from '../components/Footer.astro'
-import BotonesFlotantes from '../components/BotonesFlotantes.astro';
+import AsesoriaEspecialidades from "../components/AsesoriaEspecialidades.astro";
+import MegaMenu from "../components/MegaMenu.astro";
+import Footer from "../components/Footer.astro";
+import BotonesFlotantes from "../components/BotonesFlotantes.astro";
 import "../estilos.css";
-
-
 
 const { title } = Astro.props;
 const { descripcion } = Astro.props;
 ---
 
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="descripcion" content={descripcion} />
-    <meta name="generator" content={Astro.generator}/> 
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <link rel="icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="/src/estilos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+        <link
+      rel="preload"
+      href="/fuentes/gt-walsheim/GT-Walsheim-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fuentes/gt-walsheim/GT-Walsheim-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+  </head>
 
-<body class="overflow-x-hidden">
+  <body class="overflow-x-hidden font-GTWalsheim">
     <header>
-        <MegaMenu positionNav="fixed top-0 left-0 w-full z-50"/> 
-      </header>
-  
-      <main class="sm:mt-[90px] lg:mt-0">
-          <slot />
-          <BotonesFlotantes/>
-          <AsesoriaEspecialidades/>
-      </main>
-      
-      
-      <footer>
-            <Footer/>
-      </footer>
+      <MegaMenu positionNav="fixed top-0 left-0 w-full z-50" />
+    </header>
 
-      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <main class="sm:mt-[90px] md:mt-[120px] lg:mt-0">
+      <slot />
+      <BotonesFlotantes />
+      <AsesoriaEspecialidades />
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    ></script>
     <script src="/src/main.js"></script>
-    <script src="flowbite/dist/flowbite.min.js"></script>
-</body>
+  </body>
 </html>

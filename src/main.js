@@ -1,4 +1,4 @@
-document.querySelectorAll('h1').forEach((element) => {
+/* document.querySelectorAll('h1').forEach((element) => {
     element.classList.add('titulos');
 });
 
@@ -27,4 +27,4 @@ document.querySelectorAll('li').forEach((element) => {
     element.classList.add('lista');
 });
 
-
+ */

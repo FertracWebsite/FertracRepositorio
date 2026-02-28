@@ -2,15 +2,13 @@
 export default {
 	
 	content: [
-		'./node_modules/flowbite/**/*.js',
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue }'
 	],
 	
 	theme: {
 		extend: {
 			fontFamily : {
-				"lato" : ["lato", "sans-serif"],
-				"gotham" : ["gotham", "sans-serif"],
+
 				"GTWalsheim" : ["GT Walsheim", "sans-serif"],
 			},
 
@@ -30,7 +28,4 @@ export default {
 			
 		},
 	},
-	plugins: [
-		require('flowbite/plugin')
-	],
 }

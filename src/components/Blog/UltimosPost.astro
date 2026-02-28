@@ -29,7 +29,7 @@ const latestPosts = postsArray.slice(0, 4);
     <p class="md:w-[600px] sm:w-auto text-azul" >Visita nuestro blog y mantente al día con consejos, novedades y tendencias que harán que tu camión siempre esté en su mejor forma. ¡No te lo pierdas!</p>
     <hr class="mt-4 h-1 bg-naranja">
 
-        <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 2xl:gap-8 lg:gap-8 pt-4">
+        <ul class="grid md:grid-cols-2 sm:grid-cols-1 lg:grid-cols-4 2xl:gap-8 md:gap-8 pt-4">
             {latestPosts.map(post => (
                 <li><CardsBlog title={post.title} image={post.image} url={post.url} previewText={post.previewText} pubDate={post.pubDate} tags={post.tags} tiempoLectura={post.tiempoLectura}/></li>
               

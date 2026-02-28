@@ -19,29 +19,29 @@ const {
 ---
 
 <div
-  class="lg:p-16 rounded-lg bg-gray-50 dark:bg-gray-800 animacion from-left flex items-center justify-center sm:flex-wrap lg:flex-nowrap gap-4 p-4"
+  class="lg:p-16 rounded-lg bg-gray-50 animacion from-left flex items-center justify-center sm:flex-wrap lg:flex-nowrap gap-4 p-4"
   role="tabpanel"
   aria-labelledby="pqrs-tab"
 >
-  <div
-    class="relative items-end overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full max-w-lg bg-slate-600 sm:h-[500px] lg:h-[850px]"
-  >
-    <img
-      src={imgForm}
-      alt=""
-      class="right-0inset-0 h-full w-full object-cover object-center"
-    />
+<div
+  class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full max-w-lg bg-slate-600 h-[500px] lg:h-[850px]"
+>
+  <img
+    src={imgForm}
+    alt=""
+    class="absolute inset-0 h-full w-full object-cover object-center"
+  />
 
-    <div
-      class="relative bg-gradient-to-t from-gray-900/50 to-gray-900/100 p-4 bottom-[155px] left-0"
-    >
-      <h3 class="!text-white">{tituloForm}</h3>
-      <p class="mt-2 text-sm/relaxed !text-white/95 parrafo">
-        {descripcionForm}
-      </p>
-    </div>
-    y
+  <div
+    class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-gray-900/80 to-gray-900/80 p-6"
+  >
+    <h3 class="!text-white">{tituloForm}</h3>
+    <p class="mt-2 !text-white/95 parrafo">
+      {descripcionForm}
+    </p>
   </div>
+</div>
+
 
   <form
     id={id}
@@ -68,7 +68,7 @@ const {
                 id="nombres"
                 placeholder="Carlos"
                 required
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800  ps-10"
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ const {
                 id="apellidos"
                 placeholder="Ramírez"
                 required
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 pe-4 text-gray-800  ps-10"
               />
             </div>
           </div>
@@ -110,7 +110,7 @@ const {
             id="email"
             placeholder="correo@ejemplo.com"
             required
-            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800  ps-10"
           />
         </div>
       </div>
@@ -130,7 +130,7 @@ const {
             id="telefono"
             placeholder="123 456 7890"
             required
-            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800  ps-10"
           />
         </div>
       </div>
@@ -148,7 +148,7 @@ const {
                 name="identificacion"
                 id="identificacion"
                 placeholder="Numero de Identificación"
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800  ps-10"
               />
             </div>
           </div>
@@ -168,7 +168,7 @@ const {
                 name="empresa"
                 id="empresa"
                 placeholder="Mi empresa S.A.S"
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800  ps-10"
               />
             </div>
           </div>
@@ -179,7 +179,7 @@ const {
       {
         mostrarAreaDirigida && (
           <div class="field">
-            <label for="area_dirigida">Area Dirigida</label>
+            <label for="area_dirigida">Área de Interés</label>
             <div class="relative">
               <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
                 <i class="fa-solid fa-list" />
@@ -188,9 +188,9 @@ const {
                 name="area"
                 id="area"
                 required
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-500  ps-10"
               >
-                <option value="" disabled selected>Selecciona el area a la cual te comunicas</option>
+                <option value="" disabled selected>Seleccionar área.</option>
                 <option value="Gestión_Humana">Gestión Humana</option>
                 <option value="Gestión_Garantias">Gestión de Garantias</option>
                 <option value="Mercadeo">Mercadeo</option>
@@ -213,7 +213,7 @@ const {
                 name="tipo_queja"
                 id="tipo_queja"
                 required
-                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+                class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-400  ps-10"
               >
                 <option value="" disabled selected>Selecciona el tipo de solicitud</option>
                 <option value="Petición">Petición</option>
@@ -240,7 +240,7 @@ const {
             id="mensaje"
             rows="5"
             required
-            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800 text-sm ps-10"
+            class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-800  ps-10"
             placeholder="Escribe tu mensaje aquí..."></textarea>
         </div>
       </div>
@@ -251,7 +251,7 @@ const {
           name="documento"
           type="file"
           id="fileInput"
-          class="hidden w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-naranja file:text-white hover:file:bg-orange-600"
+          class=" w-full file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file: file:font-semibold file:bg-black file:text-white hover:file:bg-gray-600 "
         />
       </div>
 
@@ -275,7 +275,7 @@ const {
       </p>
 
       <!-- Política -->
-      <div class="mt-4 text-sm">
+      <div class="mt-4 ">
         <label class="flex items-center space-x-2">
           <input
             type="checkbox"
@@ -285,7 +285,7 @@ const {
             required
             class="w-4 h-4 text-blue-600 border-gray-300 rounded"
           />
-          <span class="text-gray-700 dark:text-gray-300">
+          <span class="text-gray-900">
             Acepto la
             <a
               href="/img/politica-manejo-de-datos.pdf"
@@ -301,10 +301,24 @@ const {
   </form>
 </div>
 
+
+
+
+
+
+
+
   <style>
-    .input {
-      @apply border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-naranja/50 my-2;
-    }
+
+
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #f2790c;
+  outline-offset: 2px;
+  border-radius: 0.5rem; /* ejemplo */
+}
+
     .field {
       margin-bottom: 10px;
     }
@@ -319,7 +333,7 @@ const {
       display: block;
 
       line-height: 1.5;
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .animacion {

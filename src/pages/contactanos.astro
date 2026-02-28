@@ -10,65 +10,44 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 <MainLayout title={title} description={descripcion}>
 
 <div
-  class="xl:mt-48 sm:pt-8 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto  sm:m-4 lg:pt-0"
+  class="xl:mt-48 max-w-screen-xl mx-auto sm:my-8 md:mt-36 lg:px-14 "
 >
+<div>
+  <div class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0">
   <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
     Estamos aqui para ti, Contáctanos en cualquier momento
   </h1>
   <p class="lg:!text-center !sm:text-justify">
     Si tienes alguna duda sobre nuestros servicios, no dudes en preguntarnos.
   </p>
+  </div>
+
 </div>
 
-<section class="flex flex-col  max-lg:max-w-3xl mx-auto items-center ">
-    
-<!--   <div class="mb-4 border-b border-gray-200 w-full">
-    <ul
-      class="flex md:flex-wrap sm:flex-wrap text-sm font-medium text-center justify-center"
-      id="myTab"
-      data-tabs-toggle="#myTabContent"
-      role="tablist"
-    >
+<div id="mercadeo">
+  <FormularioEstructura
+    id="mercadeoForm"
+   tituloForm="Envíanos tu solicitud"
+  descripcionForm="Comparte con nosotros tu mensaje, petición o requerimiento. Nuestro equipo revisará tu información y la direccionará al área correspondiente para brindarte una respuesta clara, oportuna y acorde con tu necesidad."
+  imgForm="/img/area-mercadeo.jpg"
+    mostrarIdentificacion={true}
+    mostrarEmpresa={true}
+    mostrarAreaDirigida={true}
+    mostrarTipoPQRS={false}
+    mostrarArchivo={true}
+  />
+</div>
 
 
-      <li class="me-2" role="presentation">
-        <button
-          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="mercadeo-tab"
-          data-tabs-target="#mercadeo"
-          type="button"
-          role="tab"
-          aria-controls="mercadeo"
-          aria-selected="false">Area de Mercadeo</button
-        >
-      </li>
 
-      <li class="me-2" role="presentation">
-        <button
-          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="garantias-tab"
-          data-tabs-target="#garantias"
-          type="button"
-          role="tab"
-          aria-controls="garantias"
-          aria-selected="false">Gestion de Garantias</button
-        >
-      </li>
+<!-- LOADING SPINNER GLOBAL -->
+<div
+  id="loadingSpinner"
+  class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
+>
+<lottie-player class="w-24 " src="/animaciones/gear.json" loop autoplay></lottie-player>
 
-        <li class="me-2" role="presentation">
-        <button
-          class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
-          id="rrhh-tab"
-          data-tabs-target="#rrhh"
-          type="button"
-          role="tab"
-          aria-controls="rrhh"
-          aria-selected="false">Gestion Humana</button
-        >
-      </li>
-
-    </ul>
-  </div> -->
+</div>
 
 <div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
   <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
@@ -82,28 +61,10 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 </div>
 
 
-<!--   <div id="myTabContent" class=""> -->
-
-
-<div id="mercadeo">
-  <FormularioEstructura
-    id="mercadeoForm"
-   tituloForm="Area de Mercadeo"
-  descripcionForm="Impulsamos nuestra presencia con estrategias innovadoras para conectar eficazmente con nuestros clientes y destacar en el mercado."
-  imgForm="/img/area-mercadeo.jpg"
-    mostrarIdentificacion={true}
-    mostrarEmpresa={true}
-    mostrarAreaDirigida={true}
-    mostrarTipoPQRS={false}
-    mostrarArchivo={true}
-  />
-</div>
-
-
   </div>
 
 
-</section>
+
 
           
 
