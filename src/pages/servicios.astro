@@ -2,6 +2,7 @@
 import BotonPrincipal from "../components/BotonPrincipal.astro";
 import FAQS from "../components/FAQS.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import FormularioEstructura from "../components/Formularios/FormularioEstructura.astro";
 
 const title =
   "Fertrac - Servicios de Venta de Repuestos para vehículos de carga";
@@ -13,26 +14,44 @@ const descripcion =
   <div
     class="grid lg:grid-cols-1 sm:grid-cols-1 2xl:mx-56 lg:mx-14 xl:mt-36 md:mt-24 sm:m-4 sm:gap-8 lg:gap-12 items-center sm:py-8"
   >
-    <div
-      class="flex flex-wrap sm:flex-col-reverse lg:flex-row lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none"
+
+      <div
+      id="solicitud-credito"
+      class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row"
     >
+
+      <div class="lg:w-[50%] img-container">
+
+        <div id="mercadeo"></div>
+               <FormularioEstructura
+               bg=""
+               id="mercadeoForm"
+    dataColeccion="Credito"
+    mostrarBanner={false}
+    mostrarIdentificacion={true}
+    mostrarEmpresa={true}
+    mostrarAreaDirigida={true}
+    mostrarSolicitudCredito={true}
+    mostrarTipoPQRS={false}
+    mostrarArchivo={true}
+  />
+      </div>
+
       <div
         class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left"
       >
-        <h2 class="">Venta de Repuestos para vehículos de carga.</h2>
+        <h2 class="">Solicita tu Crédito.</h2>
         <p>
-          En Fertrac, somos especialistas en la venta de repuestos para
-          vehículos de carga, ofreciendo calidad, confianza y un amplio
-          portafolio de marcas reconocidas. Nos enfocamos en brindar soluciones
-          eficientes para mantener tu flota siempre en movimiento, con productos
-          diseñados para durar y optimizar el rendimiento de tus vehículos de
-          carga.
+                      Completa el formulario con tus datos y nos pondremos en contacto contigo para brindarte toda la información sobre nuestras opciones de crédito. En Fertrac queremos facilitar el acceso a los repuestos que tu operación necesita, ofreciéndote un proceso ágil, seguro y adaptado a tus necesidades.
         </p>
+
+ <img class="clip-izq" src="/img/solicitud-credito.jpg" alt="" />
       </div>
-      <div class="clip-izq lg:w-[50%] sm:w-auto img-container">
-        <img src="/img/productos-fertrac.jpg" alt="" />
-      </div>
+      
+
     </div>
+
+
 
     <!--     <div id="tienda-online" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row">
       <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left ">
@@ -45,12 +64,13 @@ const descripcion =
     </div> -->
 
     <div
-      id="bruchure-digital"
-      class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none"
+      id="brochure-digital"
+      class="flex flex-wrap lg:bg-azul-opaco  sm:bg-none lg:shadow-md sm:shadow-none"
     >
       <div class="clip-der lg:w-[50%] sm:w-auto img-container">
         <img src="/img/brochure-fertrac.jpg" alt="" />
       </div>
+      
       <div
         class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left"
       >
@@ -71,41 +91,12 @@ const descripcion =
       </div>
     </div>
 
-    <div
-      id="solicitud-credito"
-      class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row"
-    >
-      <div
-        class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left"
-      >
-        <h2 class="">Solicitud de Credito</h2>
-        <p>
-          ¡Solicita tu crédito con Fertrac aquí! En Fertrac, es importante que
-          puedas acceder a los repuestos de confianza que necesitas, cuando los
-          necesitas. Por eso, te ofrecemos la posibilidad de obtener un crédito
-          directamente con nuestra empresa. No te quedes sin la oportunidad de
-          unirte a este gran equipo y asegurar todo lo que necesitas para tu
-          camión. ¡Realiza el proceso ahora y forma parte de la familia Fertrac!.
-        </p>
-        <BotonPrincipal
-          
-          icon="fa-solid fa-file-arrow-down"
-          text="Descargar Formato"
-          estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white mr-2 "
-        />
-      </div>
-      <div class="clip-izq lg:w-[50%] sm:w-auto img-container">
-        <img src="/img/solicitud-credito.jpg" alt="" />
-      </div>
-    </div>
-
-    <div
+        <div
       id="asesoria-tecnica"
-      class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none"
+      class="flex flex-wrap lg:bg-azul-opaco sm:flex-col-reverse lg:flex-row sm:bg-none lg:shadow-md sm:shadow-none"
     >
-      <div class="clip-der lg:w-[50%] sm:w-auto img-container">
-        <img src="/img/asesoria-tecnica.webp" alt="" />
-      </div>
+
+
       <div
         class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left"
       >
@@ -129,8 +120,47 @@ const descripcion =
             constantemente en la prestación de nuestros servicios.
           </li>
         </ul>
+
+                  <BotonPrincipal
+            url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
+            text="Tengo una duda"
+            estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
+            icon="fa-solid fa-arrow-right"
+          />
+      </div>
+
+            <div class="clip-izq lg:w-[50%] sm:w-auto img-container">
+        <img src="/img/asesoria-tecnica.webp" alt="" />
       </div>
     </div>
+
+    <div
+    id="venta-repuestos"
+      class="flex flex-wrap  lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none"
+    >
+
+          <div class="clip-der lg:w-[50%] sm:w-auto img-container">
+        <img src="/img/productos-fertrac.jpg" alt="" />
+      </div>
+
+
+      <div
+        class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0 gap-4 flex flex-col justify-center items-left"
+      >
+        <h2 class="">Venta de Repuestos para vehículos de carga.</h2>
+        <p>
+          En Fertrac, somos especialistas en la venta de repuestos para
+          vehículos de carga, ofreciendo calidad, confianza y un amplio
+          portafolio de marcas reconocidas. Nos enfocamos en brindar soluciones
+          eficientes para mantener tu flota siempre en movimiento, con productos
+          diseñados para durar y optimizar el rendimiento de tus vehículos de
+          carga.
+        </p>
+      </div>
+
+    </div>
+
+
     <!--     
     <div id="innovación-investigación" class="flex flex-wrap lg:bg-azul-opaco sm:bg-none lg:shadow-md sm:shadow-none sm:flex-col-reverse lg:flex-row">
       <div class="lg:w-[50%] sm:w-auto xl:px-36 lg:p-8 sm:py-2 sm:px-0  gap-4 flex flex-col justify-center items-left">
@@ -139,17 +169,35 @@ const descripcion =
       </div>
       <div class="clip-izq lg:w-[50%] sm:w-auto img-container"><img src="/img/innovación-fertrac.jpg" alt=""></div>
     </div> -->
+
+<div
+  id="loadingSpinner"
+  class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
+>
+<lottie-player class="w-24 " src="/animaciones/gear.json" loop autoplay></lottie-player>
+
+</div>
+
+<div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
+  <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
+    <h3 class="text-lg !text-center">¡Formulario enviado con éxito!</h3>
+    <p class=" !text-gray-600 !text-center">Tu información ha sido recibida correctamente. <br> Nuestro equipo la revisará y se pondrá en contacto contigo en caso necesario.</p>
+    <div id="cerrarModal" class="mt-4">
+      <BotonPrincipal text="Cerrar" icon="hidden" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white" estilosButton="!w-auto"/>
+    </div>
+   
+  </div>
+</div>
+
   </div>
 
   <FAQS />
 </MainLayout>
 
 <style>
-  /* Aplicar clip-path solo en pantallas grandes */
+
   @media (min-width: 768px) {
-    /*   .img-container img {
-    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
-  } */
+
     .clip-izq {
       clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
     }
@@ -159,5 +207,5 @@ const descripcion =
     }
   }
 
-  /* Puedes agregar otros estilos para diferentes pantallas aquí si es necesario */
+
 </style>

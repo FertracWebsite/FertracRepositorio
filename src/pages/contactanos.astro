@@ -26,13 +26,16 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 
 <div id="mercadeo">
   <FormularioEstructura
-    id="mercadeoForm"
+  id="mercadeoForm"
    tituloForm="Envíanos tu solicitud"
   descripcionForm="Comparte con nosotros tu mensaje, petición o requerimiento. Nuestro equipo revisará tu información y la direccionará al área correspondiente para brindarte una respuesta clara, oportuna y acorde con tu necesidad."
   imgForm="/img/area-mercadeo.jpg"
+  bg="p-4"
+  mostrarBanner={true}
     mostrarIdentificacion={true}
     mostrarEmpresa={true}
     mostrarAreaDirigida={true}
+    mostrarSolicitudGeneral={true}
     mostrarTipoPQRS={false}
     mostrarArchivo={true}
   />
@@ -40,7 +43,6 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 
 
 
-<!-- LOADING SPINNER GLOBAL -->
 <div
   id="loadingSpinner"
   class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
@@ -71,14 +73,14 @@ const descripcion = "Comunícate con nosotros para recibir asesoría o más info
 
 </MainLayout>
 
-<!-- ✅ Script que se ejecuta solo en el navegador -->
- <script type="module" src="/scripts/firebase.js"></script>
+
+<script type="module" src="/scripts/firebase.js"></script>
 <script type="module" is:client>
   import {
     configurarEnvioFormulario,
     configurarValidacionTelefono,
   } from "/scripts/scriptFormulario.js";
 
-  configurarEnvioFormulario("contactoForm", "template_5903hhf"); // ⚠️ Usa el ID de plantilla correcto de EmailJS
+  configurarEnvioFormulario("contactoForm", "template_5903hhf");
   configurarValidacionTelefono();
 </script>

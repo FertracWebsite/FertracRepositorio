@@ -17,22 +17,41 @@ import BotonPrincipal from "./BotonPrincipal.astro";
   class="swiper-content carrusel1  2xl:max-w-[1500px] xl:max-w-[1300px] w-full sm:py-0 sm:mb-10 lg:my-10 mx-auto"
 >
   <div class="swiper-wrapper">
-    <div class="swiper-slide  rounded-lg border-2 shadow-lg ">
+
+      <div class="swiper-slide  rounded-lg border-2 shadow-lg ">
       <div class=" bg-white border border-gray-200 rounded-lg shadow">
-        <img class="rounded-t-lg" src="/img/productos-fertrac.png" alt="" />
+        <img class="rounded-t-lg" src="/img/solicitud-credito.webp" alt="" />
         <div class="p-5">
-          <h3 class="mb-2 tracking-tight sm:text-xl lg:text-2xl">
-            Repuestos para tractocamiones.
+          <h3 class="mb-2 tracking-tight">Solicita tu crédito.</h3>
+          <p class="mb-3"> En Fertrac queremos facilitar el acceso a los repuestos que tu operación necesita, ofreciéndote un proceso ágil, seguro y adaptado a tus necesidades.
+          </p>
+
+          <BotonPrincipal
+            url="/servicios/"
+            text="Solicitar Credito"
+            estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
+            icon="fa-solid fa-envelope-open-text"
+          />
+        </div>
+      </div>
+    </div>
+
+        <div class="swiper-slide  rounded-lg border-2 shadow-lg">
+      <div class=" bg-white border border-gray-200 rounded-lg shadow">
+        <img class="rounded-t-lg" src="/img/brochure-fertrac.webp" alt="" />
+        <div class="p-5">
+          <h3 class="mb-2 tracking-tight">
+            Brochure Corporativo
           </h3>
           <p class="mb-3">
-            Repuestos para vehículos de carga con calidad, confianza y marcas
-            líderes. Soluciones eficientes para mantener tu flota en movimiento.
+            Consulta nuestro brochure digital con todas nuestras especialidades
+            y soluciones en repuestos para tractocamiones.
           </p>
           <BotonPrincipal
-            url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
-            text="Solicitar Información"
+            url="https://drive.google.com/file/d/1zVLDKDr5oqocJ05Y04TinTUU-C7lL7q2/view?usp=sharing"
+            text="Descargar Catalogo PDF"
             estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
-            icon="fa-solid fa-arrow-right"
+            icon="fa-solid fa-file-arrow-down"
           />
         </div>
       </div>
@@ -61,47 +80,30 @@ import BotonPrincipal from "./BotonPrincipal.astro";
       </div>
     </div>
 
-    <div class="swiper-slide  rounded-lg border-2 shadow-lg ">
-      <div class=" bg-white border border-gray-200 rounded-lg shadow">
-        <img class="rounded-t-lg" src="/img/solicitud-credito.webp" alt="" />
-        <div class="p-5">
-          <h3 class="mb-2 tracking-tight">Solicitud de Credito</h3>
-          <p class="mb-3">
-            En Fertrac, te ofrecemos opciones de crédito flexibles y
-            convenientes, adaptadas a tus necesidades para facilitar el
-            crecimiento de tu negocio.
-          </p>
 
-          <BotonPrincipal
-            url="/Contáctanos/"
-            text="Enviar Correo"
-            estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
-            icon="fa-solid fa-envelope-open-text"
-          />
-        </div>
-      </div>
-    </div>
 
-    <div class="swiper-slide  rounded-lg border-2 shadow-lg">
+      <div class="swiper-slide  rounded-lg border-2 shadow-lg ">
       <div class=" bg-white border border-gray-200 rounded-lg shadow">
-        <img class="rounded-t-lg" src="/img/brochure-fertrac.webp" alt="" />
+        <img class="rounded-t-lg" src="/img/productos-fertrac.png" alt="" />
         <div class="p-5">
-          <h3 class="mb-2 tracking-tight dark:text-white">
-            Brochure Corporativo
+          <h3 class="mb-2 tracking-tight sm:text-xl lg:text-2xl">
+            Repuestos para tractocamiones.
           </h3>
           <p class="mb-3">
-            Consulta nuestro brochure digital con todas nuestras especialidades
-            y soluciones en repuestos para tractocamiones.
+            Repuestos para vehículos de carga con calidad, confianza y marcas
+            líderes. Soluciones eficientes para mantener tu flota en movimiento.
           </p>
           <BotonPrincipal
-            url="https://drive.google.com/file/d/1zVLDKDr5oqocJ05Y04TinTUU-C7lL7q2/view?usp=sharing"
-            text="Descargar Catalogo PDF"
+            url="https://api.whatsapp.com/send?phone=573124615606&text=Hola%2C%20necesito%20informaci%C3%B3n%20sobre..."
+            text="Solicitar Información"
             estilos="hover:bg-white text-white bg-naranja hover:border border-naranja hover:text-naranja lg:w-full"
-            icon="fa-solid fa-file-arrow-down"
+            icon="fa-solid fa-arrow-right"
           />
         </div>
       </div>
     </div>
+
+
 
     <div class="swiper-slide  rounded-lg border-2 shadow-lg">
       <div class=" bg-white border border-gray-200 rounded-lg shadow">

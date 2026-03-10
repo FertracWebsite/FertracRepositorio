@@ -26,7 +26,7 @@ const {bgNav} = Astro.props;
           <!-- ESPECIALIDADES -->
 
       <li class=" relative hover-underline-animation px-3 py-2 group  hover:text-naranja cursor-pointer">
-        <a><!-- <i class="fa-solid fa-gear mr-2"> --></i>
+        <a href="#"><!-- <i class="fa-solid fa-gear mr-2"> --></i>
           Especialidades
         <i class="fa-solid fa-caret-down"></i>
       </a>
@@ -249,26 +249,53 @@ const {bgNav} = Astro.props;
 
             <div class="relative z-10 justify-between">
               <div class="grid items-stretch grid-cols-2 gap-8">
+                
                 <div>
                   <ul class=" text-[15px] space-y-4">
 
+                    
                     <li>
-                      <a href="/servicios#ventas"
-                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-blue-200">
-                        <div class="p-2 bg-blue-500 rounded-full">
-                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
+                      <a href="/servicios/"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
+                        <div class="p-2 bg-green-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
                         </div>
                         <div class="titulos-nav">
-                          Venta de repuestos para vehículos de carga
-                          <p class="!text-base !leading-[1.2] !text-left !font-light">Calidad, confianza y marcas lideres.</p>
+                          Solicitud de Credito
+                          <p class="!text-base !leading-[1.2] !text-left !font-light">Opciones de credito flexibles y convenientes.</p>
                         </div>
                       </a>
                     </li>
-                    
+
 
 
                     <li>
-                      <a href="/servicios/"
+                      <a href="/servicios#asesoria-tecnica"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-yellow-200">
+                        <div class="p-2 bg-yellow-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
+                        </div>
+                        <div class="titulos-nav">
+                          Asesoria Tecnica
+                          <p class="!text-base !leading-[1.2] !text-left !font-light">Soluciones rapidas y apoyo de primer mano.</p>
+                        </div>
+                      </a>
+                    </li>
+
+
+
+
+                        
+
+                  </ul>
+                </div>
+
+                <div>
+                  <ul class=" text-[15px] space-y-4">
+
+                    
+                    <li>
+                      <a href="/servicios#brochure-digital"
                         class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-fuchsia-200">
                         <div class="p-2 bg-fuchsia-500  rounded-full">
                           <img width="24" height="24" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
@@ -281,40 +308,18 @@ Soluciones en repuestos para tractocamiones.</p>
                       </a>
                     </li>
 
-                        
-
-                  </ul>
-                </div>
-
-                <div>
-                  <ul class=" text-[15px] space-y-4">
-
-                    <li>
-                      <a href="/servicios#bruchure-digital"
-                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-green-200">
-                        <div class="p-2 bg-green-500 rounded-full">
-                          <img width="24" height="24" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
+                                        <li>
+                      <a href="/servicios#venta-repuestos"
+                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-blue-200">
+                        <div class="p-2 bg-blue-500 rounded-full">
+                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                         </div>
                         <div class="titulos-nav">
-                          Solicitud de Credito
-                          <p class="!text-base !leading-[1.2] !text-left !font-light">Opciones de credito flexibles y convenientes.</p>
+                          Venta de repuestos para vehículos de carga
+                          <p class="!text-base !leading-[1.2] !text-left !font-light">Calidad, confianza y marcas lideres.</p>
                         </div>
                       </a>
                     </li>
-
-                    <li>
-                      <a href="/servicios#solicitud-credito"
-                        class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-yellow-200">
-                        <div class="p-2 bg-yellow-500 rounded-full">
-                          <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
-                        </div>
-                        <div class="titulos-nav">
-                          Asesoria Tecnica
-                          <p class="!text-base !leading-[1.2] !text-left !font-light">Soluciones rapidas y apoyo de primer mano.</p>
-                        </div>
-                      </a>
-                    </li>
-
                     <!-- <li>
                       <a href="/servicios#asesoria-tecnica"
                         class="flex items-center p-2 -mx-2 space-x-2 font-black  transition duration-300 ease-in-out rounded-lg hover:bg-teal-200">
@@ -629,8 +634,41 @@ Soluciones en repuestos para tractocamiones.</p>
                 <div class="sm_menu">
                     <ul class="gap-y-2.5  text-center grid grid-cols-2 grid-rows-2">
 
+                     
                       <li class="">
-                        <a href="/servicios/" class="flex items-center flex-col justify-left  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                        <a href="/servicios/" class="flex items-center flex-col justify-left  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-green-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
+                          </div>
+                            Solicitud de Crédito
+
+                        </a>
+                      </li>
+
+                      <li class="">
+                        <a href="/servicios#brochure-digital" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-fuchsia-500 rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
+                          </div>
+                          Brochure Digital
+
+                        </a>
+                      </li>
+                    
+                      
+
+                      <li class="">
+                        <a href="/servicios#asesoria-tecnica" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
+                          <div class="p-2 bg-yellow-500  rounded-xl">
+                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
+                          </div>
+                            Asesoría Técnica
+
+                        </a>
+                      </li>
+
+                       <li class="">
+                        <a href="/servicios#venta-repuestos" class="flex items-center flex-col justify-left  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
                           <div class="p-2 bg-blue-500 rounded-xl">
                             <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/checked-truck.png" alt="checked-truck"/>
                           </div>
@@ -639,37 +677,6 @@ Soluciones en repuestos para tractocamiones.</p>
                         </a>
                       </li>
 
-                      <li class="">
-                        <a href="/servicios/" class="flex items-center flex-col justify-left  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                          <div class="p-2 bg-green-500 rounded-xl">
-                            <img class="w-4 h-4" src="https://img.icons8.com/external-anggara-glyph-anggara-putra/32/FFFFFF/external-Banking-Card-accounting-anggara-glyph-anggara-putra.png" alt="icono de una billetera"/>
-                          </div>
-                            Solicitud de credito
-
-                        </a>
-                      </li>
-
-                      <li class="">
-                        <a href="/servicios/" class="flex items-center justify-between flex-col  text-center transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                          <div class="p-2 bg-fuchsia-500 rounded-xl">
-                            <img class="w-4 h-4" src="https://img.icons8.com/glyph-neue/64/FFFFFF/pdf-2.png" alt="icono de un catalogo pdf"/>
-                          </div>
-                          Catalogo en linea
-
-                        </a>
-                      </li>
-                    
-                      
-
-                      <li class="">
-                        <a href="/servicios/" class="flex items-center justify-between flex-col  text-center  transition duration-300 ease-in-out rounded-lg hover:bg-green-50 hover:text-green-600">
-                          <div class="p-2 bg-yellow-500  rounded-xl">
-                            <img class="w-4 h-4" src="https://img.icons8.com/ios-filled/50/FFFFFF/service.png" alt="icono representando una mano con tuerca encima"/>
-                          </div>
-                            Asesioria tecnica
-
-                        </a>
-                      </li>
 
                     </ul>
                   

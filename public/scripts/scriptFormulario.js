@@ -35,6 +35,7 @@ const coleccionesPorArea = {
   Gestión_Garantias: "Gestión de Garantias",
   Mercadeo: "Mercadeo",
   Ventas: "Ventas",
+  Credito: "Credito",
 };
 
 // --- Configurar envío del formulario ---

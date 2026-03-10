@@ -2,9 +2,13 @@
 import BotonPrincipal from "../BotonPrincipal.astro";
 
 const {
+  bg,
   id,
   dataColeccion,
   titulo,
+  mostrarBanner,
+  mostrarSolicitudGeneral,
+  mostrarSolicitudCredito,
   mostrarAreaDirigida,
   mostrarIdentificacion,
   mostrarEmpresa,
@@ -18,12 +22,15 @@ const {
 } = Astro.props;
 ---
 
-<div
-  class="lg:p-16 rounded-lg bg-gray-50 animacion from-left flex items-center justify-center sm:flex-wrap lg:flex-nowrap gap-4 p-4"
+
+
+<div class={ `lg:p-16 rounded-lg  animacion from-left flex items-center justify-center sm:flex-wrap lg:flex-nowrap gap-4  ${bg}` }
+  class=""
   role="tabpanel"
   aria-labelledby="pqrs-tab"
 >
-<div
+{ mostrarBanner && (
+   <div
   class="relative overflow-hidden rounded-lg shadow transition hover:shadow-lg w-full max-w-lg bg-slate-600 h-[500px] lg:h-[850px]"
 >
   <img
@@ -40,7 +47,10 @@ const {
       {descripcionForm}
     </p>
   </div>
-</div>
+</div> 
+)
+}
+
 
 
   <form
@@ -175,9 +185,9 @@ const {
         )
       }
 
-      
-      {
-        mostrarAreaDirigida && (
+
+    {
+      mostrarAreaDirigida && (
           <div class="field">
             <label for="area_dirigida">Área de Interés</label>
             <div class="relative">
@@ -190,16 +200,28 @@ const {
                 required
                 class="w-full border-gray-300 bg-gray-100 rounded-lg py-3 px-4 text-gray-500  ps-10"
               >
+                {
+                  mostrarSolicitudCredito && (
+                   <option value="Credito">Credito y Cartera</option>
+                  )
+                }
+              {
+                mostrarSolicitudGeneral && (
                 <option value="" disabled selected>Seleccionar área.</option>
                 <option value="Gestión_Humana">Gestión Humana</option>
                 <option value="Gestión_Garantias">Gestión de Garantias</option>
                 <option value="Mercadeo">Mercadeo</option>
                 <option value="Ventas">Ventas</option>
+                )
+              }
+
+           
               </select>
             </div>
           </div>
-        )
-      }
+      )
+    }
+
 
       {
         mostrarTipoPQRS && (

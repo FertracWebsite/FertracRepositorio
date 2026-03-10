@@ -7,7 +7,7 @@ const firebaseConfig = {
   authDomain: "formulario-pqrs-5a195.firebaseapp.com",
   databaseURL: "https://formulario-pqrs-5a195-default-rtdb.firebaseio.com",
   projectId: "formulario-pqrs-5a195",
-  storageBucket: "formulario-pqrs-5a195.firebasestorage.app", // ✅ ojo, usa appspot.com
+  storageBucket: "formulario-pqrs-5a195.firebasestorage.app", 
   messagingSenderId: "366767588477",
   appId: "1:366767588477:web:6f21d81f2bc86e20a31d14",
   measurementId: "G-Y9Y32WGKQ6",
