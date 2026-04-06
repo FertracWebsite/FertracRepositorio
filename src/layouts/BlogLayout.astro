@@ -37,6 +37,18 @@ const { descripcion } = Astro.props;
       crossorigin
     />
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJDY7CTF4V"></script>
+<script is:inline>
+  // @ts-ignore
+  window.dataLayer = window.dataLayer || [];
+  // @ts-ignore
+  function gtag(){ dataLayer.push(arguments); }
+
+  gtag('js', new Date());
+  gtag('config', 'G-QJDY7CTF4V');
+</script>
+
     <script
       is:inline
       set:html={`

@@ -42,11 +42,24 @@ const { descripcion } = Astro.props;
 
     <script src="https://static.elfsight.com/platform/platform.js" async
     ></script>
-    
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QJDY7CTF4V"></script>
+<script is:inline>
+  // @ts-ignore
+  window.dataLayer = window.dataLayer || [];
+  // @ts-ignore
+  function gtag(){ dataLayer.push(arguments); }
+
+  gtag('js', new Date());
+  gtag('config', 'G-QJDY7CTF4V');
+</script>
+
  <script is:inline set:html={`
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};x
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
     t.src=v;s=b.getElementsByTagName(e)[0];
