@@ -3,16 +3,19 @@ const { estilos } = Astro.props;
 const { estilosButton } = Astro.props;
 const { text } = Astro.props;
 const { icon } = Astro.props;
-const { url} = Astro.props;
+const { url } = Astro.props;
 const { enlace } = Astro.props;
-const {download } = Astro.props
+const { download } = Astro.props;
+const { id } = Astro.props;
 
 ---
-<button class={ `w-full ${estilosButton} ` }>
-    <a  download={ download }
-    href={ url }
+
+<button class={`w-full  ${estilosButton} `}>
+  <a
+    id={id}
+    download={download}
+    href={url}
     class={`font-GTWalsheim inline-flex sm:w-full  lg:w-full sm:justify-center items-center text-center rounded-lg lg:px-8 lg:py-2 leading-[2] sm:px-6 sm:py-1.5 lg:text-[16px] sm:text-[1rem] ${estilos}`}
     >{text} <i class=`ml-2 ${icon}`></i></a
->
+  >
 </button>
-

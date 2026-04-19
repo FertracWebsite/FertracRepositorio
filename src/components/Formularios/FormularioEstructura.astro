@@ -2,6 +2,7 @@
 import BotonPrincipal from "../BotonPrincipal.astro";
 
 const {
+  idBotonForm,
   bg,
   id,
   dataColeccion,
@@ -279,6 +280,7 @@ const {
 
       <!-- Botón -->
       <BotonPrincipal
+      id={idBotonForm}
         type="submit"
         icon="fa-solid fa-arrow-right"
         text="Enviar Formulario"
