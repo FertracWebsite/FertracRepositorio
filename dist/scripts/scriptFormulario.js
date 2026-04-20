@@ -95,6 +95,15 @@ export function configurarEnvioFormulario(formId, templateID) {
 
       await emailjs.sendForm("default_service", templateID, form);
 
+      // 🚀 GTM PUSH: Notificar éxito real a Tag Manager
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        'event':  'formulario_enviado',
+        'id_formulario': formId, // Pasamos el ID (pqrsForm, creditoForm, etc)
+        'metodo': 'formulario_firebase',
+        'area_destino': coleccion // Opcional: para saber a qué área llegó el lead
+      });
+
       let tiempo_respuesta = "";
 
       if (datos.tipo_queja === "Petición") {
@@ -118,7 +127,7 @@ export function configurarEnvioFormulario(formId, templateID) {
       if (btn) btn.textContent = "Enviar";
       /*  console.log("Correo enviado con EmailJS"); */
 
-      // 🎉 Modal de éxito
+      // Modal de éxito
       const modal = document.getElementById("modalExito");
       if (modal) {
         modal.classList.remove("hidden");
@@ -133,6 +142,7 @@ export function configurarEnvioFormulario(formId, templateID) {
       }
 
       form.reset();
+
     } catch (error) {
       /*       console.error("Ha corrudio un error al enviar el formulario:", error); */
       alert("Ocurrió un error al enviar. Intenta de nuevo.");
