@@ -36,9 +36,9 @@ const formaterFecha = new Date(pubDate).toLocaleDateString('es-ES', {
         <img src={image.url} alt={image.alt} class="w-full h-full object-cover">
     </div>
     
-    <div class="flex gap-4 py-2 justify-between">
-        <time datetime={pubDate} class="text-lg">{formaterFecha}</time>
-        <span class="text-naranja font-GTWalsheim font-black text-lg" >{tags}</span>
+    <div class="flex justify-between items-center py-4">
+        <time datetime={pubDate} class="text-[#6b7280] font-GTWalsheim text-sm tracking-tight">{formaterFecha}</time>
+        <span class="text-naranja font-GTWalsheim font-black text-sm uppercase tracking-[0.1em]" >{tags}</span>
         
     </div>
     <h3 class="titulos-blog-card">{title}</h3>

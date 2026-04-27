@@ -69,15 +69,15 @@ details {
 
 
 .titulos-blog-card {
-    @apply sm:text-2xl lg:text-lg xl:text-2xl font-GTWalsheim font-extrabold sm:text-left lg:text-left text-azul sm:!leading-[1.2] !leading-7 tracking-tighter py-2;
+    @apply sm:text-2xl lg:text-lg xl:text-xl font-GTWalsheim font-bold sm:text-left lg:text-left text-azul sm:!leading-[1.2] !leading-7 tracking-tight py-2;
 }
 
 .subtitulos-blog {
-    @apply !leading-7 tracking-tighter lg:text-lg xl:text-2xl;
+    @apply !leading-7 tracking-tight lg:text-lg xl:text-2xl;
 }
 
 dt, dd {
-  @apply font-GTWalsheim sm:!leading-[1.2] tracking-tighter;
+  @apply font-GTWalsheim sm:!leading-[1.2] tracking-tight;
 }
 
 
