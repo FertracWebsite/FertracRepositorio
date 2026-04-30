@@ -1,5 +1,6 @@
 import typography from '@tailwindcss/typography';
 
+// Force tailwind rebuild
 /** @type {import('tailwindcss').Config} */
 export default {
     content: [

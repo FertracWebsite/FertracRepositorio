@@ -1,0 +1,380 @@
+---
+import { getCollection } from "astro:content";
+import DashboardLayout from "../../layouts/EspecialidadDashboardLayout.astro";
+import SubcategoriaCard from "../../components/Especialidades/SubcategoriaCard.astro";
+import AplicacionCard from "../../components/Especialidades/AplicacionCard.astro";
+
+export async function getStaticPaths() {
+  const especialidadesEntries = await getCollection("especialidades");
+  return especialidadesEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const {
+  title,
+  subtitle,
+  description,
+  brands,
+  applications,
+  subcategories,
+  heroImage,
+  gallery,
+} = data;
+---
+
+<DashboardLayout title={title} descripcion={description}>
+  <!-- Contenedor Principal (2 Columnas en lg/xl, simulando main + right sidebar) -->
+  <div class="flex flex-col xl:flex-row gap-8">
+    <!-- Columna Izquierda (Main Content) -->
+    <div class="flex-1 space-y-10">
+      <!-- Hero Section (Title + Description) -->
+      <section>
+        <div
+          class="bg-white rounded-[32px] p-8 shadow-sm border border-slate-100 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden group"
+        >
+          <div
+            class="absolute -right-20 -top-20 w-64 h-64 bg-slate-50 rounded-full mix-blend-multiply opacity-50 group-hover:scale-110 transition-transform duration-700"
+          >
+          </div>
+
+          <div class="flex-1 relative z-10">
+            <div class="mb-6">
+              <h1 class="text-6xl font-black text-[#04297e] mb-2">{title}</h1>
+              <p class="text-lg text-slate-500 font-medium">{subtitle}</p>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-4">
+              Información General
+            </h3>
+            <p class="text-slate-600 leading-relaxed mb-8">{description}</p>
+            <button
+              class="bg-[#04297e] hover:bg-[#031d59] text-white font-bold py-3.5 px-8 rounded-xl transition-all hover:shadow-lg hover:shadow-[#04297e]/20 active:scale-95 flex items-center gap-2"
+            >
+              Descargar Catálogo <i class="fa-solid fa-download"></i>
+            </button>
+          </div>
+          {
+            heroImage && (
+              <div class="w-full md:w-5/12 relative z-10">
+                <div class="rounded-2xl overflow-hidden shadow-lg border-4 border-white bg-slate-100">
+                  <img
+                    src={heroImage}
+                    alt={title}
+                    class="w-full object-cover aspect-video md:aspect-[4/3] group-hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+            )
+          }
+        </div>
+      </section>
+
+      <!-- Contenedor Unificado de 3 Columnas -->
+      <div
+        class="bg-white rounded-[24px] p-6 lg:p-8 shadow-sm border border-slate-100 flex flex-col lg:flex-row gap-10 lg:gap-0 lg:divide-x-2 divide-slate-200"
+      >
+        <!-- Subcategorías (Simulando "Continue Learning" Cards) -->
+        <section class="flex-1 lg:pr-8">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-2"
+          >
+            <h2 class="text-xl font-bold text-slate-800">
+              Subcategorías Destacadas
+            </h2>
+            <a
+              href="#"
+              class="text-[#f2790c] font-bold text-sm hover:underline hover:text-[#d1680a] flex items-center gap-1"
+            >
+              Ver todas <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5">
+            {
+              subcategories
+                .slice(0, 4)
+                .map((subcat: string, index: number) => (
+                  <SubcategoriaCard subcategoria={subcat} index={index} />
+                ))
+            }
+          </div>
+        </section>
+
+        <!-- Marcas -->
+        <section class="flex-1 lg:px-8">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-2"
+          >
+            <h3 class="font-bold text-slate-800 text-xl">Marcas Compatibles</h3>
+            <a
+              href="#"
+              class="text-[#f2790c] font-bold text-sm hover:underline hover:text-[#d1680a] flex items-center gap-1"
+            >
+              Explorar <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-2 gap-4">
+            {
+              brands.slice(0, 8).map((marca: any) => (
+                <div class="flex flex-col items-center text-center gap-3 p-4 bg-slate-50/50 hover:bg-slate-50 border border-slate-50 hover:border-slate-200 rounded-[16px] transition-all cursor-pointer group hover:-translate-y-1">
+                  <div class="w-16 h-16 bg-white border border-slate-100 rounded-xl shadow-sm flex items-center justify-center overflow-hidden p-2 group-hover:shadow-md transition-shadow">
+                    {marca.logo ? (
+                      <img
+                        src={marca.logo}
+                        alt={marca.name}
+                        class="max-w-full max-h-full object-contain group-hover:scale-110 transition-transform"
+                      />
+                    ) : (
+                      <span class="font-black text-[#04297e] text-lg bg-[#04297e]/5 w-full h-full rounded flex items-center justify-center">
+                        {marca.name.substring(0, 2).toUpperCase()}
+                      </span>
+                    )}
+                  </div>
+                  <div class="flex-1 w-full">
+                    <span class="block font-black text-slate-800 text-sm group-hover:text-[#04297e] transition-colors mb-0.5 truncate">
+                      {marca.name}
+                    </span>
+                    <span class="text-[10px] text-slate-400 font-semibold uppercase tracking-wide">
+                      Originales
+                    </span>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </section>
+
+        <!-- Aplicaciones (Simulando "Recommended Courses") -->
+        <section class="flex-1 lg:pl-8">
+          <div
+            class="flex flex-col lg:flex-row lg:items-center justify-between mb-6 gap-2"
+          >
+            <h2 class="text-xl font-bold text-slate-800">
+              Aplicaciones por Marca
+            </h2>
+            <a
+              href="#"
+              class="flex items-center justify-center w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:bg-[#04297e] hover:text-white transition-colors"
+            >
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 gap-5">
+            {
+              applications.slice(0, 3).map((app: any, index: number) => {
+                // Obtener una imagen de la galería, o heroImage como fallback
+                const img =
+                  gallery && gallery.length > index
+                    ? gallery[index].src
+                    : gallery && gallery.length > 0
+                      ? gallery[0].src
+                      : heroImage;
+                return <AplicacionCard aplicacion={app} imageSrc={img} />;
+              })
+            }
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Columna Derecha (Right Sidebar del Dashboard) -->
+    <div class="w-full xl:w-[340px] space-y-6">
+      <!-- Card Estilo Perfil / Contacto ("Weekly Streak" style) -->
+      <div
+        class="bg-white rounded-[24px] p-6 shadow-sm border border-slate-100 flex flex-col items-center text-center"
+      >
+        <div
+          class="w-full flex justify-between items-center mb-4 text-slate-500"
+        >
+          <span class="text-sm font-bold">Soporte Especializado</span>
+          <i
+            class="fa-solid fa-circle-info cursor-pointer hover:text-[#04297e] transition-colors"
+          ></i>
+        </div>
+
+        <div class="relative mb-4 group">
+          <div
+            class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center text-[#f2790c] text-3xl shadow-inner border-4 border-white relative z-10 group-hover:scale-110 transition-transform"
+          >
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <!-- Ping animation -->
+          <div
+            class="absolute inset-0 bg-orange-100 rounded-full animate-ping opacity-75"
+          >
+          </div>
+        </div>
+
+        <h3 class="font-bold text-lg text-slate-800 mb-1">Equipo Fertrac</h3>
+        <p class="text-xs text-slate-500 mb-6 px-4">
+          Expertos en repuestos para tractocamión a tu disposición.
+        </p>
+
+        <div
+          class="w-full flex items-center justify-center gap-8 mb-6 bg-slate-50 p-4 rounded-2xl"
+        >
+          <div class="text-center">
+            <span
+              class="flex items-center gap-1 text-xl font-black text-[#f2790c]"
+            >
+              <i class="fa-solid fa-fire text-sm"></i> 24/7
+            </span>
+            <span
+              class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+              >Atención</span
+            >
+          </div>
+          <div class="w-px h-10 bg-slate-200"></div>
+          <div class="text-center">
+            <span
+              class="flex items-center justify-center gap-1 text-xl font-black text-[#04297e]"
+            >
+              <i class="fa-solid fa-award text-sm"></i>
+              {brands.length}
+            </span>
+            <span
+              class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+              >Marcas</span
+            >
+          </div>
+        </div>
+
+        <button
+          class="w-full bg-slate-50 hover:bg-slate-100 text-[#04297e] font-bold py-3 rounded-xl transition-colors border border-slate-200 flex items-center justify-center gap-2"
+        >
+          <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Chatear ahora
+        </button>
+      </div>
+
+      <!-- Widget Promocional (Simulando Upgrade Card en sidebar izquierdo del dashboard) -->
+      <div
+        class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+      >
+        <div
+          class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+        >
+        </div>
+        <div
+          class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+        >
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+          >
+            <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+          <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+            Aseguramos la durabilidad y desempeño de tu {title.toLowerCase()} con
+            piezas de la más alta calidad.
+          </p>
+          <button
+            class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
+          >
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+      >
+        <div
+          class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+        >
+        </div>
+        <div
+          class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+        >
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+          >
+            <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+          <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+            Aseguramos la durabilidad y desempeño de tu {title.toLowerCase()} con
+            piezas de la más alta calidad.
+          </p>
+          <button
+            class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
+          >
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+      >
+        <div
+          class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+        >
+        </div>
+        <div
+          class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+        >
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+          >
+            <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+          <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+            Aseguramos la durabilidad y desempeño de tu {title.toLowerCase()} con
+            piezas de la más alta calidad.
+          </p>
+          <button
+            class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
+          >
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+      >
+        <div
+          class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+        >
+        </div>
+        <div
+          class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+        >
+        </div>
+
+        <div class="relative z-10">
+          <div
+            class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+          >
+            <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+          <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+            Aseguramos la durabilidad y desempeño de tu {title.toLowerCase()} con
+            piezas de la más alta calidad.
+          </p>
+          <button
+            class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
+          >
+            Solicitar Cotización
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DashboardLayout>

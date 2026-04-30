@@ -1,0 +1,51 @@
+---
+const { subcategoria, index = 0 } = Astro.props;
+
+// Arreglos de iconos y colores para simular el look variado en el dashboard
+// usando los colores de marca y complementarios suaves
+const icons = [
+  "fa-cogs", "fa-wrench", "fa-oil-can", "fa-fan", "fa-truck", "fa-bolt", "fa-gas-pump", "fa-gears"
+];
+const bgColors = [
+  "bg-orange-50", "bg-blue-50", "bg-slate-100", "bg-amber-50"
+];
+const textColors = [
+  "text-[#f2790c]", "text-[#04297e]", "text-slate-600", "text-amber-600"
+];
+
+// Asignación pseudo-aleatoria basada en el índice
+const icon = icons[index % icons.length];
+const bgColor = bgColors[index % bgColors.length];
+const textColor = textColors[index % textColors.length];
+---
+
+<div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1">
+  <div class="flex items-start gap-4 mb-5">
+    <div class={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl ${bgColor} ${textColor} transition-transform group-hover:scale-110 duration-300`}>
+      <i class={`fa-solid ${icon}`}></i>
+    </div>
+    <div class="flex-1">
+      <h3 class="font-bold text-slate-800 text-lg group-hover:text-[#04297e] transition-colors leading-tight mb-1">
+        {subcategoria}
+      </h3>
+      <p class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Categoría</p>
+    </div>
+  </div>
+  
+  <!-- Barra de progreso simulada como en el dashboard -->
+  <div class="mb-5">
+    <div class="w-full bg-slate-100 rounded-full h-2 mb-2 overflow-hidden">
+      <div class="bg-gradient-to-r from-[#f2790c] to-orange-400 h-2 rounded-full" style={`width: ${Math.max(40, (index * 15) % 100)}%`}></div>
+    </div>
+    <div class="flex justify-between items-center text-xs text-slate-500 font-medium">
+      <span class="flex items-center gap-1"><i class="fa-regular fa-clone"></i> Variedad amplia</span>
+      <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> Stock disponible</span>
+    </div>
+  </div>
+
+  <div class="mt-auto pt-4 border-t border-slate-100 flex items-center justify-between">
+    <a href="#" class="text-[#f2790c] hover:text-[#d1680a] font-bold text-sm flex items-center gap-2 group-hover:translate-x-1 transition-transform w-full">
+      Explorar piezas <i class="fa-solid fa-arrow-right-long ml-auto"></i>
+    </a>
+  </div>
+</div>

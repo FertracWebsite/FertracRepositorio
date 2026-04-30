@@ -1,0 +1,168 @@
+---
+import MegaMenu from "../components/MegaMenu.astro";
+import "../estilos.css";
+
+const { title, descripcion } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="descripcion"
+      content={descripcion || "Especialidad en Fertrac"}
+    />
+    <title>{title} | Fertrac Especialidades</title>
+    <link rel="icon" href="/img/favicon.png" type="image/x-icon" />
+
+    <link
+      rel="preload"
+      href="/fuentes/gt-walsheim/GT-Walsheim-Light.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fuentes/gt-walsheim/GT-Walsheim-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body
+    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden min-h-screen flex"
+  >
+    <!--     <MegaMenu positionNav="fixed top-0 left-0 w-full z-50" bgNav="white" /> -->
+
+    <!-- Sidebar Izquierdo -->
+    <aside
+      class="w-64 bg-white border-r border-slate-200 hidden lg:flex flex-col h-screen sticky top-0"
+    >
+      <nav class="flex-1 px-4 py-16 space-y-2 overflow-y-auto custom-scrollbar">
+        <p
+          class="text-xl flex items-center gap-3 px-4 py-3 bg-orange-50 text-[#f2790c] rounded-xl font-bold transition-colors"
+        >
+          SUB-CATEGORIAS
+        </p>
+
+        <a
+          href="/especialidades-visual/motor"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-cogs"></i>
+          Motor
+        </a>
+        <a
+          href="/especialidades-visual/transmision"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-gear"></i>
+          Transmisión
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-shield-halved"></i>
+          Frenos
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-truck-front"></i>
+          Suspensión
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-truck-front"></i>
+          Suspensión
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-truck-front"></i>
+          Suspensión
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-truck-front"></i>
+          Suspensión
+        </a>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
+        >
+          <i class="fa-solid fa-truck-front"></i>
+          Suspensión
+        </a>
+      </nav>
+
+      <!-- Banner Inferior (Promo) -->
+      <div class="p-4 mt-auto">
+        <div
+          class="bg-gradient-to-br from-[#f2790c] to-orange-400 rounded-2xl p-5 text-white relative overflow-hidden shadow-lg shadow-orange-200"
+        >
+          <div class="relative z-10">
+            <h4 class="font-bold mb-1">¿Necesitas Asesoría?</h4>
+            <p class="text-sm text-orange-50 mb-3">
+              Contacta a un experto en repuestos.
+            </p>
+            <button
+              class="bg-white text-[#f2790c] text-sm font-bold py-2 px-4 rounded-xl w-full hover:bg-slate-50 transition-colors"
+              >Contactar</button
+            >
+          </div>
+          <!-- Decorative shapes -->
+          <div
+            class="absolute -right-4 -bottom-4 w-24 h-24 bg-white/20 rounded-full blur-xl"
+          >
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Contenido Principal -->
+    <div class="flex-1 flex flex-col min-h-screen relative overflow-hidden">
+      <!-- Main Slot -->
+      <main class="flex-1 p-6 lg:p-8 overflow-y-auto custom-scrollbar relative">
+        <slot />
+      </main>
+    </div>
+
+    <style is:global>
+      /* Ensure typography respects existing fonts */
+      body {
+        font-family: "GT Walsheim", sans-serif;
+      }
+
+      /* Custom scrollbar for better UI */
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background-color: #cbd5e1;
+        border-radius: 20px;
+      }
+      .custom-scrollbar:hover::-webkit-scrollbar-thumb {
+        background-color: #94a3b8;
+      }
+    </style>
+  </body>
+</html>

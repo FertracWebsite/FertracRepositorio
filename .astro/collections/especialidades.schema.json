@@ -1,0 +1,113 @@
+{
+  "$ref": "#/definitions/especialidades",
+  "definitions": {
+    "especialidades": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "subtitle": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "heroImage": {
+          "type": "string"
+        },
+        "subcategories": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "brands": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "logo": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "applications": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "brand": {
+                "type": "string"
+              },
+              "models": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "brand",
+              "models"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "gallery": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "alt": {
+                "type": "string"
+              },
+              "src": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "alt",
+              "src"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "footer": {
+          "type": "object",
+          "properties": {
+            "web": {
+              "type": "string"
+            },
+            "social": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "web",
+            "social"
+          ],
+          "additionalProperties": false
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "subtitle",
+        "description",
+        "subcategories",
+        "brands",
+        "applications"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

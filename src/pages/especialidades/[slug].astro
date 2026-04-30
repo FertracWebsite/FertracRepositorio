@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+// import MainLayout from '../../layouts/MainLayout.astro'; // Futuro uso
+
+export async function getStaticPaths() {
+  const especialidadesEntries = await getCollection('especialidades');
+  return especialidadesEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { title, subtitle, description, brands, applications, subcategories } = data;
+
+// Nota: El HTML se mantiene vacío por solicitud del usuario para enfocarse en la estructura de datos.
+---
+
+{/* 
+  Estructura de datos disponible:
+  - title: {title}
+  - subtitle: {subtitle}
+  - description: {description}
+  - subcategories: {JSON.stringify(subcategories)}
+  - brands: {JSON.stringify(brands)}
+  - applications: {JSON.stringify(applications)}
+*/}
