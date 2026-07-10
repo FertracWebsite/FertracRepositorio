@@ -1,0 +1,75 @@
+---
+import ProductCard from "./ProductCard.astro";
+
+const { products } = Astro.props;
+---
+
+<div class="relative w-full min-w-0">
+  <div class="swiper products-swiper w-full overflow-hidden">
+    <div class="swiper-wrapper">
+      {
+        products.map(
+          (product: { image: string; title: string; reference: string }) => (
+            <ProductCard {...product} />
+          ),
+        )
+      }
+    </div>
+  </div>
+  <div class="swiper-button-next products-next"></div>
+  <div class="swiper-button-prev products-prev"></div>
+</div>
+
+<style>
+  .products-swiper {
+    width: 100%;
+    overflow: hidden;
+    min-width: 0;
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .swiper-slide img {
+    object-fit: contain;
+  }
+</style>
+
+<script>
+  import Swiper from "swiper/bundle";
+  import "swiper/css/bundle";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    new Swiper(".products-swiper", {
+      slidesPerView: 5,
+      slidesPerGroup: 5,
+      spaceBetween: 25,
+      speed: 1000,
+
+      navigation: {
+        nextEl: ".products-next",
+        prevEl: ".products-prev",
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+
+        520: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+
+        950: {
+          slidesPerView: 5,
+          slidesPerGroup: 5,
+        },
+      },
+    });
+  });
+</script>

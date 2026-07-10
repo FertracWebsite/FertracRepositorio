@@ -2,7 +2,30 @@
 import MegaMenu from "../components/MegaMenu.astro";
 import "../estilos.css";
 
-const { title, descripcion } = Astro.props;
+const { title = "Especialidad", descripcion } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+
+const categories = [
+  { name: "Motor", href: "/especialidades-visual/motor", icon: "fa-cogs" },
+  {
+    name: "Transmisión",
+    href: "/especialidades-visual/transmision",
+    icon: "fa-gear",
+  },
+  { name: "Frenos", href: "#", icon: "fa-shield-halved" },
+  { name: "Suspensión", href: "#", icon: "fa-truck-front" },
+  { name: "Dirección", href: "#", icon: "fa-compass" },
+  { name: "Sistema Eléctrico", href: "#", icon: "fa-bolt" },
+  { name: "Filtración", href: "#", icon: "fa-filter" },
+];
+
+const isActive = (href: string) => {
+  if (href === "#") return false;
+  const cleanPath = currentPath.replace(/\/$/, "");
+  const cleanHref = href.replace(/\/$/, "");
+  return cleanPath === cleanHref;
+};
 ---
 
 <!doctype html>
@@ -38,98 +61,111 @@ const { title, descripcion } = Astro.props;
   </head>
 
   <body
-    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden min-h-screen flex"
+    class="bg-slate-50 text-slate-800 antialiased overflow-x-hidden min-h-screen w-full flex"
   >
     <!--     <MegaMenu positionNav="fixed top-0 left-0 w-full z-50" bgNav="white" /> -->
 
     <!-- Sidebar Izquierdo -->
     <aside
-      class="w-64 bg-white border-r border-slate-200 hidden lg:flex flex-col h-screen sticky top-0"
+      class="w-80 bg-white border-l border-slate-200 hidden lg:flex flex-col h-screen sticky top-0"
     >
-      <nav class="flex-1 px-4 py-16 space-y-2 overflow-y-auto custom-scrollbar">
-        <p
-          class="text-xl flex items-center gap-3 px-4 py-3 bg-orange-50 text-[#f2790c] rounded-xl font-bold transition-colors"
-        >
-          SUB-CATEGORIAS
-        </p>
-
-        <a
-          href="/especialidades-visual/motor"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-cogs"></i>
-          Motor
-        </a>
-        <a
-          href="/especialidades-visual/transmision"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-gear"></i>
-          Transmisión
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-shield-halved"></i>
-          Frenos
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-truck-front"></i>
-          Suspensión
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-truck-front"></i>
-          Suspensión
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-truck-front"></i>
-          Suspensión
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-truck-front"></i>
-          Suspensión
-        </a>
-        <a
-          href="#"
-          class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-[#04297e] hover:bg-slate-50 rounded-xl font-medium transition-colors"
-        >
-          <i class="fa-solid fa-truck-front"></i>
-          Suspensión
-        </a>
-      </nav>
-
-      <!-- Banner Inferior (Promo) -->
-      <div class="p-4 mt-auto">
+      <div class="w-full space-y-6 px-6 py-10 overflow-y-auto custom-scrollbar">
+        <!-- Card Estilo Perfil / Contacto ("Weekly Streak" style) -->
         <div
-          class="bg-gradient-to-br from-[#f2790c] to-orange-400 rounded-2xl p-5 text-white relative overflow-hidden shadow-lg shadow-orange-200"
+          class="bg-white rounded-[24px] p-6 shadow-sm border border-slate-100 flex flex-col items-center text-center"
         >
+          <div
+            class="w-full flex justify-between items-center mb-4 text-slate-500"
+          >
+            <span class="text-sm font-bold">Soporte Especializado</span>
+            <i
+              class="fa-solid fa-circle-info cursor-pointer hover:text-[#04297e] transition-colors"
+            ></i>
+          </div>
+
+          <div class="relative mb-4 group">
+            <div
+              class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center text-[#f2790c] text-3xl shadow-inner border-4 border-white relative z-10 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <!-- Ping animation -->
+            <div
+              class="absolute inset-0 bg-orange-100 rounded-full animate-ping opacity-75"
+            >
+            </div>
+          </div>
+
+          <h3 class="font-bold text-lg text-slate-800 mb-1">Equipo Fertrac</h3>
+          <p class="text-xs text-slate-500 mb-6 px-4">
+            Expertos en repuestos para tractocamión a tu disposición.
+          </p>
+
+          <div
+            class="w-full flex items-center justify-center gap-8 mb-6 bg-slate-50 p-4 rounded-2xl"
+          >
+            <div class="text-center">
+              <span
+                class="flex items-center gap-1 text-lg font-black text-[#f2790c]"
+              >
+                <i class="fa-solid fa-fire text-sm"></i> 24/7
+              </span>
+              <span
+                class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+                >Atención</span
+              >
+            </div>
+            <div class="w-px h-10 bg-slate-200"></div>
+            <div class="text-center">
+              <span
+                class="flex items-center gap-1 text-lg font-black text-[#04297e]"
+              >
+                <i class="fa-solid fa-tags text-sm"></i> +15
+              </span>
+              <span
+                class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+                >Marcas</span
+              >
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-slate-50 hover:bg-slate-100 text-[#04297e] font-bold py-3 rounded-xl transition-colors border border-slate-200 flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Chatear ahora
+          </button>
+        </div>
+
+        <!-- Widget Promocional (Simulando Upgrade Card en sidebar izquierdo del dashboard) -->
+        <div
+          class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+        >
+          <div
+            class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+          >
+          </div>
+          <div
+            class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+          >
+          </div>
+
           <div class="relative z-10">
-            <h4 class="font-bold mb-1">¿Necesitas Asesoría?</h4>
-            <p class="text-sm text-orange-50 mb-3">
-              Contacta a un experto en repuestos.
+            <div
+              class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+            >
+              <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+            <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+              Aseguramos la durabilidad y desempeño de tu {
+                title ? title.toLowerCase() : "especialidad"
+              } con piezas de la más alta calidad.
             </p>
             <button
-              class="bg-white text-[#f2790c] text-sm font-bold py-2 px-4 rounded-xl w-full hover:bg-slate-50 transition-colors"
-              >Contactar</button
+              class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
             >
-          </div>
-          <!-- Decorative shapes -->
-          <div
-            class="absolute -right-4 -bottom-4 w-24 h-24 bg-white/20 rounded-full blur-xl"
-          >
+              Solicitar Cotización
+            </button>
           </div>
         </div>
       </div>
@@ -139,9 +175,141 @@ const { title, descripcion } = Astro.props;
     <div class="flex-1 flex flex-col min-h-screen relative overflow-hidden">
       <!-- Main Slot -->
       <main class="flex-1 p-6 lg:p-8 overflow-y-auto custom-scrollbar relative">
+        <!-- Navegación móvil horizontal scrollable -->
+        <div
+          class="lg:hidden mb-6 overflow-x-auto no-scrollbar py-2 border-b border-slate-100 -mx-6 px-6"
+        >
+          <div class="flex gap-2">
+            {
+              categories.map((cat) => {
+                const active = isActive(cat.href);
+                return (
+                  <a
+                    href={cat.href}
+                    class={`flex-none flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                      active
+                        ? "bg-orange-50 text-[#f2790c] border border-orange-100"
+                        : "bg-white border border-slate-200 text-slate-600 hover:text-[#04297e] hover:border-slate-300"
+                    }`}
+                  >
+                    <i class={`fa-solid ${cat.icon} text-xs`} />
+                    {cat.name}
+                  </a>
+                );
+              })
+            }
+          </div>
+        </div>
+
         <slot />
       </main>
     </div>
+
+    <!-- Sidebar Derecho -->
+    <aside
+      class="w-80 bg-white border-l border-slate-200 hidden lg:flex flex-col h-screen sticky top-0"
+    >
+      <div class="w-full space-y-6 px-6 py-10 overflow-y-auto custom-scrollbar">
+        <!-- Card Estilo Perfil / Contacto ("Weekly Streak" style) -->
+        <div
+          class="bg-white rounded-[24px] p-6 shadow-sm border border-slate-100 flex flex-col items-center text-center"
+        >
+          <div
+            class="w-full flex justify-between items-center mb-4 text-slate-500"
+          >
+            <span class="text-sm font-bold">Soporte Especializado</span>
+            <i
+              class="fa-solid fa-circle-info cursor-pointer hover:text-[#04297e] transition-colors"
+            ></i>
+          </div>
+
+          <div class="relative mb-4 group">
+            <div
+              class="w-20 h-20 bg-orange-50 rounded-full flex items-center justify-center text-[#f2790c] text-3xl shadow-inner border-4 border-white relative z-10 group-hover:scale-110 transition-transform"
+            >
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <!-- Ping animation -->
+            <div
+              class="absolute inset-0 bg-orange-100 rounded-full animate-ping opacity-75"
+            >
+            </div>
+          </div>
+
+          <h3 class="font-bold text-lg text-slate-800 mb-1">Equipo Fertrac</h3>
+          <p class="text-xs text-slate-500 mb-6 px-4">
+            Expertos en repuestos para tractocamión a tu disposición.
+          </p>
+
+          <div
+            class="w-full flex items-center justify-center gap-8 mb-6 bg-slate-50 p-4 rounded-2xl"
+          >
+            <div class="text-center">
+              <span
+                class="flex items-center gap-1 text-lg font-black text-[#f2790c]"
+              >
+                <i class="fa-solid fa-fire text-sm"></i> 24/7
+              </span>
+              <span
+                class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+                >Atención</span
+              >
+            </div>
+            <div class="w-px h-10 bg-slate-200"></div>
+            <div class="text-center">
+              <span
+                class="flex items-center gap-1 text-lg font-black text-[#04297e]"
+              >
+                <i class="fa-solid fa-tags text-sm"></i> +15
+              </span>
+              <span
+                class="text-[10px] text-slate-400 font-bold uppercase tracking-wider block"
+                >Marcas</span
+              >
+            </div>
+          </div>
+
+          <button
+            class="w-full bg-slate-50 hover:bg-slate-100 text-[#04297e] font-bold py-3 rounded-xl transition-colors border border-slate-200 flex items-center justify-center gap-2"
+          >
+            <i class="fa-brands fa-whatsapp text-green-500 text-lg"></i> Chatear ahora
+          </button>
+        </div>
+
+        <!-- Widget Promocional (Simulando Upgrade Card en sidebar izquierdo del dashboard) -->
+        <div
+          class="bg-gradient-to-br from-[#04297e] to-[#0a38a3] rounded-[24px] p-6 shadow-lg shadow-[#04297e]/20 relative overflow-hidden text-white"
+        >
+          <div
+            class="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full mix-blend-overlay"
+          >
+          </div>
+          <div
+            class="absolute -left-12 -bottom-12 w-40 h-40 bg-[#f2790c]/20 rounded-full blur-2xl"
+          >
+          </div>
+
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center text-xl mb-4 border border-white/20"
+            >
+              <i class="fa-solid fa-shield-halved text-[#f2790c]"></i>
+            </div>
+            <h3 class="font-bold text-xl mb-2">Garantía Total</h3>
+            <p class="text-sm text-blue-100 mb-6 leading-relaxed">
+              Aseguramos la durabilidad y desempeño de tu {
+                title ? title.toLowerCase() : "especialidad"
+              } con piezas de la más alta calidad.
+            </p>
+            <button
+              class="bg-[#f2790c] hover:bg-[#d1680a] text-white font-bold py-3 px-4 rounded-xl text-sm w-full transition-colors shadow-md"
+            >
+              Solicitar Cotización
+            </button>
+          </div>
+        </div>
+      </div>
+    </aside>
 
     <style is:global>
       /* Ensure typography respects existing fonts */
@@ -162,6 +330,16 @@ const { title, descripcion } = Astro.props;
       }
       .custom-scrollbar:hover::-webkit-scrollbar-thumb {
         background-color: #94a3b8;
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
       }
     </style>
   </body>
