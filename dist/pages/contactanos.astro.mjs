@@ -3,7 +3,7 @@ import { c as createComponent, r as renderTemplate, d as renderComponent, m as m
 import 'piccolore';
 import { $ as $$BotonPrincipal } from '../chunks/BotonPrincipal_DSjP3Lbw.mjs';
 import { $ as $$FormularioEstructura } from '../chunks/FormularioEstructura_CJfxnaw4.mjs';
-import { $ as $$MainLayout } from '../chunks/MainLayout_CeUtZtD7.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_Bx9mlvwM.mjs';
 export { renderers } from '../renderers.mjs';
 
 var __freeze = Object.freeze;

@@ -2,7 +2,7 @@
 import { c as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
 import { $ as $$HeaderEspecialidades } from '../../chunks/HeaderEspecialidades_BTspf75u.mjs';
-import { $ as $$MainLayout } from '../../chunks/MainLayout_CeUtZtD7.mjs';
+import { $ as $$MainLayout } from '../../chunks/MainLayout_Bx9mlvwM.mjs';
 import { $ as $$AsesoriaEspecialidades } from '../../chunks/AsesoriaEspecialidades_CVW4Xdk7.mjs';
 /* empty css                                             */
 export { renderers } from '../../renderers.mjs';

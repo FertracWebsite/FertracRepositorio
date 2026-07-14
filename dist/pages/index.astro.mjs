@@ -4,7 +4,7 @@ import 'piccolore';
 import { $ as $$BotonPrincipal } from '../chunks/BotonPrincipal_DSjP3Lbw.mjs';
 /* empty css                                 */
 import 'clsx';
-import { $ as $$MainLayout } from '../chunks/MainLayout_CeUtZtD7.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_Bx9mlvwM.mjs';
 import { $ as $$FAQS } from '../chunks/FAQS_CkL6iajN.mjs';
 export { renderers } from '../renderers.mjs';
 
