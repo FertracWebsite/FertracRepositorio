@@ -4,76 +4,76 @@ import FormularioEstructura from "../components/Formularios/FormularioEstructura
 import MainLayout from "../layouts/MainLayout.astro";
 
 const title = "Contáctanos – Fertrac";
-const descripcion = "Comunícate con nosotros para recibir asesoría o más información sobre repuestos para tractocamiones.";
+const descripcion =
+  "Comunícate con nosotros para recibir asesoría o más información sobre repuestos para tractocamiones.";
 ---
 
 <MainLayout title={title} description={descripcion}>
-
-<div
-  class="xl:mt-48 max-w-screen-xl mx-auto sm:my-8 md:mt-36 lg:px-14 "
->
-<div>
-  <div class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0">
-  <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
-    Estamos aqui para ti, Contáctanos en cualquier momento
-  </h1>
-  <p class="lg:!text-center !sm:text-justify">
-    Si tienes alguna duda sobre nuestros servicios, no dudes en preguntarnos.
-  </p>
-  </div>
-
-</div>
-
-<div id="mercadeo">
-  <FormularioEstructura
-  idBotonForm="btn-form-general"
-  id="mercadeoForm"
-   tituloForm="Envíanos tu solicitud"
-  descripcionForm="Comparte con nosotros tu mensaje, petición o requerimiento. Nuestro equipo revisará tu información y la direccionará al área correspondiente para brindarte una respuesta clara, oportuna y acorde con tu necesidad."
-  imgForm="/img/area-mercadeo.jpg"
-  bg="p-4"
-  mostrarBanner={true}
-    mostrarIdentificacion={true}
-    mostrarEmpresa={true}
-    mostrarAreaDirigida={true}
-    mostrarSolicitudGeneral={true}
-    mostrarTipoPQRS={false}
-    mostrarArchivo={true}
-  />
-</div>
-
-
-
-<div
-  id="loadingSpinner"
-  class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
->
-<lottie-player class="w-24 " src="/animaciones/gear.json" loop autoplay></lottie-player>
-
-</div>
-
-<div id="modalExito" class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden">
-  <div class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2">
-    <h3 class="text-lg !text-center">¡Formulario enviado con éxito!</h3>
-    <p class=" !text-gray-600 !text-center">Tu información ha sido recibida correctamente. <br> Nuestro equipo la revisará y se pondrá en contacto contigo en caso necesario.</p>
-    <div id="cerrarModal" class="mt-4">
-      <BotonPrincipal text="Cerrar" icon="hidden" estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white" estilosButton="!w-auto"/>
+  <div class="xl:mt-48 max-w-screen-xl mx-auto sm:my-8 md:mt-36 lg:px-14">
+    <div>
+      <div
+        class="xl:mt-48 sm:mx-4 sm:w-auto lg:w-[1000px] lg:mx-auto sm:pt-8 sm:m-4 lg:pt-0"
+      >
+        <h1 class="lg:!text-center !sm:text-justify mb-4 text-[36px]">
+          Estamos aqui para ti, Contáctanos en cualquier momentoo
+        </h1>
+        <p class="lg:!text-center !sm:text-justify">
+          Si tienes alguna duda sobre nuestros servicios, no dudes en
+          preguntarnos.
+        </p>
+      </div>
     </div>
-   
+
+    <div id="mercadeo">
+      <FormularioEstructura
+        idBotonForm="btn-form-general"
+        id="mercadeoForm"
+        tituloForm="Envíanos tu solicitud"
+        descripcionForm="Comparte con nosotros tu mensaje, petición o requerimiento. Nuestro equipo revisará tu información y la direccionará al área correspondiente para brindarte una respuesta clara, oportuna y acorde con tu necesidad."
+        imgForm="/img/area-mercadeo.jpg"
+        bg="p-4"
+        mostrarBanner={true}
+        mostrarIdentificacion={true}
+        mostrarEmpresa={true}
+        mostrarAreaDirigida={true}
+        mostrarSolicitudGeneral={true}
+        mostrarTipoPQRS={false}
+        mostrarArchivo={true}
+      />
+    </div>
+
+    <div
+      id="loadingSpinner"
+      class="fixed inset-0 bg-white/70 backdrop-blur-sm flex items-center justify-center z-[9999] hidden"
+    >
+      <lottie-player class="w-24" src="/animaciones/gear.json" loop autoplay
+      ></lottie-player>
+    </div>
+
+    <div
+      id="modalExito"
+      class="fixed z-50 inset-0 flex items-center justify-center bg-black/50 hidden"
+    >
+      <div
+        class="bg-white py-6 px-12 rounded-lg shadow-xl text-center flex flex-col justify-center gap-2"
+      >
+        <h3 class="text-lg !text-center">¡Formulario enviado con éxito!</h3>
+        <p class="!text-gray-600 !text-center">
+          Tu información ha sido recibida correctamente. <br /> Nuestro equipo la
+          revisará y se pondrá en contacto contigo en caso necesario.
+        </p>
+        <div id="cerrarModal" class="mt-4">
+          <BotonPrincipal
+            text="Cerrar"
+            icon="hidden"
+            estilos="bg-naranja hover:bg-white hover:text-naranja hover:border border-naranja text-white"
+            estilosButton="!w-auto"
+          />
+        </div>
+      </div>
+    </div>
   </div>
-</div>
-
-
-  </div>
-
-
-
-
-          
-
-
 </MainLayout>
-
 
 <script type="module" src="/scripts/firebase.js"></script>
 <script type="module" is:client>
