@@ -1,4 +1,4 @@
-import { _ as _page } from '../../chunks/por que la electrovalvula del fanclutch presenta problemas_B_VCLA5A.mjs';
+import { _ as _page } from '../../chunks/por que la electrovalvula del fanclutch presenta problemas_f15vv3qh.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const page = () => _page;

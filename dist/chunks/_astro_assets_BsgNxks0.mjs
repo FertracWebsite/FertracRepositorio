@@ -1,7 +1,7 @@
 import { joinPaths, isRemotePath } from '@astrojs/internal-helpers/path';
 import { isRemoteAllowed } from '@astrojs/internal-helpers/remote';
-import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, q as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, s as UnsupportedImageConversion, t as toStyleString, v as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, w as RemoteImageNotAllowed, x as ExpectedImageOptions, y as ExpectedNotESMImage, z as InvalidImageService, c as createComponent, B as ImageMissingAlt, m as maybeRenderHead, d as addAttribute, C as spreadAttributes, a as renderTemplate, b as createAstro, D as ExperimentalFontsNotEnabled, G as FontFamilyNotFound, u as unescapeHTML } from './astro/server_Bz_GtvD-.mjs';
-import { D as DEFAULT_OUTPUT_FORMAT, V as VALID_SUPPORTED_FORMATS, a as DEFAULT_HASH_PROPS } from './_astro_content_7UCREDR0.mjs';
+import { A as AstroError, E as ExpectedImage, L as LocalImageUsedWrongly, M as MissingImageDimension, q as UnsupportedImageFormat, I as IncompatibleDescriptorOptions, s as UnsupportedImageConversion, t as toStyleString, v as NoImageMetadata, F as FailedToFetchRemoteImageDimensions, w as RemoteImageNotAllowed, x as ExpectedImageOptions, y as ExpectedNotESMImage, z as InvalidImageService, c as createComponent, B as ImageMissingAlt, m as maybeRenderHead, b as addAttribute, C as spreadAttributes, r as renderTemplate, a as createAstro, D as ExperimentalFontsNotEnabled, G as FontFamilyNotFound, u as unescapeHTML } from './astro/server_Bu4Wz2YO.mjs';
+import { D as DEFAULT_OUTPUT_FORMAT, V as VALID_SUPPORTED_FORMATS, a as DEFAULT_HASH_PROPS } from './_astro_content_C5CQq_dh.mjs';
 import * as mime from 'mrmime';
 import 'clsx';
 import 'piccolore';
@@ -1441,7 +1441,7 @@ async function getConfiguredImageService() {
   if (!globalThis?.astroAsset?.imageService) {
     const { default: service } = await import(
       // @ts-expect-error
-      './sharp_BpXBUrld.mjs'
+      './sharp_BKOSRiyF.mjs'
     ).catch((e) => {
       const error = new AstroError(InvalidImageService);
       error.cause = e;

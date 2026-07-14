@@ -1,11 +1,11 @@
 /* empty css                                   */
-import { c as createComponent, d as addAttribute, e as renderHead, f as renderSlot, a as renderTemplate, b as createAstro, r as renderComponent, m as maybeRenderHead } from '../../chunks/astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, b as addAttribute, e as renderHead, f as renderSlot, r as renderTemplate, a as createAstro, d as renderComponent, m as maybeRenderHead } from '../../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { g as getCollection } from '../../chunks/_astro_content_7UCREDR0.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_C5CQq_dh.mjs';
 import 'clsx';
 /* empty css                                                                        */
 /* empty css                                     */
-import { $ as $$SubcategoriaCard, a as $$AplicacionCard } from '../../chunks/AplicacionCard_CqGOgYVk.mjs';
+import { $ as $$SubcategoriaCard, a as $$AplicacionCard } from '../../chunks/AplicacionCard_Brkj7f13.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro$1 = createAstro();

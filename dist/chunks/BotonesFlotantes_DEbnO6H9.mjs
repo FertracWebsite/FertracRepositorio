@@ -1,22 +1,7 @@
-import { c as createComponent, m as maybeRenderHead, d as addAttribute, a as renderTemplate, b as createAstro, g as renderScript } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, m as maybeRenderHead, r as renderTemplate, g as renderScript } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
 import 'clsx';
 /* empty css                                                             */
-
-const $$Astro = createAstro();
-const $$BotonPrincipal = createComponent(($$result, $$props, $$slots) => {
-  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
-  Astro2.self = $$BotonPrincipal;
-  const { estilos } = Astro2.props;
-  const { estilosButton } = Astro2.props;
-  const { text } = Astro2.props;
-  const { icon } = Astro2.props;
-  const { url } = Astro2.props;
-  const { enlace } = Astro2.props;
-  const { download } = Astro2.props;
-  const { id } = Astro2.props;
-  return renderTemplate`${maybeRenderHead()}<button${addAttribute(`w-full  ${estilosButton} `, "class")}> <a${addAttribute(id, "id")}${addAttribute(download, "download")}${addAttribute(url, "href")}${addAttribute(`font-GTWalsheim inline-flex sm:w-full  lg:w-full sm:justify-center items-center text-center rounded-lg lg:px-8 lg:py-2 leading-[2] sm:px-6 sm:py-1.5 lg:text-[16px] sm:text-[1rem] ${estilos}`, "class")}>${text} <i${addAttribute(`ml-2 ${icon}`, "class")}></i></a> </button>`;
-}, "C:/Users/eroberto/Desktop/FertracRepositorio/src/components/BotonPrincipal.astro", void 0);
 
 const $$Footer = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<footer class="text-center lg:text-left bg-gradient-to-r from-naranja to-yellow-400"> <div class="gap-8 items-center justify-center bg-gradient-to-r from-azul to-gray-700 border-b-2 border-neutral-200 lg:p-16 lg:justify-evenly sm:p-8 md:px-24"> <!-- <Form bgBlog="" titulo="text-white" parrafo="text-white"/> --> <!--     <hr class="border boder-white w-full lg:hidden">
@@ -42,4 +27,4 @@ Contactar Asesor
 <span class="ec ec-sunglasses" data-astro-cid-qr3zrvxp></span> </span> </a> </div>  ${renderScript($$result, "C:/Users/eroberto/Desktop/FertracRepositorio/src/components/BotonesFlotantes.astro?astro&type=script&index=0&lang.ts")}`;
 }, "C:/Users/eroberto/Desktop/FertracRepositorio/src/components/BotonesFlotantes.astro", void 0);
 
-export { $$BotonPrincipal as $, $$Footer as a, $$BotonesFlotantes as b };
+export { $$Footer as $, $$BotonesFlotantes as a };

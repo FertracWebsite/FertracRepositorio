@@ -1,4 +1,4 @@
-import { c as createComponent, m as maybeRenderHead, a as renderTemplate } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, m as maybeRenderHead, r as renderTemplate } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
 import 'clsx';
 

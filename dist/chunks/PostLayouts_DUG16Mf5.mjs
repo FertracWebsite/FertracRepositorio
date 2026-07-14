@@ -1,6 +1,6 @@
-import { c as createComponent, r as renderComponent, a as renderTemplate, b as createAstro, m as maybeRenderHead, d as addAttribute, f as renderSlot } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, d as renderComponent, r as renderTemplate, a as createAstro, m as maybeRenderHead, b as addAttribute, f as renderSlot } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$BlogLayout } from './BlogLayout_WdV3n0QE.mjs';
+import { $ as $$BlogLayout } from './BlogLayout_utrUYQ5F.mjs';
 
 const $$Astro = createAstro();
 const $$PostLayouts = createComponent(($$result, $$props, $$slots) => {

@@ -1,9 +1,9 @@
 /* empty css                                */
-import { c as createComponent, r as renderComponent, a as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, d as renderComponent, r as renderTemplate, m as maybeRenderHead } from '../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$BotonPrincipal } from '../chunks/BotonesFlotantes_rhDh_o33.mjs';
-import { $ as $$FormularioEstructura } from '../chunks/FormularioEstructura_F1KFsAC_.mjs';
-import { $ as $$MainLayout } from '../chunks/MainLayout_DJleim-r.mjs';
+import { $ as $$BotonPrincipal } from '../chunks/BotonPrincipal_DSjP3Lbw.mjs';
+import { $ as $$FormularioEstructura } from '../chunks/FormularioEstructura_CJfxnaw4.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_CeUtZtD7.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Pqrs = createComponent(($$result, $$props, $$slots) => {

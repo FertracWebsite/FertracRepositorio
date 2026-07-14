@@ -1,6 +1,6 @@
-import { c as createComponent, m as maybeRenderHead, r as renderComponent, a as renderTemplate } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, m as maybeRenderHead, d as renderComponent, r as renderTemplate } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$BotonPrincipal } from './BotonesFlotantes_rhDh_o33.mjs';
+import { $ as $$BotonPrincipal } from './BotonPrincipal_DSjP3Lbw.mjs';
 
 const $$AsesoriaEspecialidades = createComponent(($$result, $$props, $$slots) => {
   return renderTemplate`${maybeRenderHead()}<div class="w-full flex justify-center items-center sm:p-4 sm:py-8 lg:py-24 flex-wrap lg:gap-16 bg-cover  bg-slate-800 gap-4 lg:mt-24 sm:mt-8 bg-[url(/img/trabaja-con-nosotros.jpg)]" style="background-position-x: 73%; background-position-y: center;"> <div class="2xl:w-[29%] xl:w-[48%] lg:w-[45%] sm:w-full gap-4"> <h2 class="!text-white mb-4 !text-left md:px-24 lg:px-8 ">

@@ -1,8 +1,8 @@
 /* empty css                                   */
-import { c as createComponent, a as renderTemplate, b as createAstro } from '../../chunks/astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, r as renderTemplate, a as createAstro } from '../../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
 import 'clsx';
-import { g as getCollection } from '../../chunks/_astro_content_7UCREDR0.mjs';
+import { g as getCollection } from '../../chunks/_astro_content_C5CQq_dh.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const $$Astro = createAstro();

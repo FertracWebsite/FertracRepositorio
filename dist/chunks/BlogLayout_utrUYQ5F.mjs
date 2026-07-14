@@ -1,8 +1,8 @@
-import { c as createComponent, a as renderTemplate, g as renderScript, r as renderComponent, f as renderSlot, e as renderHead, d as addAttribute, b as createAstro } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, r as renderTemplate, g as renderScript, d as renderComponent, f as renderSlot, e as renderHead, b as addAttribute, a as createAstro } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$AsesoriaEspecialidades } from './AsesoriaEspecialidades_B_RlQa9x.mjs';
-import { $ as $$MegaMenu } from './MegaMenu_6c349kcb.mjs';
-import { a as $$Footer, b as $$BotonesFlotantes } from './BotonesFlotantes_rhDh_o33.mjs';
+import { $ as $$AsesoriaEspecialidades } from './AsesoriaEspecialidades_CVW4Xdk7.mjs';
+import { $ as $$MegaMenu } from './MegaMenu_CybcZAZ_.mjs';
+import { $ as $$Footer, a as $$BotonesFlotantes } from './BotonesFlotantes_DEbnO6H9.mjs';
 /* empty css                                                             */
 
 var __freeze = Object.freeze;

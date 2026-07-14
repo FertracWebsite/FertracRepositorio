@@ -1,15 +1,37 @@
 /* empty css                                */
-import { c as createComponent, r as renderComponent, a as renderTemplate, b as createAstro, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, m as maybeRenderHead, r as renderTemplate, a as createAstro, b as addAttribute, d as renderComponent } from '../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$CardsBlog } from '../chunks/CardsBlog_DRI-drwV.mjs';
-import { $ as $$BlogLayout } from '../chunks/BlogLayout_WdV3n0QE.mjs';
+import 'clsx';
+/* empty css                                */
+import { $ as $$BlogLayout } from '../chunks/BlogLayout_utrUYQ5F.mjs';
 export { renderers } from '../renderers.mjs';
+
+const $$Astro$2 = createAstro();
+const $$BotonBlog = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$BotonBlog;
+  const { tiempoLectura } = Astro2.props;
+  return renderTemplate`${maybeRenderHead()}<div class="flex flex-col  text-naranja py-2" data-astro-cid-nifawlto> <span class="lg:text-base sm:text-base text-left" data-astro-cid-nifawlto>Tiempo de lectura aproximado: ${tiempoLectura}</span> <button class="relative effect text-azul py-2 hover:text-azul font-black text-left w-fit text-lg tracking-wide" data-astro-cid-nifawlto>Seguir Leyendo</button> </div> `;
+}, "C:/Users/eroberto/Desktop/FertracRepositorio/src/components/BotonBlog.astro", void 0);
+
+const $$Astro$1 = createAstro();
+const $$CardsBlog = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$1, $$props, $$slots);
+  Astro2.self = $$CardsBlog;
+  const { image, url, title, pubDate, previewText, tags, tiempoLectura } = Astro2.props;
+  const formaterFecha = new Date(pubDate).toLocaleDateString("es-ES", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  });
+  return renderTemplate`${maybeRenderHead()}<article class=" transition-transform duration-300 lg:hover:scale-110  bg-white" data-astro-cid-qdqebrmc> <a${addAttribute(url, "href")} class="overflow-hidden" data-astro-cid-qdqebrmc> <div class=" h-44" data-astro-cid-qdqebrmc> <img${addAttribute(image.url, "src")}${addAttribute(image.alt, "alt")} class="w-full h-full object-cover" data-astro-cid-qdqebrmc> </div> <div class="flex justify-between items-center py-4" data-astro-cid-qdqebrmc> <time${addAttribute(pubDate, "datetime")} class="text-[#6b7280] font-GTWalsheim text-sm tracking-tight" data-astro-cid-qdqebrmc>${formaterFecha}</time> <span class="text-naranja font-GTWalsheim font-black text-sm uppercase tracking-[0.1em]" data-astro-cid-qdqebrmc>${tags}</span> </div> <h3 class="titulos-blog-card" data-astro-cid-qdqebrmc>${title}</h3> <p id="previewText" class="previewText !text-justify" data-astro-cid-qdqebrmc>${previewText}</p> ${renderComponent($$result, "BotonBlog", $$BotonBlog, { "tiempoLectura": tiempoLectura, "data-astro-cid-qdqebrmc": true })} </a> </article> `;
+}, "C:/Users/eroberto/Desktop/FertracRepositorio/src/components/Blog/CardsBlog.astro", void 0);
 
 const $$Astro = createAstro();
 const $$Blog = createComponent(async ($$result, $$props, $$slots) => {
   const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
   Astro2.self = $$Blog;
-  const postList = await Astro2.glob(/* #__PURE__ */ Object.assign({"/src/pages/posts/Daños frecuentes en las camisas del motor.md": () => import('../chunks/Daños frecuentes en las camisas del motor_AOYCoCYF.mjs').then(n => n._),"/src/pages/posts/Daños frecuentes en los pistones del motor.md": () => import('../chunks/Daños frecuentes en los pistones del motor_B6NgRLBl.mjs').then(n => n._),"/src/pages/posts/El Fan Clutch.md": () => import('../chunks/El Fan Clutch_CRupLW2m.mjs').then(n => n._),"/src/pages/posts/Fatiga en los rodamientos, El enemigo silencioso que amenaza la productividad de su operación.md": () => import('../chunks/Fatiga en los rodamientos_ El enemigo silencioso que amenaza la productividad de su operación_DfN_WQcK.mjs').then(n => n._),"/src/pages/posts/Filtros Fleetguard, La primera línea de defensa para su flota.md": () => import('../chunks/Filtros Fleetguard_ La primera línea de defensa para su flota_wkbZqpGx.mjs').then(n => n._),"/src/pages/posts/Guías de Válvulas en Perfecto Estado.md": () => import('../chunks/Guías de Válvulas en Perfecto Estado_B6P9ThJf.mjs').then(n => n._),"/src/pages/posts/La Revolución en el Sistema de Cardan.md": () => import('../chunks/La Revolución en el Sistema de Cardan_3XjtaMNg.mjs').then(n => n._),"/src/pages/posts/La evolución de los pistones.md": () => import('../chunks/La evolución de los pistones_DrAUuvC0.mjs').then(n => n._),"/src/pages/posts/Los multiples del Motor.md": () => import('../chunks/Los multiples del Motor_Dc6Mlvcu.mjs').then(n => n._),"/src/pages/posts/Por qué tu sistema de frenos necesita un secador de aire.md": () => import('../chunks/Por qué tu sistema de frenos necesita un secador de aire_VNULX5Dd.mjs').then(n => n._),"/src/pages/posts/Tipos de Suspensión en Tractocamiones y Camiones.md": () => import('../chunks/Tipos de Suspensión en Tractocamiones y Camiones_BlNNebFF.mjs').then(n => n._),"/src/pages/posts/por que la electrovalvula del fanclutch presenta problemas.md": () => import('../chunks/por que la electrovalvula del fanclutch presenta problemas_B_VCLA5A.mjs').then(n => n._)}), () => "/src/pages/posts/*.md");
+  const postList = await Astro2.glob(/* #__PURE__ */ Object.assign({"/src/pages/posts/Daños frecuentes en las camisas del motor.md": () => import('../chunks/Daños frecuentes en las camisas del motor_MgZFQwGx.mjs').then(n => n._),"/src/pages/posts/Daños frecuentes en los pistones del motor.md": () => import('../chunks/Daños frecuentes en los pistones del motor_C9--VyfY.mjs').then(n => n._),"/src/pages/posts/El Fan Clutch.md": () => import('../chunks/El Fan Clutch_XwNF_GtJ.mjs').then(n => n._),"/src/pages/posts/Fatiga en los rodamientos, El enemigo silencioso que amenaza la productividad de su operación.md": () => import('../chunks/Fatiga en los rodamientos_ El enemigo silencioso que amenaza la productividad de su operación_UAN0FOif.mjs').then(n => n._),"/src/pages/posts/Filtros Fleetguard, La primera línea de defensa para su flota.md": () => import('../chunks/Filtros Fleetguard_ La primera línea de defensa para su flota_D35nQWnl.mjs').then(n => n._),"/src/pages/posts/Guías de Válvulas en Perfecto Estado.md": () => import('../chunks/Guías de Válvulas en Perfecto Estado_C6HKctE1.mjs').then(n => n._),"/src/pages/posts/La Revolución en el Sistema de Cardan.md": () => import('../chunks/La Revolución en el Sistema de Cardan_BtWUTlFf.mjs').then(n => n._),"/src/pages/posts/La evolución de los pistones.md": () => import('../chunks/La evolución de los pistones_B8iNbT0R.mjs').then(n => n._),"/src/pages/posts/Los multiples del Motor.md": () => import('../chunks/Los multiples del Motor_BMZxNOZ8.mjs').then(n => n._),"/src/pages/posts/Por qué tu sistema de frenos necesita un secador de aire.md": () => import('../chunks/Por qué tu sistema de frenos necesita un secador de aire_DfhEetEN.mjs').then(n => n._),"/src/pages/posts/Tipos de Suspensión en Tractocamiones y Camiones.md": () => import('../chunks/Tipos de Suspensión en Tractocamiones y Camiones_Bm2IEuiG.mjs').then(n => n._),"/src/pages/posts/por que la electrovalvula del fanclutch presenta problemas.md": () => import('../chunks/por que la electrovalvula del fanclutch presenta problemas_f15vv3qh.mjs').then(n => n._)}), () => "/src/pages/posts/*.md");
   const postsArray = Object.values(postList).map((post) => ({
     title: post.frontmatter.title,
     previewText: post.frontmatter.previewText,

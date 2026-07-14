@@ -1,6 +1,6 @@
-import { c as createComponent, a as renderTemplate, r as renderComponent, d as addAttribute, m as maybeRenderHead, b as createAstro } from './astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, r as renderTemplate, d as renderComponent, b as addAttribute, m as maybeRenderHead, a as createAstro } from './astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$BotonPrincipal } from './BotonesFlotantes_rhDh_o33.mjs';
+import { $ as $$BotonPrincipal } from './BotonPrincipal_DSjP3Lbw.mjs';
 /* empty css                               */
 
 var __freeze = Object.freeze;

@@ -1,4 +1,4 @@
-import { _ as _page } from '../../chunks/Tipos de Suspensión en Tractocamiones y Camiones_BlNNebFF.mjs';
+import { _ as _page } from '../../chunks/Tipos de Suspensión en Tractocamiones y Camiones_Bm2IEuiG.mjs';
 export { renderers } from '../../renderers.mjs';
 
 const page = () => _page;

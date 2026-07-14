@@ -1,11 +1,11 @@
 /* empty css                                */
-import { c as createComponent, m as maybeRenderHead, r as renderComponent, g as renderScript, a as renderTemplate } from '../chunks/astro/server_Bz_GtvD-.mjs';
+import { c as createComponent, m as maybeRenderHead, d as renderComponent, g as renderScript, r as renderTemplate } from '../chunks/astro/server_Bu4Wz2YO.mjs';
 import 'piccolore';
-import { $ as $$BotonPrincipal } from '../chunks/BotonesFlotantes_rhDh_o33.mjs';
+import { $ as $$BotonPrincipal } from '../chunks/BotonPrincipal_DSjP3Lbw.mjs';
 /* empty css                                 */
 import 'clsx';
-import { $ as $$MainLayout } from '../chunks/MainLayout_DJleim-r.mjs';
-import { $ as $$FAQS } from '../chunks/FAQS_5xD8nzuI.mjs';
+import { $ as $$MainLayout } from '../chunks/MainLayout_CeUtZtD7.mjs';
+import { $ as $$FAQS } from '../chunks/FAQS_CkL6iajN.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$TarjetasEspecialidades = createComponent(($$result, $$props, $$slots) => {
