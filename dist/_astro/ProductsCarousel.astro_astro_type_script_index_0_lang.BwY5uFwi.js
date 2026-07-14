@@ -1,0 +1,1 @@
+import{S as e}from"./swiper-bundle.DyqnLEGM.js";document.addEventListener("DOMContentLoaded",()=>{new e(".products-swiper",{slidesPerView:5,slidesPerGroup:5,spaceBetween:25,speed:1e3,navigation:{nextEl:".products-next",prevEl:".products-prev"},breakpoints:{0:{slidesPerView:1,slidesPerGroup:1},520:{slidesPerView:2,slidesPerGroup:2},950:{slidesPerView:5,slidesPerGroup:5}}})});
