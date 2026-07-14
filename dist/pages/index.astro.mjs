@@ -317,7 +317,7 @@ Nuestro equipo está formado por expertos en la industria, listos para asistirte
           en cada paso del camino. Ya sea que necesites asesoramiento sobre qué repuesto
           es el adecuado para tu camión o asistencia con la instalación, estamos aquí
           para ayudarte.
-</p> </div> <div class="py-12"> <dl class="grid max-w-screen-xl grid-cols-4 md:gap-8 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 lg:px-24 sm:items-start sm:gap-2"> <div class="flex flex-col items-center justify-center"> <dt class="font-mb-2 text-4xl font-extrabold text-azul">15.000+</dt> <dd class="font-sm:text-sm md:text-xl text-azul text-center">
+</p> </div> <div class="py-12"> <dl class="grid max-w-screen-xl grid-cols-4 md:gap-8 mx-auto text-gray-900 sm:grid-cols-2 md:grid-cols-4 xl:grid-cols-4 lg:px-24 sm:items-start sm:gap-2"> <div class="flex flex-col items-center justify-center"> <dt class="font-mb-2 text-4xl font-extrabold text-azul">15.001+</dt> <dd class="font-sm:text-sm md:text-xl text-azul text-center">
 Referencias de repuestos
 </dd> </div> <div class="flex flex-col items-center justify-center"> <dt class="font-mb-2 text-4xl font-extrabold text-azul">20+</dt> <dd class="font-sm:text-sm md:text-xl text-azul text-center">
 Años de Experiencia en el mercado
