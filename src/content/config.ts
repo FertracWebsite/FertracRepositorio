@@ -7,7 +7,10 @@ const especialidades = defineCollection({
     subtitle: z.string(),
     description: z.string(),
     heroImage: z.string().optional(),
-    subcategories: z.array(z.string()),
+    subcategories: z.array(z.object({
+      name: z.string(),
+      icon: z.string(),
+    })),
     brands: z.array(z.object({
       name: z.string(),
       logo: z.string().optional(),
@@ -16,9 +19,10 @@ const especialidades = defineCollection({
       brand: z.string(),
       models: z.string(),
     })),
-    gallery: z.array(z.object({
-      alt: z.string(),
-      src: z.string(),
+    featuredProducts: z.array(z.object({
+      image: z.string(),
+      name: z.string(),
+      aplication: z.string(),
     })).optional(),
     footer: z.object({
       web: z.string(),

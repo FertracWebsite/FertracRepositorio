@@ -19,7 +19,20 @@
         "subcategories": {
           "type": "array",
           "items": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "icon": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "name",
+              "icon"
+            ],
+            "additionalProperties": false
           }
         },
         "brands": {
@@ -59,21 +72,25 @@
             "additionalProperties": false
           }
         },
-        "gallery": {
+        "featuredProducts": {
           "type": "array",
           "items": {
             "type": "object",
             "properties": {
-              "alt": {
+              "image": {
                 "type": "string"
               },
-              "src": {
+              "name": {
+                "type": "string"
+              },
+              "aplication": {
                 "type": "string"
               }
             },
             "required": [
-              "alt",
-              "src"
+              "image",
+              "name",
+              "aplication"
             ],
             "additionalProperties": false
           }

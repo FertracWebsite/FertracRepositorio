@@ -1,0 +1,25 @@
+import { c as createComponent, r as renderComponent, a as renderTemplate, b as createAstro, m as maybeRenderHead, d as addAttribute, f as renderSlot } from './astro/server_Bz_GtvD-.mjs';
+import 'piccolore';
+import { $ as $$BlogLayout } from './BlogLayout_WdV3n0QE.mjs';
+
+const $$Astro = createAstro();
+const $$PostLayouts = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro, $$props, $$slots);
+  Astro2.self = $$PostLayouts;
+  const { frontmatter } = Astro2.props;
+  const pubDate = frontmatter.pubDate;
+  const formatearFecha = pubDate ? new Date(pubDate).toLocaleDateString("es-ES", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric"
+  }) : "Fecha no disponible";
+  return renderTemplate`${renderComponent($$result, "BlogLayout", $$BlogLayout, { "title": frontmatter.title }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<div class="lg:w-[700px] mx-auto md:p-0 relative mt-[90px]"> <div class="flex flex-col justify-center md:gap-6 sm:gap-0 sm:p-4"> <div class="w-full h-auto"> <img class="w-full h-full object-cover rounded-xl shadow-md"${addAttribute(frontmatter.image.url, "src")}${addAttribute(frontmatter.image.alt || "Imagen de blog Fertrac", "alt")}> <div class="flex gap-4 py-4 justify-between items-center border-b border-gray-100"> <time${addAttribute(pubDate, "datetime")} class="text-sm text-gray-500 font-medium"> ${formatearFecha} </time> <span class="font-GTWalsheim font-black text-naranja uppercase text-xs tracking-widest"> ${frontmatter.tags} </span> </div> </div> <article class="post-body"> <header> <h1 class="text-3xl md:text-4xl font-bold tracking-tight text-azul my-6 leading-tight"> ${frontmatter.title} </h1> </header> <div class="prose max-w-none 
+prose-headings:mt-6 prose-headings:mb-4
+prose-p:mt-2 prose-p:mb-4 
+    prose-p:font-GTWalsheim prose-p:font-light prose-p:text-black prose-p:text-xl prose-p:leading-[1.2]
+    prose-h2:font-GTWalsheim prose-h2:font-black prose-h2:text-azul prose-h2:text-2xl md:prose-h2:text-3xl 
+    prose-li:font-GTWalsheim prose-li:text-black prose-li:text-xl
+    prose-a:text-black prose-a:font-bold hover:prose-a:text-azul"> ${renderSlot($$result2, $$slots["default"])} </div> </article> </div> </div> ` })}`;
+}, "C:/Users/eroberto/Desktop/FertracRepositorio/src/layouts/PostLayouts.astro", void 0);
+
+export { $$PostLayouts as $ };

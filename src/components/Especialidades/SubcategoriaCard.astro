@@ -1,5 +1,5 @@
 ---
-const { subcategoria, index = 0 } = Astro.props;
+const { subcategoria } = Astro.props;
 
 // Arreglos de iconos y colores para simular el look variado en el dashboard
 // usando los colores de marca y complementarios suaves
@@ -20,46 +20,27 @@ const textColors = [
   "text-slate-600",
   "text-amber-600",
 ];
-
-// Asignación pseudo-aleatoria basada en el índice
-const icon = icons[index % icons.length];
-const bgColor = bgColors[index % bgColors.length];
-const textColor = textColors[index % textColors.length];
 ---
 
 <div
-  class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1"
+  class="bg-white rounded-2xl p-4 shadow-sm hover:shadow-md border border-slate-100 transition-all duration-300 group flex flex-col h-full hover:-translate-y-1"
 >
-  <div class="flex items-start gap-4 mb-5">
+  <div class="flex items-center gap-4">
     <div
-      class={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl ${bgColor} ${textColor} transition-transform group-hover:scale-110 duration-300`}
+      class={`w-14 h-14 rounded-2xl flex items-center justify-center text-2xl transition-transform group-hover:scale-110 duration-300`}
     >
-      <i class={`fa-solid ${icon}`}></i>
+      <img
+        src={subcategoria.icon}
+        alt={subcategoria.name}
+        class="w-12 h-12 object-contain"
+      />
     </div>
     <div class="flex-1">
-      <h3
-        class="font-bold text-slate-800 text-lg group-hover:text-[#04297e] transition-colors leading-tight mb-1"
+      <p
+        class="font-light text-left text-slate-800 text-lg group-hover:text-[#04297e] transition-colors leading-none!"
       >
-        {subcategoria}
-      </h3>
-      <span class="flex items-center gap-1 text-sm"
-        ><i class="fa-regular fa-clone"></i> Variedad amplia</span
-      >
-    </div>
-  </div>
-
-  <!-- Barra de progreso simulada como en el dashboard -->
-  <div class="">
-    <div class="w-full bg-slate-100 rounded-full h-2 mb-2 overflow-hidden">
-      <div
-        class="bg-gradient-to-r from-[#f2790c] to-orange-400 h-2 rounded-full"
-        style={`width: ${Math.max(40, (index * 15) % 100)}%`}
-      >
-      </div>
-    </div>
-    <div
-      class="flex justify-between items-center text-xs text-slate-500 font-medium"
-    >
+        {subcategoria.name}
+      </p>
     </div>
   </div>
 </div>

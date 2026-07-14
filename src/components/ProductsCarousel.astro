@@ -9,7 +9,7 @@ const { products } = Astro.props;
     <div class="swiper-wrapper">
       {
         products.map(
-          (product: { image: string; title: string; reference: string }) => (
+          (product: { image: string; name: string; aplication: string }) => (
             <ProductCard {...product} />
           ),
         )
